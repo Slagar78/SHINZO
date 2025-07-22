@@ -214,7 +214,7 @@
 00D5={NAME} received the{N}{ITEM}.
 00D6=Found the {ITEM}, but{N}can't carry it.{N}You must discard something.{W1}
 00D7={NAME} discarded{N}the {ITEM} and{N}picked up the {ITEM}.
-00D8={CLEAR}Hee, hee, hee...{N}You're finally here!{W2}
+00D8={CLEAR}F < D U L T : 3 B Q R K V Y J G H C N E A ( W X I O ) S M & > Z {N} f P d u l t # / b q r k v y  {N} Hj/f {W2}
 00D9=Ah, you look so confused.{N}You don't know why you're{N}here?{W2}
 00DA=Yes, yes...I used a spell{N}on you.{W2}
 00DB=Ha, ha.  Where are you{N}going?  You can't escape{W2}
