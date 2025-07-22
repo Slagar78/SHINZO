@@ -3,12 +3,12 @@
 ; 0x94D22..0x94D44 : 
                 mWarp 14, 11
                   warpNoScroll
-                  warpMap    MAP_INSIDE_MITULA
+                  warpMap    MAP_KLEDON
                   warpDest   10, 31
                   warpFacing UP
                 mWarp 15, 11
                   warpNoScroll
-                  warpMap    MAP_INSIDE_MITULA
+                  warpMap    MAP_KLEDON
                   warpDest   12, 31
                   warpFacing UP
                 mWarp 14, 35

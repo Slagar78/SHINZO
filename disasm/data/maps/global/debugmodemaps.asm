@@ -66,7 +66,7 @@ i: = i+1
                 dc.b MAP_ANCIENT_TOWER_UNDERGROUND_STAIRS
                 dc.b MAP_HARPY_POOL
                 dc.b MAP_OUTSIDE_MITULA
-                dc.b MAP_INSIDE_MITULA
+                dc.b MAP_KLEDON
                 dc.b MAP_PACALON
                 dc.b MAP_OVERWORLD_GRANS_NORTH_SHORE
                 dc.b MAP_ZEON_ARENA
