@@ -4,7 +4,7 @@
 abcs_battle15:  textCursor 2506
                 loadMapFadeIn MAP_ACHILLES_SHRINES,9,10
                 loadMapEntities ce_4AFB6
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_A,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -23,7 +23,7 @@ abcs_battle15:  textCursor 2506
                  moveRight 6
                 endActions
                 fadeOutB
-                setPos ALLY_BOWIE,27,10,UP
+                setPos ALLY_MUSHRA,27,10,UP
                 setPos ALLY_PETER,28,10,UP
                 setPos FOLLOWER_B,26,10,UP
                 setPos FOLLOWER_A,27,7,UP
@@ -53,7 +53,7 @@ abcs_battle15:  textCursor 2506
                  moveDown 2
                 endActions
                 csWait 15
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActions ALLY_PETER
@@ -62,14 +62,14 @@ abcs_battle15:  textCursor 2506
                 entityActionsWait FOLLOWER_B
                  moveDown 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 waitIdle FOLLOWER_A
                 entityActionsWait FOLLOWER_A
                  moveLeft 3
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,LEFT
                 setFacing FOLLOWER_B,LEFT
                 entityActionsWait FOLLOWER_A
@@ -78,7 +78,7 @@ abcs_battle15:  textCursor 2506
                 hide FOLLOWER_A
                 clearF 77               ; Old man is a follower
                 setF 732                ; Set after the old man fails to open the way to Grans in the Wooden Panel shrine
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 warp MAP_ACHILLES_SHRINES,27,11,UP
                 csc_end

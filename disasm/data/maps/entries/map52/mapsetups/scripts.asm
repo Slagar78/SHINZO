@@ -3,9 +3,9 @@
 ; 0x5C4EE..0x5C638 : 
 cs_5C4EE:       textCursor 1397
                 cameraSpeed $30
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
-                setDest ALLY_BOWIE,5,23
+                setDest ALLY_MUSHRA,5,23
                 setDest ALLY_PETER,4,22
                 entityActionsWait ALLY_PETER
                  moveRight 1
@@ -57,7 +57,7 @@ cs_5C4EE:       textCursor 1397
                 nextSingleText $0,131   ; "Who's that?{W1}"
                 setFacing 131,DOWN
                 setCamDest 0,17
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,DOWN
                 csWait 50
                 setCamDest 16,7

@@ -4,7 +4,7 @@
 abcs_battle26:  textCursor 2637
                 loadMapFadeIn MAP_OVERWORLD_NORTH_SOUTH_PARMECIA_JUNCTION,13,11
                 loadMapEntities ce_4BE4A
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 customActscriptWait ALLY_HIGINS
                  ac_motion OFF          ;   
                  ac_orientLeft          ;   

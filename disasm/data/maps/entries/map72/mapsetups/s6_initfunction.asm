@@ -24,12 +24,12 @@ return_4FF40:
                 playSound MUSIC_SAD_THEME_3
                 fadeInB
                 textCursor 240
-                nextSingleText $0,ALLY_BOWIE ; "That's it for today?{W2}{N}Yes, you had better take a{N}rest now.{N}Come back again.{W1}"
+                nextSingleText $0,ALLY_MUSHRA ; "That's it for today?{W2}{N}Yes, you had better take a{N}rest now.{N}Come back again.{W1}"
                 csc_end
 cs_4FF5A:       textCursor 1556
                 newEntity ALLY_LUKE,43,47,DOWN,NOTHING_BYTE
                 csWait 1
-                setPos ALLY_BOWIE,45,47,LEFT
+                setPos ALLY_MUSHRA,45,47,LEFT
                 setPos ALLY_PETER,44,47,DOWN
                 setPos ALLY_LUKE,43,47,DOWN
                 setPos FOLLOWER_B,45,48,LEFT

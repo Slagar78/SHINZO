@@ -347,17 +347,17 @@ LoadMemberScreenWindowLayouts:
                 
                 jsr     (CopyBytes).w   
             if (ALTERNATE_JEWEL_ICONS_DISPLAY=1)
-                ; Display small jewel icons next to Bowie's mapsprite
+                ; Display small jewel icons next to MUSHRA's mapsprite
                 tst.w   member(a6)
-                bne.s   @SkipJewels         ; skip if anyone other than Bowie
+                bne.s   @SkipJewels         ; skip if anyone other than MUSHRA
                 move.l  a1,-(sp)
                 adda.w  #26,a1              ; offset into window layout
-                chkFlg  384                 ; Set after Bowie obtains the jewel of light
+                chkFlg  384                 ; Set after MUSHRA obtains the jewel of light
                 beq.s   @CheckJewelOfEvil
                 move.w  #VDPTILE_JEWEL_OF_LIGHT|VDPTILE_PALETTE3|VDPTILE_PRIORITY,(a1)
 @CheckJewelOfEvil:
                 
-                chkFlg  385                 ; Set after Bowie obtains the jewel of evil
+                chkFlg  385                 ; Set after MUSHRA obtains the jewel of evil
                 beq.s   @SkipJewelOfEvil
                 
                 adda.w  #2,a1
@@ -1166,8 +1166,8 @@ WriteEnemyLvOrExp:
 @WriteJewels:   
             if (ALTERNATE_JEWEL_ICONS_DISPLAY=0)
                 tst.w   member(a6)
-                bne.s   @DmaIcons       ; skip if anyone other than Bowie
-                chkFlg  384             ; Set after Bowie obtains the jewel of light/evil... whichever it is
+                bne.s   @DmaIcons       ; skip if anyone other than MUSHRA
+                chkFlg  384             ; Set after MUSHRA obtains the jewel of light/evil... whichever it is
                 beq.s   @DmaIcons       ; skip if we haven't obtained Jewel of Light
                 bsr.s   WriteJewelIcons
             endif
@@ -1333,7 +1333,7 @@ WriteJewelIcons:
                 bsr.s   LoadJewelIconPixels
                 adda.w  #ICON_TILE_BYTESIZE,a2
                 
-                chkFlg  385             ; Set after Bowie obtains King Galam's jewel
+                chkFlg  385             ; Set after MUSHRA obtains King Galam's jewel
                 beq.s   @Return         ; skip if we haven't obtained Jewel of Evil
                 
                 ; Copy icon tiles to window layout

@@ -38,7 +38,7 @@ cs_5FB6A:       textCursor 3377
                 setActscriptWait ALLY_PETER,eas_Jump
                 nextSingleText $80,ALLY_PETER ; "But...but...{N}Woooooow!{W1}"
                 setCamDest 4,6
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 playSound $FE
                 playSound SFX_BIG_DOOR_RUMBLE
                 setQuake 3
@@ -70,7 +70,7 @@ cs_5FB6A:       textCursor 3377
                 setCameraEntity 65535
                 mapLoad MAP_OVERWORLD_GRANS_NORTH_SHORE,40,12
                 loadMapEntities ce_5FDD4
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setBlocks 60,59,4,5,44,15
                 fadeInB
                 executeSubroutine sub_5FD7C
@@ -103,7 +103,7 @@ cs_5FB6A:       textCursor 3377
                 fadeOutB
                 mapLoad MAP_OVERWORLD_GRANS_NORTH_SHORE,40,12
                 loadMapEntities ce_5FDD4
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setBlocks 60,59,4,5,44,15
                 customActscriptWait 128
                  ac_setSpeed 16,16      ;   

@@ -4,7 +4,7 @@
 bbcs_28:        textCursor 2661
                 loadMapFadeIn MAP_PANGOAT_VALLEY_BRIDGE,0,4
                 loadMapEntities ce_4C03C
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,0,9,RIGHT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -13,7 +13,7 @@ bbcs_28:        textCursor 2661
                 playSound MUSIC_BATTLE_THEME_3
                 fadeInB
                 cameraSpeed $30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveRight 3
                 endActions
                 entityActions FOLLOWER_B
@@ -47,16 +47,16 @@ bbcs_28:        textCursor 2661
                 endActions
                 nextSingleText $0,ALLY_PETER ; "Those monsters are eating{N}the bridge.{W1}"
                 nextSingleText $0,129   ; "Help!  Help me!{W1}"
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript FOLLOWER_B,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                  moveRight 1
                  moveDown 1
                 endActions
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript ALLY_PETER,eas_2xUpDown
                 csWait 100
@@ -69,18 +69,18 @@ bbcs_28:        textCursor 2661
                  moveDown 2
                 endActions
                 csWait 10
-                stopEntity ALLY_BOWIE
-                customActscriptWait ALLY_BOWIE
+                stopEntity ALLY_MUSHRA
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 64,64      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
                 setQuake 2
                 playSound SFX_HIT_2
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                 endActions
-                setFacing ALLY_BOWIE,UP
-                customActscriptWait ALLY_BOWIE
+                setFacing ALLY_MUSHRA,UP
+                customActscriptWait ALLY_MUSHRA
                  ac_motion OFF          ;   
                  ac_orientDown          ;   
                  ac_updateSprite        ;   
@@ -92,7 +92,7 @@ bbcs_28:        textCursor 2661
                 nextText $0,FOLLOWER_B  ; "Look!{W2}"
                 nextSingleText $0,FOLLOWER_B ; "She's stranded on the{N}bridge.{W1}"
                 setFacing ALLY_PETER,RIGHT
-                shiver ALLY_BOWIE
+                shiver ALLY_MUSHRA
                 setCamDest 7,21
                 nextSingleText $0,ALLY_PETER ; "Get away from the bridge{N}before it falls into the{N}river!{W1}"
                 nextText $0,129         ; "I sprained my ankle!{N}Please help me!{W2}"
@@ -101,12 +101,12 @@ bbcs_28:        textCursor 2661
                 setFacing FOLLOWER_B,DOWN
                 setActscriptWait FOLLOWER_B,eas_Jump
                 csWait 30
-                setActscriptWait ALLY_BOWIE,eas_Init
-                startEntity ALLY_BOWIE
-                headshake ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                startEntity ALLY_MUSHRA
+                headshake ALLY_MUSHRA
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}, defeat all the{N}monsters!  Hurry!{W1}"
                 setActscript ALLY_PETER,eas_Jump
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 csc_end
 ce_4C03C:       mainEntity 1,8,RIGHT
                 entity 0,9,RIGHT,ALLY_PETER,eas_Init

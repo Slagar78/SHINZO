@@ -3,13 +3,13 @@
 ; 0x5E0F8..0x5E22C : 
 cs_5E0F8:       textCursor 2053
                 setCameraEntity ALLY_GYAN
-                setDest ALLY_BOWIE,19,7
+                setDest ALLY_MUSHRA,19,7
                 entityActionsWait ALLY_PETER
                  moveDown 1
                 endActions
                 setPos FOLLOWER_B,19,8,RIGHT
                 setPos ALLY_PETER,18,8,RIGHT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_GYAN,LEFT
                 nextSingleText $0,ALLY_GYAN ; "Well, you're not from{N}Pacalon, are you?{W1}"
                 nextSingleText $0,FOLLOWER_B ; "We're from Granseal,{N}Mr. {NAME;24}.{W1}"
@@ -23,19 +23,19 @@ cs_5E0F8:       textCursor 2053
                 entityActionsWait FOLLOWER_B
                  moveDown 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActionsWait ALLY_GYAN
                  moveLeft 4
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
                 entityActionsWait FOLLOWER_B
                  moveUp 1
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,UP
                 setFacing ALLY_GYAN,RIGHT
                 csWait 10
@@ -43,10 +43,10 @@ cs_5E0F8:       textCursor 2053
                 nextSingleText $0,ALLY_PETER ; "To defeat devils!{W1}"
                 setFacing ALLY_GYAN,DOWN
                 nextSingleText $0,ALLY_GYAN ; "Really?{W1}"
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 entityActionsWait FOLLOWER_B
                  moveUp 1
                 endActions
@@ -68,7 +68,7 @@ cs_5E0F8:       textCursor 2053
                 setFacing ALLY_GYAN,RIGHT
                 nextSingleText $0,ALLY_GYAN ; "Let me go with you!{W1}"
                 join ALLY_GYAN
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 followEntity ALLY_GYAN,FOLLOWER_B,2
                 setPos ALLY_ZYNK,4,12,UP

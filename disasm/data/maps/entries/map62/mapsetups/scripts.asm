@@ -41,7 +41,7 @@ cs_5C8D4:       textCursor 3619
 cs_5C8FE:       textCursor 3627
                 nextSingleText $0,129   ; "You need my help?{W1}"
                 nextSingleText $0,129   ; "Come in.  Talk to me.{W1}"
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
                 csc_end

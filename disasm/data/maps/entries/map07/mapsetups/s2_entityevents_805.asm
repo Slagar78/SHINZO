@@ -63,7 +63,7 @@ Map7_EntityEvent1:
                 bra.s   loc_55616
 byte_55602:
                 
-                chkFlg  703             ; Set after the scene where Bowie brings the plank above deck, also set after the initial Ribble scene, where the guy runs away
+                chkFlg  703             ; Set after the scene where MUSHRA brings the plank above deck, also set after the initial Ribble scene, where the guy runs away
                 bne.s   byte_55612      
                 txt     1191            ; "Gee, Parmecia is full{N}of wonders!{W2}"
                 txt     1192            ; "Phoenix, Volcanon...it's{N}like living a myth!{W1}"

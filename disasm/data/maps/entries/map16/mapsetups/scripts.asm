@@ -4,7 +4,7 @@
 cs_51F88:       textCursor 962
                 nextSingleText $C0,128  ; "Listen, everybody!{N}We're going to Granseal!{W1}"
                 setFacing ALLY_SLADE,DOWN
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setCamDest 12,11
                 nextSingleText $C0,ALLY_SLADE ; "We're too late!{W1}"
                 nextText $C0,128        ; "As you may know, my{N}messenger was killed!{W2}"
@@ -130,7 +130,7 @@ cs_51F88:       textCursor 962
                  moveDown 7
                 endActions
                 setFacing ALLY_SLADE,DOWN
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setCamDest 12,5
                 hide ALLY_LEMON
                 hide 128
@@ -152,7 +152,7 @@ cs_51F88:       textCursor 962
                 hide 144
                 nextText $C0,ALLY_SLADE ; "They've gone.{N}The war begins.{W1}"
                 setFacing ALLY_SLADE,LEFT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 nextText $C0,ALLY_SLADE ; "So, what should we do?{N}Are you still going to{N}Granseal?{W1}"
                 nextText $C0,ALLY_SLADE ; "You're serious?{N}Do you think you can stop{N}the war?{W2}"
                 nextSingleText $0,ALLY_SLADE ; "I will leave you once I'm{N}outside the gate!{W1}"
@@ -164,8 +164,8 @@ cs_521BA:       textCursor 986
                 setCamDest 0,17
                 nextSingleText $0,145   ; "How did you get out?{W1}"
                 setActscriptWait ALLY_SLADE,eas_Init
-                setActscriptWait ALLY_BOWIE,eas_Init
-                setDest ALLY_BOWIE,3,19
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                setDest ALLY_MUSHRA,3,19
                 setDest ALLY_SLADE,4,19
                 nextSingleText $0,ALLY_SLADE ; "I...{W1}"
                 nextSingleText $0,146   ; "Wow, great jewel!{W1}"
@@ -173,25 +173,25 @@ cs_521BA:       textCursor 986
                 nextSingleText $0,147   ; "Oh, this?{N}The King gave it to me!{W1}"
                 nextSingleText $0,146   ; "Because you captured that{N}rat?{W1}"
                 setCamDest 0,13
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_SLADE,LEFT
                 nextText $0,147         ; "Yes.  I presented them to{N}King Galam.{W2}"
                 nextSingleText $0,147   ; "He was so kind to give me{N}one of the pair, the Jewel{N}of Light!{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveRight 1
                 endActions
                 entityActionsWait ALLY_SLADE
                  moveRight 1
                 endActions
                 nextSingleText $0,145   ; "Wait!{W1}"
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_SLADE,DOWN
                 setCamDest 0,18
                 nextSingleText $0,145   ; "How did you escape?{W1}"
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_SLADE,LEFT
                 csWait 20
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_SLADE,DOWN
                 setDest 145,9,23
                 setActscriptWait 145,eas_Jump

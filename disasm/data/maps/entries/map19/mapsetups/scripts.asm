@@ -12,11 +12,11 @@ cs_53176:       setCameraEntity 65535
                 newEntity 149,30,10,UP,MAPSPRITE_WORKER
                 newEntity 150,30,11,UP,MAPSPRITE_WORKER
                 csWait 1
-                setPos ALLY_BOWIE,26,9,RIGHT
+                setPos ALLY_MUSHRA,26,9,RIGHT
                 setPos ALLY_SARAH,26,10,RIGHT
                 setPos ALLY_CHESTER,26,11,RIGHT
                 setPos 140,63,63,DOWN
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_SARAH,eas_Init
                 setActscriptWait ALLY_CHESTER,eas_Init
                 fadeInB
@@ -191,7 +191,7 @@ cs_53176:       setCameraEntity 65535
                 endActions
                 setFacing 138,LEFT
                 nextText $80,138        ; "You're the pupils of Astral.{N}I know of you, {LEADER}.{W2}"
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
                 csWait 20
@@ -215,7 +215,7 @@ cs_534AC:       entityActionsWait 140
                 setFacing 140,LEFT
                 textCursor 758
                 nextSingleText $0,140   ; "Thank you.{N}Depart to fetch Hawel{N}immediately.{W1}"
-                followEntity ALLY_SARAH,ALLY_BOWIE,2
+                followEntity ALLY_SARAH,ALLY_MUSHRA,2
                 followEntity ALLY_CHESTER,ALLY_SARAH,2
                 csc_end
 cs_534D2:       textCursor 694
@@ -309,7 +309,7 @@ cs_535FA:       textCursor 690
                 nextSingleText $0,129   ; "King Galam took{N}Princess Elis to the{N}Ancient Tower!{W1}"
                 nextSingleText $0,130   ; "Elis is in the tower.{N}I shall go with you and{N}save my daughter.{W1}"
                 nextSingleText $FF,255  ; "King Granseal and the{N}Minister go with {LEADER}.{W1}"
-                followEntity 130,ALLY_BOWIE,2
+                followEntity 130,ALLY_MUSHRA,2
                 followEntity 129,130,2
                 csc_end
 cs_53620:       textCursor 713

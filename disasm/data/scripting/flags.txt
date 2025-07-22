@@ -1,4 +1,4 @@
-0000=Bowie joined
+0000=MUSHRA joined
 0001=Sarah joined
 0002=Chester joined
 0003=Jaha joined
@@ -30,7 +30,7 @@
 0029=Claude joined
 0030=Character 31 joined
 0031=Character 32 joined
-0032=Bowie in active party
+0032=MUSHRA in active party
 0033=Sarah in active party
 0034=Chester in active party
 0035=Jaha in active party
@@ -382,8 +382,8 @@
 0381=TEMP FLAG #7D
 0382=TEMP FLAG #7E
 0383=TEMP FLAG #7F
-0384=Set after Bowie obtains the jewel of light/evil... whichever it is
-0385=Set after Bowie obtains King Galam's jewel
+0384=Set after MUSHRA obtains the jewel of light/evil... whichever it is
+0385=Set after MUSHRA obtains King Galam's jewel
 0386=Set during battle 32, after Jaro switches sides
 0387=Set after the first set of tile changes in the Oddeye battle
 0388=Set after the second set of tile changes in the Oddeye battle
@@ -599,7 +599,7 @@
 0598=
 0599=These are all 00, presumably unused
 0600=Set after agreeing to try getting into the castle
-0601=Set after Bowie is intercepted by his mother going downstairs
+0601=Set after MUSHRA is intercepted by his mother going downstairs
 0602=Set after Astral's second basement line
 0603=Set after the messenger scene
 0604=Set after the guards have listened to Sarah and allowed you into the castle
@@ -698,15 +698,15 @@
 0697=
 0698=
 0699=
-0700=Set after ship arrives in Parmecia and you regain control of Bowie
+0700=Set after ship arrives in Parmecia and you regain control of MUSHRA
 0701=Set after the scene with Peter and the kids in New Granseal
 0702=Set after the scene with Peter at the Castle (ends with you leaving the Castle)
-0703=Set after the scene where Bowie brings the plank above deck, also set after the initial Ribble scene, where the guy runs away
+0703=Set after the scene where MUSHRA brings the plank above deck, also set after the initial Ribble scene, where the guy runs away
 0704=
 0705=Set after you automatically walk into New Granseal after it is built
 0706=Set after the scene with the sailor and soldier in New Granseal (Peter intro)
 0707=Set after the "one year has passed" text, after New Granseal is built
-0708=Set after the scene in Ribble where the mayor confronts Bowie
+0708=Set after the scene in Ribble where the mayor confronts MUSHRA
 0709=Set after the mayor in Ribble scene... this flag unlocks the doors
 0710=Set after Oddler wanders down from the mountain
 0711=Set after you dislodge the turtle/fairy in Polca, also set after you speak to Volcanon
@@ -759,7 +759,7 @@
 0758=
 0759=Set after talking to one of the dwarves in the mine near the Fairy Woods
 0760=Set after the fairy cures the sick dwarf in the mine
-0761=Set after the dwarf gives Bowie the cannon
+0761=Set after the dwarf gives MUSHRA the cannon
 0762=Set after the fairy tags along at Creed's
 0763=
 0764=

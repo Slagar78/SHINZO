@@ -5,7 +5,7 @@ abcs_battle01:  textCursor 2305
                 resetForceBattleStats
                 loadMapFadeIn MAP_ANCIENT_TOWER_FIRST_ROOM,2,0
                 loadMapEntities ce_497F6
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setPos ALLY_SARAH,8,7,UP
                 setPos ALLY_CHESTER,8,8,UP
                 fadeInB
@@ -23,7 +23,7 @@ abcs_battle01:  textCursor 2305
                 csWait 5
                 setActscript 129,eas_2xRightLeft
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 30
                 mapFadeOutToWhite
                 csWait 30
@@ -47,7 +47,7 @@ abcs_battle01:  textCursor 2305
                  moveDown 1
                 endActions
                 nextSingleText $0,129   ; "Oh, there it is!{W1}"
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_SARAH,DOWN
                 setFacing ALLY_CHESTER,DOWN
                 setCamDest 2,3

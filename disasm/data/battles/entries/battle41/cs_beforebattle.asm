@@ -4,7 +4,7 @@
 bbcs_41:        textCursor 3083
                 loadMapFadeIn MAP_ANCIENT_TOWER_CLIMB,12,21
                 loadMapEntities ce_4ED76
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setPos ALLY_PETER,16,24,RIGHT
                 setPos FOLLOWER_B,15,24,RIGHT
                 setPos ALLY_LEMON,14,24,RIGHT
@@ -13,7 +13,7 @@ bbcs_41:        textCursor 3083
 cs_4ED48:       playSound MUSIC_BATTLE_THEME_3
                 fadeInB
                 nextSingleText $0,128   ; "Who are you?!{N}Oh, are you from Granseal?{W1}"
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setCamDest 12,4
                 nextSingleText $0,128   ; "But, Odd Eye went to...{W2}"
                 entityActionsWait 128

@@ -5,7 +5,7 @@
 ; =============== S U B R O U T I N E =======================================
 
 ; Check for muddle 2'd units to control whether or not they take an action,
-;  and to prevent them from killing Bowie or bosses.
+;  and to prevent them from killing MUSHRA or bosses.
 ; 
 ; In:  d0 = character index of attacker
 ;      d1 = character index of defender
@@ -14,7 +14,7 @@
 ; If d3=1 upon return, then no action is taken by the attacker.
 ; 
 ; Return 1 if...
-;         ally attacker and defender is Bowie
+;         ally attacker and defender is MUSHRA
 ;         enemy attacker attacking the first enemy (usually the boss)
 ;         50/50 odds to return 1 if attacker targets itself
 ; Return 0 otherwise.
@@ -29,7 +29,7 @@ DetermineMuddleBattleaction:
                 ; Ally attacker
                 moveq   #1,d3
                 cmpi.b  #COMBATANT_ALLIES_START,d1
-                beq.w   @Done           ; return d3=1 if target is Bowie
+                beq.w   @Done           ; return d3=1 if target is MUSHRA
                 moveq   #0,d3
                 cmp.b   d0,d1
                 bne.w   @Done           ; return d3=0 if the attacker and defender are different

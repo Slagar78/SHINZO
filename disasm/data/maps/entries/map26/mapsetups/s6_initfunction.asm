@@ -28,13 +28,13 @@ return_59E02:
 cs_59E04:       textCursor 1739
                 setCameraEntity 65535
                 reloadMap 21,8
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
-                stopEntity ALLY_BOWIE
+                stopEntity ALLY_MUSHRA
                 stopEntity ALLY_PETER
                 stopEntity FOLLOWER_B
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 10,10      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
@@ -58,14 +58,14 @@ cs_59E04:       textCursor 1739
                  ac_setSpeed 10,10      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                setPos ALLY_BOWIE,26,7,DOWN
+                setPos ALLY_MUSHRA,26,7,DOWN
                 setPos ALLY_PETER,27,6,DOWN
                 setPos FOLLOWER_B,25,6,DOWN
                 setPos 130,26,6,UP
                 setPos 131,25,5,UP
                 setPos 132,27,5,UP
                 fadeInB
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 7
                 endActions
                 entityActions ALLY_PETER
@@ -84,7 +84,7 @@ cs_59E04:       textCursor 1739
                  moveDown 7
                 endActions
                 csWait 20
-                startEntity ALLY_BOWIE
+                startEntity ALLY_MUSHRA
                 startEntity ALLY_PETER
                 startEntity FOLLOWER_B
                 csWait 40
@@ -93,6 +93,6 @@ cs_59E04:       textCursor 1739
                 hide 132
                 csWait 30
                 nextSingleText $FF,255  ; "The Cotton Balloon popped.{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 csc_end

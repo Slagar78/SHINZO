@@ -19,7 +19,7 @@ GetAllyPortrait:
                 ; Check HERO
                 cmpi.b  #CLASS_HERO,d1
                 bne.s   @CheckPHNX      ; HARDCODED promotion classes which trigger new portraits
-                moveq   #PORTRAIT_BOWIE_PROMO,d0
+                moveq   #PORTRAIT_MUSHRA_PROMO,d0
 @CheckPHNX:
                 
                 cmpi.b  #CLASS_PHNX,d1

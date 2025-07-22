@@ -4,7 +4,7 @@
 bbcs_38:        textCursor 3003
                 loadMapFadeIn MAP_OVERWORLD_GRANS_GRANSEAL,9,6
                 loadMapEntities ce_4DE74
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,13,8,DOWN
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -17,7 +17,7 @@ bbcs_38:        textCursor 3003
 cs_4DDFE:       playSound MUSIC_BATTLE_THEME_1
                 fadeInB
                 cameraSpeed $30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 2
                 endActions
                 entityActions ALLY_PETER

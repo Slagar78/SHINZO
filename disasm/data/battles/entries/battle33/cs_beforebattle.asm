@@ -4,7 +4,7 @@
 bbcs_33:        textCursor 2866
                 loadMapFadeIn MAP_MOUN,22,29
                 loadMapEntities ce_4D048
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,27,38,LEFT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -16,7 +16,7 @@ bbcs_33:        textCursor 2866
                 playSound MUSIC_BATTLE_THEME_3
                 fadeInB
                 csWait 30
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 entityActionsWait ALLY_FRAYJA
@@ -33,9 +33,9 @@ bbcs_33:        textCursor 2866
                 setBlocks 1,39,2,2,26,32
                 csWait 20
                 setQuake 0
-                setCameraEntity ALLY_BOWIE
+                setCameraEntity ALLY_MUSHRA
                 csWait 50
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
                 entityActions ALLY_FRAYJA
@@ -43,7 +43,7 @@ bbcs_33:        textCursor 2866
                  moveLeft 1
                  moveUp 1
                 endActions
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 7
                 endActions
                 entityActions FOLLOWER_B
@@ -74,7 +74,7 @@ bbcs_33:        textCursor 2866
                  moveUp 1
                 endActions
                 setFacing FOLLOWER_B,RIGHT
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}, {NAME;22} will be{N}a great asset.{W1}"
                 joinBatParty ALLY_FRAYJA
                 executeSubroutine csub_4D078

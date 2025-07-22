@@ -3,7 +3,7 @@
 ; 0x52530..0x52A80 : 
 cs_52530:       textCursor 901
                 setCamDest 48,0
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 nextSingleText $C0,132  ; "What's wrong with the seal?{W1}"
                 entityActionsWait ALLY_CHESTER
                  moveLeft 1
@@ -17,7 +17,7 @@ cs_52530:       textCursor 901
                  moveLeft 1
                 endActions
                 nextSingleText $0,133   ; "Oh, you woke up!{N}Are you OK?{W1}"
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_CHESTER,LEFT
                 setFacing ALLY_JAHA,LEFT
                 setFacing ALLY_SARAH,LEFT
@@ -74,7 +74,7 @@ cs_52530:       textCursor 901
                 setCamDest 47,0
                 setFacing ALLY_SARAH,RIGHT
                 setFacing 133,RIGHT
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_JAHA,DOWN
                 setFacing ALLY_KAZIN,DOWN
                 setFacing 132,DOWN
@@ -158,10 +158,10 @@ cs_52530:       textCursor 901
                 setFacing ALLY_CHESTER,LEFT
                 nextSingleText $0,ALLY_CHESTER ; "{LEADER}, let's get back{N}to Granseal!{W1}"
                 csWait 30
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_JAHA,eas_Jump
                 setActscriptWait ALLY_KAZIN,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_JAHA,eas_Jump
                 setActscriptWait ALLY_KAZIN,eas_Jump
                 csWait 30
@@ -237,12 +237,12 @@ cs_52530:       textCursor 901
                 endActions
                 setFacing ALLY_SARAH,UP
                 nextSingleText $0,ALLY_SARAH ; "That's enough!{N}{LEADER}, let's go!{W1}"
-                followEntity ALLY_JAHA,ALLY_BOWIE,2
+                followEntity ALLY_JAHA,ALLY_MUSHRA,2
                 followEntity ALLY_KAZIN,ALLY_JAHA,2
                 followEntity ALLY_CHESTER,ALLY_KAZIN,2
                 followEntity ALLY_SARAH,ALLY_CHESTER,2
                 csc_end
-cs_528CA:       entityActionsWait ALLY_BOWIE
+cs_528CA:       entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
                 csc_end
@@ -279,7 +279,7 @@ cs_52938:       textCursor 952
                  moveDown 1
                 endActions
                 setFacing ALLY_SLADE,LEFT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 nextText $0,ALLY_SLADE  ; "You're right.  I did it.{W2}"
                 nextText $0,ALLY_SLADE  ; "But, I didn't know all this{N}would happen.{W2}"
                 nextSingleText $0,ALLY_SLADE ; "Please take me with you.{W1}"
@@ -288,7 +288,7 @@ cs_52938:       textCursor 952
                 setActscript ALLY_SLADE,eas_Jump
                 nextText $0,ALLY_SLADE  ; "Thanks.  I promise to help{N}you.{W2}"
                 nextSingleText $0,ALLY_SLADE ; "This tunnel leads to the{N}kitchen.{N}We can escape safely.{W1}"
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
                 fadeOutB
@@ -302,12 +302,12 @@ cs_52938:       textCursor 952
                 hide ALLY_CHESTER
                 hide ALLY_JAHA
                 hide ALLY_KAZIN
-                setPos ALLY_BOWIE,29,12,DOWN
+                setPos ALLY_MUSHRA,29,12,DOWN
                 setPos ALLY_SLADE,29,11,DOWN
-                stopEntity ALLY_BOWIE
+                stopEntity ALLY_MUSHRA
                 stopEntity ALLY_SLADE
                 fadeInB
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 16,16      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
@@ -315,19 +315,19 @@ cs_52938:       textCursor 952
                  ac_setSpeed 16,16      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                setActscript ALLY_BOWIE,eas_RotateRight
+                setActscript ALLY_MUSHRA,eas_RotateRight
                 setActscript ALLY_SLADE,eas_RotateRight
                 setDest 32768,29,18
                 setDest ALLY_SLADE,29,17
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_SLADE,DOWN
-                startEntity ALLY_BOWIE
+                startEntity ALLY_MUSHRA
                 startEntity ALLY_SLADE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_SLADE,eas_Init
-                followEntity ALLY_SLADE,ALLY_BOWIE,2
+                followEntity ALLY_SLADE,ALLY_MUSHRA,2
                 csc_end
-cs_52A3C:       setActscriptWait ALLY_BOWIE,eas_Init
+cs_52A3C:       setActscriptWait ALLY_MUSHRA,eas_Init
                 setFacing 131,LEFT
                 textCursor 958
                 nextText $0,131         ; "Hey, it's noisy next door.{W2}"
@@ -337,10 +337,10 @@ cs_52A3C:       setActscriptWait ALLY_BOWIE,eas_Init
                 nextText $0,131         ; "Who are you?{W2}"
                 nextSingleText $0,131   ; "Now, I have to get back{N}to work.{W1}"
                 csWait 20
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 csWait 20
                 entityActionsWait 131
                  moveRight 1

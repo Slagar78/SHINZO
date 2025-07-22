@@ -4,7 +4,7 @@
 bbcs_18:        textCursor 2520
                 loadMapFadeIn MAP_TAROS_SHRINE,7,22
                 loadMapEntities ce_4B2DA
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
                 setActscriptWait ALLY_ROHDE,eas_Init
@@ -15,7 +15,7 @@ bbcs_18:        textCursor 2520
                 playSound MUSIC_SHRINE
                 fadeInB
                 cameraSpeed $40
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 6
                 endActions
                 entityActions ALLY_PETER
@@ -29,7 +29,7 @@ bbcs_18:        textCursor 2520
                 endActions
                 nextSingleText $0,128   ; "Stop!{W1}"
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript ALLY_PETER,eas_2xRightLeft
                 csWait 5
@@ -45,7 +45,7 @@ bbcs_18:        textCursor 2520
                  moveUp 1
                 endActions
                 nextSingleText $0,ALLY_ROHDE ; "Don't you know?{W1}"
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 csWait 30
@@ -53,13 +53,13 @@ bbcs_18:        textCursor 2520
                 nextSingleText $0,ALLY_ROHDE ; "That's Taros.  The guardian of{N}this ancient shrine.{W1}"
                 nextSingleText $0,128   ; "Again, stop right there, or{N}I'll attack you.{W1}"
                 setCamDest 7,22
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,LEFT
                 setFacing ALLY_ROHDE,RIGHT
                 nextSingleText $C0,ALLY_PETER ; "What should we do?{W1}"
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 nextSingleText $0,ALLY_ROHDE ; "The Caravan is there, behind{N}him.  We must have it!{W1}"
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing ALLY_ROHDE,UP
                 nextSingleText $0,128   ; "Time's up!  Now we battle.{W1}"

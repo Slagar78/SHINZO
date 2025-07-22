@@ -4,7 +4,7 @@
 IntroCutscene4: textCursor 4233
                 mapLoad MAP_GRANSEAL_CASTLE,7,3
                 loadMapEntities ce_48FAA
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 fadeInFromBlackHalf
                 csWait 40
                 entityActions 129

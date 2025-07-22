@@ -3,8 +3,8 @@
 ; 0x57AAA..0x57CCC : 
 cs_57AAA:       textCursor 3151
                 setActscriptWait ALLY_PETER,eas_Init
-                setDest ALLY_BOWIE,39,11
-                entityActionsWait ALLY_BOWIE
+                setDest ALLY_MUSHRA,39,11
+                entityActionsWait ALLY_MUSHRA
                  moveLeft 1
                 endActions
                 setCameraEntity ALLY_PETER
@@ -13,10 +13,10 @@ cs_57AAA:       textCursor 3151
                 entityActionsWait ALLY_PETER
                  moveUp 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 entityActionsWait ALLY_PETER
                  moveUp 1
                 endActions
@@ -37,10 +37,10 @@ cs_57AAA:       textCursor 3151
                 csWait 30
                 nextSingleText $0,ALLY_PETER ; "I've brought a friend.{W1}"
                 setFacing ALLY_PETER,DOWN
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 entityActionsWait ALLY_PETER
                  moveDown 2
                 endActions
@@ -49,10 +49,10 @@ cs_57AAA:       textCursor 3151
                  moveLeft 1
                 endActions
                 setFacing ALLY_PETER,UP
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveLeft 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $0,ALLY_PETER ; "This is {LEADER}.{N}He's from Granseal.{W1}"
                 setCamDest 34,2
                 playSound SFX_BIG_DOOR_RUMBLE
@@ -80,13 +80,13 @@ cs_57AAA:       textCursor 3151
                 csWait 90
                 setQuake 0
                 setCamDest 34,5
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
                 entityActionsWait ALLY_PETER
                  moveRight 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 entityActionsWait ALLY_PETER
                  moveUp 3
                 endActions
@@ -121,10 +121,10 @@ cs_57AAA:       textCursor 3151
                 endActions
                 nextSingleText $0,ALLY_PETER ; "Then, please give some{N}advice to {LEADER}.{W1}"
                 nextSingleText $0,128   ; "{LEADER}, believe in the{N}power of the jewel.{W2}"
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveLeft 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 2
                 endActions
                 nextSingleText $0,128   ; "It belongs to both the{N}light and the darkness.{W2}"
@@ -149,5 +149,5 @@ cs_57AAA:       textCursor 3151
                 join ALLY_PETER
                 joinForceAI ALLY_PETER,$0 ; 0054 JOIN FORCE WITH AI
             endif
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 csc_end

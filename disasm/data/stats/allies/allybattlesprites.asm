@@ -9,7 +9,7 @@ table_AllyBattlesprites:
 ;        Palette range varies depending on the sprite.
 ;        Constant names ("enums"), shorthands (defined by macro), and numerical indexes are interchangeable.
                 
-; 0: BOWIE
+; 0: MUSHRA
                 allyBattleSprAndPlt SDMN, SDMN, 0
                 allyBattleSprAndPlt HERO, HERO, 0
                 allyBattleSprAndPlt NONE, NONE, 0

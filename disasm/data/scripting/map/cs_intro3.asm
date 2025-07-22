@@ -4,7 +4,7 @@
 IntroCutscene3: textCursor 4215
                 mapLoad MAP_FORCE_SWORD_SHRINE,21,1
                 loadMapEntities ce_48A50
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 resetMap
                 fadeInB
                 reloadMap 21,1

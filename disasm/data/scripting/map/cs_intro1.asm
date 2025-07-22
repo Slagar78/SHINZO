@@ -8,7 +8,7 @@ IntroCutscene1: textCursor 4186
                 mapLoad MAP_FORCE_SWORD_SHRINE,2,5
                 csWait 1
                 loadMapEntities ce_48340
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait 131,eas_InitFixedSprite
                 setActscriptWait 132,eas_InitFixedSprite
                 setActscriptWait 133,eas_InitFixedSprite

@@ -114,7 +114,7 @@ return_50E42:
 Map3_ZoneEvent6:
                 
                  
-                chkFlg  601             ; Set after Bowie is intercepted by his mother going downstairs
+                chkFlg  601             ; Set after MUSHRA is intercepted by his mother going downstairs
                 bne.s   return_50E64
                 script  cs_5145C
                 move.w  #$80,d0 
@@ -122,7 +122,7 @@ Map3_ZoneEvent6:
                 moveq   #6,d2
                 moveq   #1,d3
                 jsr     MakeEntityWalk
-                setFlg  601             ; Set after Bowie is intercepted by his mother going downstairs
+                setFlg  601             ; Set after MUSHRA is intercepted by his mother going downstairs
 return_50E64:
                 
                 rts

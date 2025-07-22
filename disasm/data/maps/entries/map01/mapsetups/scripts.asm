@@ -3,8 +3,8 @@
 ; 0x5E772..0x5E86C : 
 cs_5E772:       textCursor 3649
                 csWait 30
-                setFacing ALLY_BOWIE,UP
-                setDest ALLY_BOWIE,44,27
+                setFacing ALLY_MUSHRA,UP
+                setDest ALLY_MUSHRA,44,27
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
                 flashScreenWhite $1E
@@ -33,20 +33,20 @@ cs_5E772:       textCursor 3649
                 nextSingleText $0,ALLY_PETER ; "Yes, we are, but who are{N}you?{W1}"
                 shiver ALLY_TAYA
                 nextSingleText $80,ALLY_TAYA ; "Do you know how long I've{N}been here as a stone statue?{W1}"
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActionsWait FOLLOWER_B
                  moveLeft 1
                 endActions
                 setFacing FOLLOWER_B,UP
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $0,FOLLOWER_B ; "How do you know {LEADER}?{W1}"
                 setFacing ALLY_TAYA,DOWN
                 nextSingleText $80,ALLY_TAYA ; "Oh, I'm sorry.{W2}"
@@ -59,7 +59,7 @@ cs_5E772:       textCursor 3649
                 join ALLY_TAYA
                 nextSingleText $80,ALLY_TAYA ; "You want to go to Grans,{N}right?  Then, I think we{N}can use the ancient ship.{W2}"
                 nextSingleText $80,ALLY_TAYA ; "Let's go to Nazca.{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 addNewFollower ALLY_TAYA
                 csc_end

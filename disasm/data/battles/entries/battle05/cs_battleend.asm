@@ -3,7 +3,7 @@
 ; 0x49AB2..0x49B48 : Enemy defeated cutscene for battle 5
 edcs_battle5:   textCursor 2323
                 stopEntity 128
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_SLADE,UP
                 setActscriptWait ALLY_SLADE,eas_Init
                 setCamDest 12,0

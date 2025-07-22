@@ -2,7 +2,7 @@
 ; ASM FILE data\maps\entries\map09\mapsetups\scripts.asm :
 ; 0x568F6..0x56B84 : 
 cs_568F6:       textCursor 1372
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 csWait 20
                 entityActionsWait 130
                  moveLeft 1
@@ -37,11 +37,11 @@ cs_568F6:       textCursor 1372
                  moveDown 1
                 endActions
                 csWait 20
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
                 csWait 10
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,RIGHT
                 setFacing 130,LEFT
                 nextText $C0,130        ; "Our ancestors came to{N}Parmecia to chase after{N}a soldier called Max.{W2}"
@@ -57,13 +57,13 @@ cs_568F6:       textCursor 1372
                  moveUp 1
                 endActions
                 setFacing ALLY_PETER,RIGHT
-                setFacing ALLY_BOWIE,LEFT
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                setFacing ALLY_MUSHRA,LEFT
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 csc_end
 cs_569BC:       textCursor 1382
                 setDest ALLY_PETER,15,57
                 setFacing ALLY_PETER,DOWN
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 nextText $C0,ALLY_ROHDE ; "(Sniff)...(sniff)...I smell{N}something old....{W1}"
                 setFacing ALLY_ROHDE,UP
                 nextSingleText $C0,ALLY_ROHDE ; "That sword must be really{N}old.  Oh, my!{N}It's the Achilles Sword!{W2}"
@@ -71,16 +71,16 @@ cs_569BC:       textCursor 1382
                  ac_setSpeed 40,40      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 40,40      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                setActscriptWait ALLY_BOWIE,eas_DeactivateAutoFacing
+                setActscriptWait ALLY_MUSHRA,eas_DeactivateAutoFacing
                 entityActions ALLY_ROHDE
                  moveUp 1
                 endActions
                 csWait 3
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
                 nextText $C0,ALLY_ROHDE ; "You're an adventurer, right?{N}Don't you need a vehicle?{N}Huh?{W2}"
@@ -113,17 +113,17 @@ cs_56A82:       textCursor 1394
                 nextSingleText $FF,255  ; "{CLEAR}{LEADER} decides to take{N}Dr. {NAME;11} with him.{W1}{CLEAR}"
                 setActscriptWait ALLY_ROHDE,eas_Init
                 setPriority ALLY_ROHDE,$FFFF
-                setPriority ALLY_BOWIE,$0
+                setPriority ALLY_MUSHRA,$0
                 setActscriptWait ALLY_ROHDE,eas_Jump
                 setActscript ALLY_ROHDE,eas_Jump
                 nextSingleText $C0,ALLY_ROHDE ; "Let's go!{W1}"
-                setPriority ALLY_BOWIE,$FFFF
+                setPriority ALLY_MUSHRA,$FFFF
                 setF 725                ; Set after telling Rohde that you're going to get the Caravan
                 setF 84                 ; Rohde is a follower
                 setStoryFlag 18         ; Battle 18 unlocked - BATTLE_VERSUS_TAROS              
                 followEntity ALLY_ROHDE,FOLLOWER_B,2
-cs_56AD4:       setActscriptWait ALLY_BOWIE,eas_Init
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+cs_56AD4:       setActscriptWait ALLY_MUSHRA,eas_Init
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 csc_end
 cs_56AE6:       textCursor 1392
                 nextText $C0,ALLY_ROHDE ; "You again?!{W1}"
@@ -133,7 +133,7 @@ cs_56AE6:       textCursor 1392
                 jump cs_56A70
 cs_56B02:       textCursor 1411
                 setPriority ALLY_RICK,$FFFF
-                setPriority ALLY_BOWIE,$0
+                setPriority ALLY_MUSHRA,$0
                 nextText $0,ALLY_RICK   ; "Are you the boy who killed{N}the legendary Kraken?{W2}"
                 nextText $0,ALLY_RICK   ; "I got to Hassan thanks to{N}you.{W2}"
                 nextSingleText $0,ALLY_RICK ; "I didn't know this was such a{N}dull town.{W1}"
@@ -142,13 +142,13 @@ cs_56B02:       textCursor 1411
                 csWait 30
                 setActscriptWait ALLY_RICK,eas_Jump
                 csWait 20
-                faceEntity ALLY_RICK,ALLY_BOWIE
+                faceEntity ALLY_RICK,ALLY_MUSHRA
                 nextSingleText $0,ALLY_RICK ; "Wh...what's that?!{W1}"
                 faceEntity ALLY_PETER,ALLY_RICK
                 faceEntity ALLY_RICK,ALLY_PETER
                 nextSingleText $C0,ALLY_PETER ; "It's the Caravan...an ancient{N}vehicle found in the shrine.{W1}"
                 csWait 20
-                faceEntity ALLY_RICK,ALLY_BOWIE
+                faceEntity ALLY_RICK,ALLY_MUSHRA
                 nextText $0,ALLY_RICK   ; "I love interesting{N}things like that!{W2}"
                 nextText $0,ALLY_RICK   ; "Wow!  You found it?!{W2}"
                 nextSingleText $0,ALLY_RICK ; "I want to go with you to{N}see some more interesting{N}things!{W1}"
@@ -157,6 +157,6 @@ cs_56B02:       textCursor 1411
                 setActscriptWait ALLY_RICK,eas_Jump
                 setActscriptWait ALLY_RICK,eas_Jump
                 csWait 20
-                setPriority ALLY_BOWIE,$FFFF
+                setPriority ALLY_MUSHRA,$FFFF
                 addNewFollower ALLY_RICK
                 csc_end

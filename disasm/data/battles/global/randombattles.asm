@@ -23,7 +23,7 @@ list_RandomBattles:
 table_MeleeTypeEnemyUpgradeDefinition:
                 
 ; 3 bytes per entry, followed by a length prefixed list :
-;       0:  base upgrade range (applied to a multiplier based on Bowie's effective level)
+;       0:  base upgrade range (applied to a multiplier based on MUSHRA's effective level)
 ;       1:  first upgradable enemy
 ;       2:  last upgradable enemy
 ;       3+: list of excluded enemies

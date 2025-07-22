@@ -2,11 +2,11 @@
 ; ASM FILE data\battles\entries\battle11\cs_beforebattle.asm :
 ; 0x4ABFE..0x4ACC8 : Cutscene before battle 11
 bbcs_11:        textCursor 2483
-                setCameraEntity ALLY_BOWIE
+                setCameraEntity ALLY_MUSHRA
                 loadMapFadeIn MAP_CAVERNS_OF_DARKNESS,8,19
                 loadMapEntities ce_4ACA0
-                setActscriptWait ALLY_BOWIE,eas_Init
-                setCameraEntity ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                setCameraEntity ALLY_MUSHRA
                 executeSubroutine csub_458E
                 fadeInB
                 playSound $FD
@@ -16,7 +16,7 @@ bbcs_11:        textCursor 2483
                 endActions
                 nextSingleText $0,ALLY_PETER ; "You'll come to the foot of{N}Mt. Volcano through this{N}dark cave.{W2}"
                 setFacing ALLY_PETER,RIGHT
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 nextSingleText $0,ALLY_PETER ; "But, I heard this cave is{N}home to a hobgoblin.{W1}"
                 csWait 20
                 nextSingleText $0,128   ; "Yes, it is!{W1}"
@@ -25,11 +25,11 @@ bbcs_11:        textCursor 2483
                  moveUp 1
                 endActions
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript ALLY_PETER,eas_2xUpDown
                 csWait 120
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 entityActionsWait ALLY_PETER
                  moveUp 1
                 endActions

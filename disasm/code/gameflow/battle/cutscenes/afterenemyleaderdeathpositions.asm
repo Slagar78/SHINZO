@@ -11,7 +11,7 @@
 ApplyPositionsAfterEnemyLeaderDies:
                 
                 movem.l d0-d1/d7-a0,-(sp)
-                moveq   #ALLY_BOWIE,d0
+                moveq   #ALLY_MUSHRA,d0
                 jsr     j_GetCurrentHp
                 tst.w   d1
                 beq.w   @Done
@@ -19,7 +19,7 @@ ApplyPositionsAfterEnemyLeaderDies:
                 jsr     j_GetCurrentHp
                 tst.w   d1
                 bne.w   @Done
-                lea     table_AfterBattlePositions(pc), a0 ; if Bowie alive and enemy leader dead
+                lea     table_AfterBattlePositions(pc), a0 ; if MUSHRA alive and enemy leader dead
                 clr.w   d1
                 getSavedByte CURRENT_BATTLE, d1
 @FindBattle_Loop:

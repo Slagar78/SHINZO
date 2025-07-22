@@ -4,7 +4,7 @@
 bbcs_21:        textCursor 2576
                 loadMapFadeIn MAP_OVERWORLD_DEVILS_TAIL,5,18
                 loadMapEntities ce_4B84C
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,28,24,LEFT
                 setActscriptWait FOLLOWER_B,eas_Init

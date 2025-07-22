@@ -23,7 +23,7 @@ MapSetups:      msMap 3, ms_map3
                 msFlag 805, ms_map7_flag805 ; set after coming back to New Granseal after Creed's Mansion,when Astral joins
                 msMapEnd
                 msMap 8, ms_map8
-                msFlag 708, ms_map8_flag708 ; set after the scene in Ribble where the mayor confronts Bowie
+                msFlag 708, ms_map8_flag708 ; set after the scene in Ribble where the mayor confronts MUSHRA
                 msMapEnd
                 msMap 9, ms_map9
                 msFlag 518, ms_map9_flag518 ; Battle 18 completed
@@ -98,7 +98,7 @@ MapSetups:      msMap 3, ms_map3
                 msMapEnd
                 msMap 30, ms_map30
                 msFlag 785, ms_map30_flag785 ; set after the fairy tags along at Creed's
-                msFlag 761, ms_map30_flag761 ; set after the dwarf gives Bowie the cannon
+                msFlag 761, ms_map30_flag761 ; set after the dwarf gives MUSHRA the cannon
                 msMapEnd
                 msMap 31, ms_map31
                 msFlag 830, ms_map31_flag830 ; set after the Gyan join scene in the Moun underground

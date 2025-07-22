@@ -93,7 +93,7 @@ cs_5A33A:       textCursor 1711
                 csWait 15
                 setPos FOLLOWER_B,7,11,RIGHT
                 setPos ALLY_PETER,7,10,RIGHT
-                setPos ALLY_BOWIE,8,11,RIGHT
+                setPos ALLY_MUSHRA,8,11,RIGHT
                 setCameraEntity 158
                 entityActionsWait 158
                  moveLeft 2
@@ -107,7 +107,7 @@ cs_5A33A:       textCursor 1711
                  moveLeft 3
                  moveDown 3
                 endActions
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing FOLLOWER_B,DOWN
                 entityActionsWait 158
@@ -116,7 +116,7 @@ cs_5A33A:       textCursor 1711
                 endActions
                 hide 158
                 setCamDest 4,7
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveRight 2
                 endActions
                 entityActionsWait 128
@@ -143,8 +143,8 @@ cs_5A4FE:       textCursor 1730
                 setActscript 130,eas_Jump
                 setActscript 131,eas_Jump
                 setActscriptWait 132,eas_Jump
-                setActscriptWait ALLY_BOWIE,eas_Init
-                entityActionsWait ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                entityActionsWait ALLY_MUSHRA
                  moveLeft 1
                 endActions
                 setDest ALLY_PETER,8,10
@@ -163,7 +163,7 @@ cs_5A4FE:       textCursor 1730
                 entityActionsWait 132
                  moveLeft 2
                 endActions
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,RIGHT
                 setFacing FOLLOWER_B,RIGHT
                 entityActions 128

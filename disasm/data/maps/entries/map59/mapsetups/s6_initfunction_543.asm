@@ -20,14 +20,14 @@ return_615E4:
 cs_615E6:       textCursor 3760
                 setCameraEntity 65535
                 reloadMap 9,6
-                setPos ALLY_BOWIE,12,11,UP
-                setPriority ALLY_BOWIE,$0
+                setPos ALLY_MUSHRA,12,11,UP
+                setPriority ALLY_MUSHRA,$0
                 setPriority 128,$FFFF
                 setBlocks 12,39,7,4,10,3
                 setActscriptWait 130,eas_DeactivateAutoFacing
                 setActscriptWait 128,eas_DeactivateAutoFacing
                 setActscriptWait 131,eas_DeactivateAutoFacing
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscript 129,eas_Transparent
                 customActscriptWait 134
                  ac_motion OFF          ;   
@@ -128,11 +128,11 @@ cs_615E6:       textCursor 3760
                  moveUp 1
                  moveLeft 1
                 endActions
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscript 133,eas_Jump
                 setActscriptWait ALLY_LEMON,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscript 133,eas_Jump
                 setActscriptWait ALLY_LEMON,eas_Jump
@@ -157,12 +157,12 @@ cs_615E6:       textCursor 3760
                 playSound MUSIC_ZEON_ATTACK
                 nextSingleText $80,134  ; "I'm not Galam, you fools!{W1}"
                 setActscript 132,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscript 133,eas_Jump
                 setActscriptWait ALLY_LEMON,eas_Jump
                 setActscript 132,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscript 133,eas_Jump
                 setActscriptWait ALLY_LEMON,eas_Jump
@@ -206,19 +206,19 @@ cs_615E6:       textCursor 3760
                 nextSingleText $0,134   ; "{LEADER}!  Phoenix!{N}Come here!{W1}"
                 csWait 20
                 setFacing ALLY_PETER,LEFT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 csWait 20
                 nextSingleText $80,ALLY_PETER ; "Well, {LEADER}.{N}What should we do?{W1}"
                 nextText $0,134         ; "Quickly!  My time is short,{N}but I can still choke her!{W2}"
                 nextSingleText $0,134   ; "Get over here, NOW!{W1}"
                 csWait 20
                 nextSingleText $80,ALLY_PETER ; "We have no choice....{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 nextSingleText $FF,255  ; "{LEADER} nods hopelessly.{W1}"
                 setFacing ALLY_PETER,UP
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 csWait 30
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 16,16      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
@@ -226,7 +226,7 @@ cs_615E6:       textCursor 3760
                  ac_setSpeed 16,16      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 1
                 endActions
                 entityActionsWait ALLY_PETER
@@ -246,9 +246,9 @@ cs_615E6:       textCursor 3760
                 nextSingleText $80,ALLY_PETER ; "But...{W1}"
                 csWait 30
                 setFacing ALLY_PETER,LEFT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 csWait 20
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
                 csWait 30
@@ -275,7 +275,7 @@ cs_615E6:       textCursor 3760
                 nextSingleText $80,ALLY_PETER ; "Oh, my!{W1}"
                 csWait 30
                 setFacing ALLY_PETER,UP
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $80,ALLY_PETER ; "What should I do with it?{W1}"
                 csWait 20
                 setFacing 134,RIGHT
@@ -397,12 +397,12 @@ cs_615E6:       textCursor 3760
                  ac_updateSprite        ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing 133,LEFT
                 nextSingleText $0,134   ; "That is special fire.{N}It burns even vampires!{W1}"
                 shiver 134
                 csWait 20
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing 133,UP
                 nextSingleText $80,ALLY_PETER ; "NO!{W1}"
                 setActscriptWait ALLY_PETER,eas_Init
@@ -456,15 +456,15 @@ cs_615E6:       textCursor 3760
                 ac_end
                 csWait 30
                 setQuake 0
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 64,64      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                setCameraEntity ALLY_BOWIE
-                entityActionsWait ALLY_BOWIE
+                setCameraEntity ALLY_MUSHRA
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
-                setActscriptWait ALLY_BOWIE,eas_BumpUp
+                setActscriptWait ALLY_MUSHRA,eas_BumpUp
                 nextSingleText $FF,255  ; "{LEADER} slapped the jewel{N}out of Zeon's hand.{W1}"
                 playSound $FD
                 setPos 129,14,8,DOWN
@@ -475,24 +475,24 @@ cs_615E6:       textCursor 3760
                 setFacing 134,DOWN
                 headshake 134
                 nextSingleText $0,134   ; "Ouch, darn you {LEADER}!{W1}"
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 48,48      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                setActscriptWait ALLY_BOWIE,eas_DeactivateAutoFacing
+                setActscriptWait ALLY_MUSHRA,eas_DeactivateAutoFacing
                 setActscript 134,eas_BumpDown
                 entityFlashWhite 134,$A
                 playSound SFX_BLAST_SPELL
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 5
                 endActions
                 playSound SFX_FALLING
                 entityFlashWhite 134,$28
-                waitIdle ALLY_BOWIE
+                waitIdle ALLY_MUSHRA
                 playSound SFX_LIGHTNING_2
                 setQuake 4
-                setFacing ALLY_BOWIE,UP
-                customActscriptWait ALLY_BOWIE
+                setFacing ALLY_MUSHRA,UP
+                customActscriptWait ALLY_MUSHRA
                  ac_motion OFF          ;   
                  ac_orientDown          ;   
                  ac_updateSprite        ;   
@@ -501,8 +501,8 @@ cs_615E6:       textCursor 3760
                 csWait 30
                 setQuake 0
                 csWait 30
-                nextSingleText $0,ALLY_BOWIE ; "Ohhh....{W1}"
-                shiver ALLY_BOWIE
+                nextSingleText $0,ALLY_MUSHRA ; "Ohhh....{W1}"
+                shiver ALLY_MUSHRA
                 nextSingleText $FF,255  ; "{LEADER} is stunned.{W1}"
                 setCamDest 10,4
                 setFacing 134,DOWN
@@ -767,13 +767,13 @@ cs_615E6:       textCursor 3760
                 setFacing 133,UP
                 setFacing ALLY_PETER,UP
                 csWait 40
-                setActscriptWait ALLY_BOWIE,eas_Init
-                startEntity ALLY_BOWIE
-                setFacing ALLY_BOWIE,DOWN
-                headshake ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                startEntity ALLY_MUSHRA
+                setFacing ALLY_MUSHRA,DOWN
+                headshake ALLY_MUSHRA
                 csWait 30
                 nextSingleText $80,ALLY_PETER ; "{LEADER},  Zeon was{N}taken away by {NAME;28}.{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 nextSingleText $FF,255  ; "{LEADER} nods.{W1}"
                 csWait 40
                 shiver 133
@@ -785,9 +785,9 @@ cs_615E6:       textCursor 3760
                  moveLeft 1
                  moveUp 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setCamDest 8,5
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 5
                  faceRight 1
                 endActions
@@ -850,23 +850,23 @@ cs_615E6:       textCursor 3760
                 playSound $FD
                 nextSingleText $0,135   ; "She's in a coma.{W1}"
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript 133,eas_2xRightLeft
                 csWait 5
                 setActscript ALLY_PETER,eas_2xUpDown
                 csWait 120
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing 133,UP
                 setFacing ALLY_PETER,UP
                 playSound MUSIC_MITULA
                 setPos 135,13,7,DOWN
                 playSound SFX_PRISM_LASER_FIRING
                 entityFlashWhite 135,$46
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript 133,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript 133,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
                 csWait 20
@@ -924,7 +924,7 @@ cs_615E6:       textCursor 3760
                 nextSingleText $80,135  ; "And if Volcanon had joined{N}you, you would've leaned{N}on him, wouldn't you have?{W1}"
                 csWait 20
                 nextText $80,133        ; "The Jewel of Light was made{N}by him, wasn't it?{W2}"
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing 135,RIGHT
                 setActscriptWait 133,eas_Init
                 entityActionsWait 133
@@ -932,7 +932,7 @@ cs_615E6:       textCursor 3760
                  moveUp 1
                  faceLeft 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $80,133  ; "It protected {NAME;28}, right?{W1}"
                 csWait 20
                 setFacing 135,DOWN
@@ -978,7 +978,7 @@ cs_615E6:       textCursor 3760
                 endActions
                 setFacing 133,RIGHT
                 setFacing ALLY_PETER,RIGHT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 csWait 30
                 nod 135
                 hide 129
@@ -1055,25 +1055,25 @@ cs_615E6:       textCursor 3760
                  moveLeft 1
                  faceDown 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $80,133  ; "{LEADER}, you carry{N}Princess Elis!{W1}"
-                setPriority ALLY_BOWIE,$0
+                setPriority ALLY_MUSHRA,$0
                 setPriority 132,$FFFF
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 csWait 20
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 1
                 endActions
                 csWait 2
-                setActscriptWait ALLY_BOWIE,eas_StopMoving
-                entityActionsWait ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_StopMoving
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                  faceDown 20
                 endActions
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 hide 132
-                setFacing ALLY_BOWIE,DOWN
-                setSprite ALLY_BOWIE,MAPSPRITE_POSE2
+                setFacing ALLY_MUSHRA,DOWN
+                setSprite ALLY_MUSHRA,MAPSPRITE_POSE2
                 csWait 30
                 csWait 5
                 setActscript ALLY_PETER,eas_2xRightLeft
@@ -1082,11 +1082,11 @@ cs_615E6:       textCursor 3760
                 setQuake 32771
                 playSound MUSIC_BOSS_ATTACK
                 nextSingleText $0,133   ; "Oops!  She's sealing the{N}tower!{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 csWait 2
-                setActscriptWait ALLY_BOWIE,eas_StopMoving
+                setActscriptWait ALLY_MUSHRA,eas_StopMoving
                 entityActionsWait ALLY_PETER
                  moveDown 1
                 endActions
@@ -1096,12 +1096,12 @@ cs_615E6:       textCursor 3760
                  faceRight 1
                 endActions
                 nextSingleText $0,133   ; "{LEADER}, run!{W1}"
-                setPriority ALLY_BOWIE,$FFFF
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                setPriority ALLY_MUSHRA,$FFFF
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity 133,ALLY_PETER,2
-                setActscriptWait ALLY_BOWIE,eas_DeactivateAutoFacing
-                setCameraEntity ALLY_BOWIE
-                entityActions ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_DeactivateAutoFacing
+                setCameraEntity ALLY_MUSHRA
+                entityActions ALLY_MUSHRA
                  moveDown 1
                  moveLeft 1
                  moveDown 10
@@ -1119,8 +1119,8 @@ cs_62658:       setQuake 5
                 textCursor 3908
                 nextSingleText $FF,255  ; "Two years have passed{N}since Mitula resealed Zeon.{W1}"
                 nextSingleText $0,136   ; "Wow, is it true?{N}Did Elis' face turn pink?{W1}"
-                clearF 384              ; Set after Bowie obtains the jewel of light/evil... whichever it is
-                clearF 385              ; Set after Bowie obtains King Galam's jewel
+                clearF 384              ; Set after MUSHRA obtains the jewel of light/evil... whichever it is
+                clearF 385              ; Set after MUSHRA obtains King Galam's jewel
                 resetForceBattleStats
                 warp MAP_GRANSEAL,56,3,DOWN
                 csc_end

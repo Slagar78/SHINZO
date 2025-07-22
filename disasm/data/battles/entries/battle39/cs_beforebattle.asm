@@ -4,7 +4,7 @@
 bbcs_39:        textCursor 3029
                 loadMapFadeIn MAP_OVERWORLD_GRANS_GRANSEAL,3,5
                 loadMapEntities ce_4E4AC
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setPos ALLY_PETER,9,8,DOWN
                 setPos FOLLOWER_B,7,8,DOWN
                 setPos FOLLOWER_A,8,8,DOWN

@@ -7,7 +7,7 @@ table_AfterBattlePositions:
                 
                 tableEnd
                 
-abp_Battle5:    dc.b ALLY_BOWIE         ; character 0 : Bowie
+abp_Battle5:    dc.b ALLY_MUSHRA         ; character 0 : MUSHRA
                 dc.b 16                 ; X Pos
                 dc.b 4                  ; Y pos
                 dc.b $FF                ; ignored byte

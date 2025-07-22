@@ -407,21 +407,21 @@ j_MapEventType4:
 ; =============== S U B R O U T I N E =======================================
 
 
-j_ShrinkIntoCaravanBowieAndFollowers:
+j_ShrinkIntoCaravanMUSHRAAndFollowers:
                 
-                jmp     ShrinkIntoCaravanBowieAndFollowers(pc)
+                jmp     ShrinkIntoCaravanMUSHRAAndFollowers(pc)
 
-    ; End of function j_ShrinkIntoCaravanBowieAndFollowers
+    ; End of function j_ShrinkIntoCaravanMUSHRAAndFollowers
 
 
 ; =============== S U B R O U T I N E =======================================
 
 
-j_GrowOutBowieAndFollowers:
+j_GrowOutMUSHRAAndFollowers:
                 
-                jmp     GrowOutBowieAndFollowers(pc)
+                jmp     GrowOutMUSHRAAndFollowers(pc)
 
-    ; End of function j_GrowOutBowieAndFollowers
+    ; End of function j_GrowOutMUSHRAAndFollowers
 
 
 ; =============== S U B R O U T I N E =======================================

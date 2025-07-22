@@ -36,7 +36,7 @@ cs_5DD8E:       newEntity ALLY_ZYNK,11,8,DOWN,NOTHING_BYTE
 cs_5DD9C:       setPos 128,14,26,DOWN
                 textCursor 2132
                 csWait 1
-                setPos ALLY_BOWIE,14,28,UP
+                setPos ALLY_MUSHRA,14,28,UP
                 setPos ALLY_PETER,13,29,UP
                 setPos FOLLOWER_B,14,29,UP
                 jumpIfFlagSet 76,cs_5DE22 ; Zynk is a follower
@@ -54,7 +54,7 @@ cs_5DDC2:       playSound MUSIC_TOWN
                 entityActionsWait 128
                  moveLeft 2
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,LEFT
                 setFacing FOLLOWER_B,LEFT
                 nextSingleText $0,ALLY_PETER ; "No, wait!  We're not Galam{N}soldiers!{W1}"

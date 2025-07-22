@@ -4,7 +4,7 @@
 abcs_battle28:  textCursor 2670
                 loadMapFadeIn MAP_PANGOAT_VALLEY_BRIDGE,7,25
                 loadMapEntities ce_4C3B4
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,13,28,DOWN
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -20,7 +20,7 @@ abcs_battle28:  textCursor 2670
                 nextSingleText $0,ALLY_PETER ; "Phew!  That was close!{W1}"
                 nextText $0,128         ; "Thank you very much.{W2}"
                 nextSingleText $0,128   ; "Excuse me, will you help{N}me up?{W1}"
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActions FOLLOWER_B
@@ -28,7 +28,7 @@ abcs_battle28:  textCursor 2670
                  moveRight 1
                 endActions
                 csWait 15
-                setActscriptWait ALLY_BOWIE,eas_JumpRight
+                setActscriptWait ALLY_MUSHRA,eas_JumpRight
                 waitIdle FOLLOWER_B
                 setFacing FOLLOWER_B,DOWN
                 nextSingleText $0,FOLLOWER_B ; "NO!  I'll do it!{W1}"
@@ -51,7 +51,7 @@ abcs_battle28:  textCursor 2670
                 endActions
                 nextText $0,ALLY_PETER  ; "You sure are being nice.{N}Hmmm....{W2}"
                 nextSingleText $0,ALLY_PETER ; "Anyway, Tristan is just over{N}there.  Let's go.{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveRight 1
                 endActions
                 entityActionsWait 129
@@ -59,7 +59,7 @@ abcs_battle28:  textCursor 2670
                  moveDown 2
                 endActions
                 setCamDest 10,25
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveRight 2
                  moveDown 1
                  moveRight 2
@@ -74,7 +74,7 @@ abcs_battle28:  textCursor 2670
                  moveDown 1
                 endActions
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}...{NAME;7}...{W1}"
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,LEFT
                 nextSingleText $0,ALLY_PETER ; "What?  Don't you want to{N}go to Tristan?{W1}"
                 csWait 60
@@ -97,12 +97,12 @@ abcs_battle28:  textCursor 2670
                 setSprite 128,MAPSPRITE_CAMEELA
                 setFacing 128,RIGHT
                 startEntity 128
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
                 entityActions ALLY_PETER
                  moveLeft 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                  moveLeft 3
                 endActions
@@ -172,7 +172,7 @@ abcs_battle28:  textCursor 2670
                 csWait 40
                 setCameraEntity 65535
                 setCamDest 8,26
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 entityActionsWait FOLLOWER_B
                  moveUp 2
@@ -205,7 +205,7 @@ abcs_battle28:  textCursor 2670
                 nextText $0,FOLLOWER_B  ; "Her evil aura was apparent.{N}By the way, did you hear{N}what she said?{W2}"
                 nextText $0,FOLLOWER_B  ; "They're all acting on their{N}own, ignoring Zeon's orders.{W2}"
                 nextSingleText $0,FOLLOWER_B ; "It will be dangerous.{N}We must be careful.{W1}"
-                followEntity 129,ALLY_BOWIE,2
+                followEntity 129,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,129,1
                 followEntity ALLY_PETER,129,3
                 warp MAP_CURRENT,16,30,RIGHT

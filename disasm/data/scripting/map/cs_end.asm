@@ -3,8 +3,8 @@
 ; 0x49058..0x4931C : End cutscene
 EndCutscene:    mapLoad MAP_GRANSEAL_CASTLE_1F,19,33
                 loadMapEntities ce_492CC
-                setActscriptWait ALLY_BOWIE,eas_Init
-                customActscriptWait ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 20,20      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
@@ -27,16 +27,16 @@ EndCutscene:    mapLoad MAP_GRANSEAL_CASTLE_1F,19,33
                 setSprite ALLY_ROHDE,MAPSPRITE_NPC_ROHDE
                 fadeInB
                 csWait 60
-                setPos ALLY_BOWIE,25,35,RIGHT
-                entityActionsWait ALLY_BOWIE
+                setPos ALLY_MUSHRA,25,35,RIGHT
+                entityActionsWait ALLY_MUSHRA
                  moveDownRight 1
                  moveRight 1
                 endActions
                 csWait 30
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 4
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 entityActionsWait 128
                  moveRight 1
                 endActions
@@ -46,28 +46,28 @@ EndCutscene:    mapLoad MAP_GRANSEAL_CASTLE_1F,19,33
                 csWait 60
                 nod 128
                 nod 129
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 csWait 40
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 4
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 csWait 80
                 setPos 131,25,35,RIGHT
                 entityActionsWait 131
                  moveDownRight 1
                 endActions
                 csWait 40
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 csWait 60
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 4
                 endActions
                 entityActionsWait 131
                  moveRight 1
                  moveDown 3
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing 131,LEFT
                 setActscript 128,eas_Jump
                 setActscript 129,eas_Jump
@@ -87,15 +87,15 @@ EndCutscene:    mapLoad MAP_GRANSEAL_CASTLE_1F,19,33
                 csWait 20
                 setFacing 128,RIGHT
                 csWait 40
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 csWait 20
                 setFacing 131,DOWN
                 csWait 60
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 csWait 10
                 setFacing 131,LEFT
                 csWait 30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveLeft 4
                 endActions
                 entityActionsWait 131
@@ -149,13 +149,13 @@ EndCutscene:    mapLoad MAP_GRANSEAL_CASTLE_1F,19,33
                 setFacing ALLY_LUKE,DOWN
                 csWait 10
                 setFacing ALLY_JAHA,DOWN
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing 131,UP
                 csWait 30
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing 131,LEFT
                 csWait 30
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing 131,UP
                 csWait 40
                 setActscript ALLY_ROHDE,eas_Jump
@@ -165,9 +165,9 @@ EndCutscene:    mapLoad MAP_GRANSEAL_CASTLE_1F,19,33
                 setActscript ALLY_PETER,eas_Jump
                 setFacing 131,LEFT
                 nod 128
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 csWait 50
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 setActscript ALLY_ROHDE,eas_Jump
                 setActscript ALLY_CHESTER,eas_Jump
                 setActscript ALLY_LUKE,eas_Jump

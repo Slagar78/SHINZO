@@ -89,11 +89,11 @@ cs_55A36:       textCursor 1198
                 entityActionsWait ALLY_PETER
                  moveDown 2
                 endActions
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity ALLY_SARAH,ALLY_PETER,2
                 followEntity ALLY_CHESTER,ALLY_SARAH,2
-                followEntity ALLY_JAHA,ALLY_BOWIE,5
-                followEntity ALLY_KAZIN,ALLY_BOWIE,6
+                followEntity ALLY_JAHA,ALLY_MUSHRA,5
+                followEntity ALLY_KAZIN,ALLY_MUSHRA,6
                 csWait 60
                 nextSingleText $0,129   ; "Minister, bring the gift!{W1}"
                 nod 128
@@ -121,10 +121,10 @@ cs_55A36:       textCursor 1198
                 endActions
                 nextSingleText $0,139   ; "Good luck, {LEADER}.{W2}"
                 nextSingleText $0,139   ; "Find as many friends as you{N}can on your journey with{N}{NAME;7}.{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 csWait 60
-                setCameraEntity ALLY_BOWIE
-                entityActionsWait ALLY_BOWIE
+                setCameraEntity ALLY_MUSHRA
+                entityActionsWait ALLY_MUSHRA
                  moveDown 18
                 endActions
                 warp MAP_NEW_GRANSEAL,11,1,DOWN
@@ -135,7 +135,7 @@ cs_55BEE:       textCursor 1249
                 setDest 32768,11,7
                 setDest ALLY_PETER,10,8
                 setCamDest 6,2
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 nextSingleText $0,139   ; "Thanks to you, Granseal has{N}many allies to trade with.{W1}"
                 nextText $0,128         ; "You've also made a lot of{N}new friends!{W2}"
@@ -213,16 +213,16 @@ cs_55BEE:       textCursor 1249
                 entityActionsWait ALLY_PETER
                  moveUp 1
                 endActions
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 setActscript ALLY_PETER,eas_Jump
                 nod 128
                 setFacing ALLY_PETER,RIGHT
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 nod 139
                 entityActions ALLY_PETER
                  moveUp 1
                 endActions
-                headshake ALLY_BOWIE
+                headshake ALLY_MUSHRA
                 setActscriptWait ALLY_PETER,eas_Jump
                 entityActionsWait ALLY_PETER
                  moveRight 2
@@ -230,7 +230,7 @@ cs_55BEE:       textCursor 1249
                 setFacing ALLY_PETER,UP
                 nod 128
                 setActscriptWait 139,eas_Jump
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 nextSingleText $FF,255  ; "{LEADER} and {NAME;7}{N}explain in detail.{W1}"
                 entityActionsWait ALLY_PETER
                  moveLeft 1
@@ -241,17 +241,17 @@ cs_55BEE:       textCursor 1249
                 setFacing 128,LEFT
                 setActscriptWait 129,eas_Jump
                 nod 129
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveLeft 1
                  moveUp 1
                 endActions
                 setFacing 139,DOWN
-                nod ALLY_BOWIE
-                entityActionsWait ALLY_BOWIE
+                nod ALLY_MUSHRA
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                  moveRight 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextText $FF,255        ; "About the ancient ruins{N}and Creed....{W2}"
                 nextText $FF,255        ; "And Zeon's message through{N}Evil Spilit.{W2}"
                 nextSingleText $FF,255  ; "They explain everything.{W1}"
@@ -316,8 +316,8 @@ cs_55BEE:       textCursor 1249
                 executeSubroutine j_FadeOut_WaitForP1Input
                 hideText
                 nextSingleText $0,139   ; "We have to remove the rocks{N}blocking the passageway{N}leading to North Parmecia.{W2}{N}Maybe we can use an{N}explosive!{W1}"
-                nod ALLY_BOWIE
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                nod ALLY_MUSHRA
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 addNewFollower 139
                 setF 70                 ; Astral is a follower
                 csc_end

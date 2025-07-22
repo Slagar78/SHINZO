@@ -4,7 +4,7 @@
 abcs_battle32:  textCursor 2853
                 loadMapFadeIn MAP_OVERWORLD_MOUN_AND_MITULA,5,20
                 loadMapEntities ce_4CEEC
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,11,25,UP
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -48,7 +48,7 @@ abcs_battle32:  textCursor 2853
                 nextSingleText $0,FOLLOWER_B ; "I don't care, {NAME;7}.{N}He has seen the error of his{N}ways.{W1}"
                 setFacing FOLLOWER_B,DOWN
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}, don't you want{N}{NAME;23} to join our{N}force?{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
             if (STANDARD_BUILD&NO_AI_JARO=1)
             else
                 join ALLY_JARO
@@ -62,7 +62,7 @@ abcs_battle32:  textCursor 2853
                 setActscriptWait ALLY_JARO,eas_Jump
                 nextSingleText $C0,ALLY_JARO ; "I'll try to do my best!{W1}"
                 executeSubroutine csub_4CEE4
-                followEntity FOLLOWER_A,ALLY_BOWIE,2
+                followEntity FOLLOWER_A,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,FOLLOWER_A,1
                 followEntity FOLLOWER_B,FOLLOWER_A,3
                 followEntity ALLY_FRAYJA,FOLLOWER_A,2

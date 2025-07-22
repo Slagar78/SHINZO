@@ -15,10 +15,10 @@ table_AllyDialogueProperties:
 ;               allyPortraitAndSfx [PORTRAIT_]enum (or index), [SFX_]enum (or index)
 ;               allyPortraitAndSfx [PORTRAIT_]enum (or index), [SFX_]enum (or index)
                 
-; 0: Bowie
-                allyPortraitAndSfx BOWIE_BASE,  DIALOG_BLEEP_5
-                allyPortraitAndSfx BOWIE_PROMO, DIALOG_BLEEP_5
-                allyPortraitAndSfx BOWIE_PROMO, DIALOG_BLEEP_5
+; 0: MUSHRA
+                allyPortraitAndSfx MUSHRA_BASE,  DIALOG_BLEEP_5
+                allyPortraitAndSfx MUSHRA_PROMO, DIALOG_BLEEP_5
+                allyPortraitAndSfx MUSHRA_PROMO, DIALOG_BLEEP_5
                 
 ; 1: Sarah
                 allyPortraitAndSfx SARAH, DIALOG_BLEEP_2
@@ -167,13 +167,13 @@ table_AllyDialogueProperties:
                 
             if (EXPANDED_FORCE_MEMBERS=1)
 ; 30: 
-                allyPortraitAndSfx BOWIE_BASE, DIALOG_BLEEP_5
-                allyPortraitAndSfx BOWIE_BASE, DIALOG_BLEEP_5
-                allyPortraitAndSfx BOWIE_BASE, DIALOG_BLEEP_5
+                allyPortraitAndSfx MUSHRA_BASE, DIALOG_BLEEP_5
+                allyPortraitAndSfx MUSHRA_BASE, DIALOG_BLEEP_5
+                allyPortraitAndSfx MUSHRA_BASE, DIALOG_BLEEP_5
                 
 ; 31: 
-                allyPortraitAndSfx BOWIE_BASE, DIALOG_BLEEP_5
-                allyPortraitAndSfx BOWIE_BASE, DIALOG_BLEEP_5
-                allyPortraitAndSfx BOWIE_BASE, DIALOG_BLEEP_5
+                allyPortraitAndSfx MUSHRA_BASE, DIALOG_BLEEP_5
+                allyPortraitAndSfx MUSHRA_BASE, DIALOG_BLEEP_5
+                allyPortraitAndSfx MUSHRA_BASE, DIALOG_BLEEP_5
                 
             endif

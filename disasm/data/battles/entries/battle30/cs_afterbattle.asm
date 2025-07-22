@@ -4,7 +4,7 @@
 abcs_battle30:  textCursor 2765
                 loadMapFadeIn MAP_INSIDE_MITULA,5,8
                 loadMapEntities ce_4C96C
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,12,13,UP
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -74,7 +74,7 @@ abcs_battle30:  textCursor 2765
                  moveLeft 2
                  moveDown 4
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing FOLLOWER_B,LEFT
                 setFacing ALLY_PETER,LEFT
                 csWait 50
@@ -124,7 +124,7 @@ abcs_battle30:  textCursor 2765
                 setFacing 129,LEFT
                 csWait 40
                 entityFlashWhite 129,$32
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscriptWait FOLLOWER_B,eas_Jump
                 nextSingleText $0,FOLLOWER_B ; "Goddess Mitula, where are{N}you going?{W1}"
@@ -163,9 +163,9 @@ abcs_battle30:  textCursor 2765
                 nextSingleText $0,FOLLOWER_B ; "We have to go to Arc Valley{N}on Grans Island.{W2}"
                 setFacing FOLLOWER_B,DOWN
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}, find the{N}storytellers first.{W1}"
-                setFacing ALLY_BOWIE,UP
-                nod ALLY_BOWIE
-                followEntity FOLLOWER_B,ALLY_BOWIE,2
+                setFacing ALLY_MUSHRA,UP
+                nod ALLY_MUSHRA
+                followEntity FOLLOWER_B,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,FOLLOWER_B,2
                 csc_end
 ce_4C96C:       mainEntity 10,13,UP

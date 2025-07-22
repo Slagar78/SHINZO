@@ -4,7 +4,7 @@
 bbcs_06:        textCursor 2342
                 loadMapFadeIn MAP_OVERWORLD_GRANS_GRANSEAL,25,5
                 loadMapEntities ce_49CBA
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_SLADE,eas_Init
                 setActscriptWait 128,eas_Init
                 setActscriptWait 129,eas_Init
@@ -13,7 +13,7 @@ bbcs_06:        textCursor 2342
                 fadeInB
                 nextSingleText $0,129   ; "Halt!{W1}"
                 setActscript ALLY_SLADE,eas_Jump
-                setActscriptWait ALLY_BOWIE,eas_Jump
+                setActscriptWait ALLY_MUSHRA,eas_Jump
                 setCamDest 31,9
                 nextSingleText $0,129   ; "How did you get past the{N}Galam guards?{W1}"
                 nextSingleText $0,130   ; "No one is allowed to leave{N}'til we conquer Granseal!{W1}"

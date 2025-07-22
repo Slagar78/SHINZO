@@ -38,7 +38,7 @@ byte_561FC:     msDesc 5, 15, 2, 11     ; "{NAME} investigated{N}the sign.{W2}{C
 Map8_DescFunc0:
                 
                  
-                chkFlg  708             ; Set after the scene in Ribble where the mayor confronts Bowie
+                chkFlg  708             ; Set after the scene in Ribble where the mayor confronts MUSHRA
                 bne.s   loc_56256
                 move.w  #$546,d0        ; It reads...{N}NO STRANGERS!{N}-Shopkeeper{W1}
                 jsr     (DisplayText).w 
@@ -63,7 +63,7 @@ return_5626A:
 Map8_DescFunc2:
                 
                  
-                chkFlg  708             ; Set after the scene in Ribble where the mayor confronts Bowie
+                chkFlg  708             ; Set after the scene in Ribble where the mayor confronts MUSHRA
                 bne.s   loc_56284
                 move.w  #$547,d0        ; {LEADER} checks the door.{W2}
                 jsr     (DisplayText).w 

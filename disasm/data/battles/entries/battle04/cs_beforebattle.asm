@@ -4,7 +4,7 @@
 bbcs_04:        textCursor 2311
                 loadMapFadeIn MAP_OVERWORLD_GRANS_GRANSEAL,1,5
                 loadMapEntities ce_4989E
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setPos ALLY_KAZIN,6,9,DOWN
                 fadeInB
                 setActscriptWait ALLY_KAZIN,eas_Jump

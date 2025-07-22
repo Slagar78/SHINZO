@@ -4,7 +4,7 @@
 abcs_battle34:  textCursor 2911
                 loadMapFadeIn MAP_CAMEELA_ARENA,2,7
                 loadMapEntities ce_4D69E
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,9,11,UP
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -38,7 +38,7 @@ cs_4D502:       stopEntity 128
                 setSprite 128,MAPSPRITE_OBJECT3
                 startEntity 128
                 setActscript 128,eas_AnimSpeedx2
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 jumpIfFlagClear 76,cs_4D592 ; Zynk is a follower
                 setActscript ALLY_ZYNK,eas_Jump
@@ -93,13 +93,13 @@ cs_4D620:       textCursor 2932
                  moveRight 1
                 endActions
                 setFacing ALLY_ZYNK,LEFT
-cs_4D654:       nod ALLY_BOWIE
-                entityActionsWait ALLY_BOWIE
+cs_4D654:       nod ALLY_MUSHRA
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
                 hide 131
                 executeSubroutine csub_4D694
-                followEntity 130,ALLY_BOWIE,2
+                followEntity 130,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,130,1
                 followEntity FOLLOWER_B,130,3
                 jumpIfFlagClear 76,cs_4D692 ; Zynk is a follower

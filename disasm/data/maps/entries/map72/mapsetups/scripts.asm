@@ -16,10 +16,10 @@ cs_4FFDA:       textCursor 3341
                 setDest 32798,27,39
                 setDest 32799,28,37
                 setDest 32775,25,37
-                setDest ALLY_BOWIE,26,37
+                setDest ALLY_MUSHRA,26,37
                 csWait 60
                 setPos 128,27,36,LEFT
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 csWait 50
@@ -37,16 +37,16 @@ cs_4FFDA:       textCursor 3341
                  moveUp 1
                  moveLeft 2
                 endActions
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing ALLY_ROHDE,UP
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 nextSingleText $FF,255  ; "{NAME;11} gets the dynamite{N}from {LEADER}.{W1}"
                 entityActionsWait ALLY_ROHDE
                  moveRight 1
                  moveUp 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,ALLY_ROHDE ; "Stand back.  Ready?{W1}"
@@ -78,10 +78,10 @@ cs_4FFDA:       textCursor 3341
                 setActscriptWait ALLY_ROHDE,eas_Jump
                 nextSingleText $0,ALLY_ROHDE ; "Wow!  This cannon is great!{W1}"
                 setFacing ALLY_PETER,RIGHT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing FOLLOWER_B,LEFT
                 setActscript ALLY_PETER,eas_JumpLeft
-                setActscript ALLY_BOWIE,eas_JumpLeft
+                setActscript ALLY_MUSHRA,eas_JumpLeft
                 setActscriptWait FOLLOWER_B,eas_JumpRight
                 setPos ALLY_ROHDE,26,36,RIGHT
                 csWait 25
@@ -130,11 +130,11 @@ cs_4FFDA:       textCursor 3341
                 nextSingleText $0,FOLLOWER_B ; "{NAME;11} is hooked.{N}Ha, ha!{W1}"
                 setFacing FOLLOWER_B,DOWN
                 nextSingleText $0,FOLLOWER_B ; "OK, {LEADER}.  Let's go{N}to North Parmecia!{W1}"
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
-                followEntity FOLLOWER_A,ALLY_BOWIE,2
+                followEntity FOLLOWER_A,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,FOLLOWER_A,1
                 followEntity FOLLOWER_B,FOLLOWER_A,3
                 setStoryFlag 25         ; Battle 25 unlocked - BATTLE_NORTH_CAVE                
@@ -147,37 +147,37 @@ cs_5023E:       textCursor 3357
                 setDest 32798,27,39
                 setDest 32799,28,37
                 setDest 32775,25,37
-                setDest ALLY_BOWIE,26,37
+                setDest ALLY_MUSHRA,26,37
                 waitIdle FOLLOWER_A
                 waitIdle FOLLOWER_B
                 waitIdle ALLY_PETER
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 csWait 50
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 csWait 30
                 setFacing FOLLOWER_B,LEFT
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 shiver FOLLOWER_B
                 setFacing ALLY_PETER,RIGHT
                 csWait 20
                 nextSingleText $0,FOLLOWER_B ; "What?!  You forgot to bring{N}the {ITEM} with you?{N}{LEADER}, are you serious?{W2}"
-                stopEntity ALLY_BOWIE
-                setSize ALLY_BOWIE,22
+                stopEntity ALLY_MUSHRA
+                setSize ALLY_MUSHRA,22
                 csWait 10
-                setSize ALLY_BOWIE,20
+                setSize ALLY_MUSHRA,20
                 csWait 10
-                setSize ALLY_BOWIE,18
+                setSize ALLY_MUSHRA,18
                 entityActionsWait FOLLOWER_B
                  moveLeft 1
                 endActions
                 setActscriptWait FOLLOWER_B,eas_Jump
                 setActscriptWait FOLLOWER_B,eas_Jump
                 nextSingleText $0,FOLLOWER_B ; "You fool!  Go back and{N}bring it here!{W1}"
-                setActscriptWait ALLY_BOWIE,eas_Init
-                startEntity ALLY_BOWIE
-                followEntity FOLLOWER_A,ALLY_BOWIE,2
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                startEntity ALLY_MUSHRA
+                followEntity FOLLOWER_A,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,FOLLOWER_A,1
                 followEntity FOLLOWER_B,FOLLOWER_A,3
                 csc_end

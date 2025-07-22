@@ -4,7 +4,7 @@
 bbcs_29:        textCursor 2718
                 loadMapFadeIn MAP_OUTSIDE_MITULA,10,28
                 loadMapEntities ce_4C5AE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,16,34,UP
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -12,7 +12,7 @@ bbcs_29:        textCursor 2718
                 playSound MUSIC_MITULA_SHRINE
                 fadeInB
                 cameraSpeed $30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 1
                 endActions
                 entityActions ALLY_PETER
@@ -30,19 +30,19 @@ bbcs_29:        textCursor 2718
                 endActions
                 setFacing FOLLOWER_B,RIGHT
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}, what do you{N}think?{W1}"
-                setFacing ALLY_BOWIE,LEFT
-                nextSingleText $0,ALLY_BOWIE ; "I'm not sure.{W1}"
+                setFacing ALLY_MUSHRA,LEFT
+                nextSingleText $0,ALLY_MUSHRA ; "I'm not sure.{W1}"
                 entityActionsWait ALLY_PETER
                  moveUp 1
                 endActions
                 setFacing ALLY_PETER,LEFT
                 nextSingleText $0,ALLY_PETER ; "{LEADER}, it's obvious!{W1}"
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 nod FOLLOWER_B
                 nextText $0,FOLLOWER_B  ; "I agree.  We have to see the{N}storytellers and listen to{N}the legends.{W2}"
                 nextSingleText $0,FOLLOWER_B ; "Make a break for it!{W1}"
                 setCamDest 10,26
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 48,48      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
@@ -57,7 +57,7 @@ bbcs_29:        textCursor 2718
                 entityActions FOLLOWER_B
                  moveUp 3
                 endActions
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveLeft 1
                  moveUp 2
                 endActions

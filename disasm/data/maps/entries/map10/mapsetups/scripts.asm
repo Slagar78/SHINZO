@@ -3,12 +3,12 @@
 ; 0x570B0..0x579CA : 
 cs_570B0:       textCursor 1616
                 reloadMap 6,19
-                setPos ALLY_BOWIE,11,25,UP
+                setPos ALLY_MUSHRA,11,25,UP
                 setPos ALLY_PETER,11,26,UP
                 setPos 150,10,21,RIGHT
                 setPos 151,13,21,LEFT
                 setActscriptWait ALLY_PETER,eas_Init
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 customActscriptWait 150
                  ac_setSpeed 48,48      ;   
                  ac_jump eas_Idle       ;   
@@ -90,7 +90,7 @@ cs_570B0:       textCursor 1616
                  moveDown 2
                  faceLeft 1
                 endActions
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 nextSingleText $0,ALLY_PETER ; "The devils we fought must{N}have been part of that army!{W1}"
                 setFacing 150,DOWN
                 entityActionsWait 151
@@ -136,7 +136,7 @@ cs_570B0:       textCursor 1616
                  moveDown 5
                 endActions
                 csWait 30
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setActscriptWait ALLY_PETER,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
@@ -144,7 +144,7 @@ cs_570B0:       textCursor 1616
                 setFacing 150,RIGHT
                 setFacing 151,LEFT
                 nextSingleText $0,ALLY_PETER ; "We already defeated them.{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 setCamDest 6,22
                 customActscriptWait 150
                  ac_setSpeed 8,8        ;   
@@ -215,10 +215,10 @@ cs_570B0:       textCursor 1616
                 endActions
                 csWait 40
                 setFacing ALLY_PETER,LEFT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 nextText $0,ALLY_PETER  ; "{LEADER}, let's go.{W2}"
                 nextSingleText $0,ALLY_PETER ; "I'll introduce you to{N}King Bedoe.{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 setPos 150,34,51,UP
                 setPos 151,35,51,UP
                 csc_end
@@ -294,7 +294,7 @@ cs_574A6:       textCursor 1651
                 setActscriptWait ALLY_LUKE,eas_Jump
                 nextSingleText $80,ALLY_LUKE ; "{NAME;7}, {NAME;7}!{W1}"
                 setPos ALLY_PETER,33,52,RIGHT
-                setPos ALLY_BOWIE,33,53,RIGHT
+                setPos ALLY_MUSHRA,33,53,RIGHT
                 setCamDest 31,47
                 entityActionsWait ALLY_PETER
                  moveRight 3
@@ -325,23 +325,23 @@ cs_574A6:       textCursor 1651
                  moveLeft 2
                 endActions
                 csWait 40
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 entityActions ALLY_PETER
                  moveRight 3
                  faceUp 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 3
                  faceUp 1
                 endActions
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 nextSingleText $0,ALLY_PETER ; "This is {LEADER}.{N}He's from Grans and...{W1}"
                 entityActionsWait ALLY_LUKE
                  moveDown 1
                  faceLeft 1
                 endActions
                 setFacing ALLY_PETER,RIGHT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 nextSingleText $80,ALLY_LUKE ; "I know.  He is a pupil of{N}Astral of Granseal.{W1}"
                 setActscriptWait ALLY_PETER,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
@@ -355,7 +355,7 @@ cs_574A6:       textCursor 1651
                 endActions
                 setFacing ALLY_LUKE,UP
                 setFacing ALLY_PETER,UP
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextText $80,147        ; "And I heard that somebody{N}unsealed Zeon.{W2}"
                 nextText $80,147        ; "Grans people caused a big,{N}big problem.{W2}"
                 customActscriptWait 147
@@ -410,7 +410,7 @@ cs_574A6:       textCursor 1651
                 setFacing ALLY_LUKE,DOWN
                 setFacing ALLY_PETER,DOWN
                 nextSingleText $0,ALLY_PETER ; "OK.{N}Anyway, let's go.{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 csc_end
 cs_5766C:       textCursor 1680
                 setCameraEntity 153
@@ -446,7 +446,7 @@ cs_5766C:       textCursor 1680
                  moveLeft 2
                  faceUp 1
                 endActions
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 nextText $0,153         ; "That didn't work.  Hee, hee.{W2}"
                 nextSingleText $0,153   ; "Stay there.{N}I know I can fly!{W1}"
@@ -490,7 +490,7 @@ cs_5766C:       textCursor 1680
                 endActions
                 setFacing 153,LEFT
                 setSprite 153,MAPSPRITE_CHICK
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,RIGHT
                 nextSingleText $0,153   ; "See.  I told you!{N}I can fly...sort of.{W1}"
                 csc_end
@@ -499,13 +499,13 @@ cs_5779C:       textCursor 1686
                 setFacing 152,UP
                 setCamDest 1,5
                 setActscriptWait ALLY_PETER,eas_Init
-                setPos ALLY_BOWIE,5,22,DOWN
+                setPos ALLY_MUSHRA,5,22,DOWN
                 setPos ALLY_PETER,11,22,UP
                 entityActions ALLY_PETER
                  eaWait 60
                  moveLeft 4
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setActscriptWait 153,eas_46198
                 setActscriptWait 153,eas_DeactivateAutoFacing
                 playSound SFX_JUMP
@@ -539,7 +539,7 @@ cs_5779C:       textCursor 1686
                 setCameraEntity 153
                 cameraSpeed $30
                 nextSingleText $0,152   ; "Oh my, {NAME;20}!{W1}"
-                setPriority ALLY_BOWIE,$0
+                setPriority ALLY_MUSHRA,$0
                 setPriority 153,$FFFF
                 setActscriptWait 153,eas_DeactivateAutoFacing
                 customActscriptWait 153
@@ -551,7 +551,7 @@ cs_5779C:       textCursor 1686
                  moveDown 13
                 endActions
                 setFacing ALLY_PETER,LEFT
-                setPriority ALLY_BOWIE,$0
+                setPriority ALLY_MUSHRA,$0
                 setPriority 153,$FFFF
                 csWait 35
                 customActscriptWait 152
@@ -564,8 +564,8 @@ cs_5779C:       textCursor 1686
                 endActions
                 waitIdle 153
                 setQuake 3
-                setFacing ALLY_BOWIE,UP
-                customActscriptWait ALLY_BOWIE
+                setFacing ALLY_MUSHRA,UP
+                customActscriptWait ALLY_MUSHRA
                  ac_motion OFF          ;   
                  ac_orientDown          ;   
                  ac_updateSprite        ;   
@@ -606,11 +606,11 @@ cs_5779C:       textCursor 1686
                 endActions
                 csWait 30
                 setActscriptWait ALLY_PETER,eas_BumpLeft
-                setActscriptWait ALLY_BOWIE,eas_Init
-                setFacing ALLY_BOWIE,DOWN
-                headshake ALLY_BOWIE
-                setPriority ALLY_BOWIE,$FFFF
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                setFacing ALLY_MUSHRA,DOWN
+                headshake ALLY_MUSHRA
+                setPriority ALLY_MUSHRA,$FFFF
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 csc_end
 cs_5797A:       textCursor 1607
                 faceEntity ALLY_PETER,147

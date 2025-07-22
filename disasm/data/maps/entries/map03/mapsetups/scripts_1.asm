@@ -21,7 +21,7 @@ cs_51406:       textCursor 535
                 setF 600                ; Set after agreeing to try getting into the castle
                 setF 66                 ; Sarah + Chester are followers
                 join 128
-                followEntity ALLY_SARAH,ALLY_BOWIE,2
+                followEntity ALLY_SARAH,ALLY_MUSHRA,2
                 followEntity ALLY_CHESTER,ALLY_SARAH,2
                 setPos 138,27,3,DOWN
                 setPos 139,31,3,DOWN
@@ -49,7 +49,7 @@ cs_5148C:       setPos ALLY_SARAH,41,10,UP
                 csc_end
 cs_5149A:       textCursor 517
                 csWait 20
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 csWait 60
                 setPos 142,46,7,LEFT
                 entityActionsWait 142
@@ -66,7 +66,7 @@ cs_5149A:       textCursor 517
                 endActions
                 csWait 120
                 nextSingleText $0,143   ; "Sir Astral!{W1}"
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_SARAH,DOWN
                 setFacing ALLY_CHESTER,DOWN
                 setFacing 142,DOWN
@@ -80,7 +80,7 @@ cs_5149A:       textCursor 517
                  moveRight 1
                  moveUp 2
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_SARAH,UP
                 setFacing ALLY_CHESTER,UP
                 entityActionsWait 143
@@ -100,7 +100,7 @@ cs_5149A:       textCursor 517
                 entityActionsWait 142
                  moveDown 3
                 endActions
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_SARAH,DOWN
                 setFacing ALLY_CHESTER,DOWN
                 entityActions 143
@@ -130,7 +130,7 @@ cs_5149A:       textCursor 517
                 hide 142
                 hide 143
                 setCamDest 38,6
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_CHESTER,LEFT
                 nextText $0,ALLY_CHESTER ; "{LEADER}, did you hear that?{N}The King is sick!{W2}"
                 nextSingleText $0,ALLY_CHESTER ; "But, I think it must be{N}something else!{N}He was acting so strange!{W1}"
@@ -139,7 +139,7 @@ cs_5149A:       textCursor 517
                  moveRight 3
                 endActions
                 setFacing ALLY_SARAH,UP
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_CHESTER,DOWN
                 nextSingleText $C0,ALLY_SARAH ; "Hey, {NAME;2}!{N}Let's go to the castle.{W1}"
                 nextSingleText $0,ALLY_CHESTER ; "We can't, {NAME;1}!{N}We're just kids.{N}They won't let us in.{W1}"
@@ -166,7 +166,7 @@ cs_51614:       textCursor 535
                 setF 600                ; Set after agreeing to try getting into the castle
                 setF 66                 ; Sarah + Chester are followers
                 join 128
-                followEntity ALLY_SARAH,ALLY_BOWIE,2
+                followEntity ALLY_SARAH,ALLY_MUSHRA,2
                 followEntity ALLY_CHESTER,ALLY_SARAH,2
                 setPos 138,27,3,DOWN
                 setPos 139,31,3,DOWN

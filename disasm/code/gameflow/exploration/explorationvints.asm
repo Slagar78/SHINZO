@@ -63,7 +63,7 @@ loc_25B64:
                 add.w   d1,d0
                 bne.s   loc_25BAA
                 sndCom  SOUND_COMMAND_FADE_OUT ; CARAVAN ACTIONS
-                bsr.w   j_j_ShrinkInBowieAndFollowers
+                bsr.w   j_j_ShrinkInMUSHRAAndFollowers
                 sndCom  MUSIC_HEADQUARTERS
                 trap    #VINT_FUNCTIONS
                 dc.w VINTS_DEACTIVATE
@@ -79,7 +79,7 @@ loc_25B64:
                 dc.w VINTS_ACTIVATE
                 dc.l VInt_UpdateEntities
                 sndCom  SOUND_COMMAND_FADE_OUT
-                bsr.w   j_j_GrowOutBowieAndFollowers
+                bsr.w   j_j_GrowOutMUSHRAAndFollowers
                 sndCom  SOUND_COMMAND_PLAY_PREVIOUS_MUSIC
                 bra.w   return_25BF2
 loc_25BAA:

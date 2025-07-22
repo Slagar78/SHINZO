@@ -23,7 +23,7 @@ BattleDebugFunction1B120A:
                 jsr     j_RemoveItemFromCaravan
                 moveq   #0,d1
                 jsr     j_RemoveItemFromCaravan
-                moveq   #ALLY_BOWIE,d0
+                moveq   #ALLY_MUSHRA,d0
                 jsr     j_JoinForce
                 setSavedByte #BATTLE_VERSUS_ALL_BOSSES, CURRENT_BATTLE
                 jsr     j_InitializeEnemyList

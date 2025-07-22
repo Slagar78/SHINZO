@@ -4,7 +4,7 @@
 bbcs_37:        textCursor 2956
                 loadMapFadeIn MAP_OVERWORLD_GRANS_AROUND_DWARF_VILLAGE,50,33
                 loadMapEntities ce_4DB74
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,56,37,LEFT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -15,9 +15,9 @@ bbcs_37:        textCursor 2956
                 setPos ALLY_ZYNK,63,62,DOWN
 cs_4DAB8:       fadeInB
                 nextSingleText $0,128   ; "Now you shall pay for killing{N}my precious Prism Flowers.{W1}"
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing FOLLOWER_B,DOWN
                 cameraSpeed $30
@@ -49,9 +49,9 @@ cs_4DAB8:       fadeInB
                 setFacing ALLY_PETER,UP
                 nextSingleText $C0,ALLY_PETER ; "Galam is just over there,{N}but...{W1}"
                 setFacing FOLLOWER_B,DOWN
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 nextSingleText $C0,FOLLOWER_B ; "We have to advance.{N}{LEADER}, are you ready?{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 csc_end
 ce_4DB74:       mainEntity 55,36,LEFT
                 entity 56,37,LEFT,ALLY_PETER,eas_Init

@@ -21,9 +21,9 @@ MapEventType2:
     ; End of function MapEventType2
 
 cs_45284:       setActscriptWait FOLLOWER_A,eas_452A4
-                setActscriptWait ALLY_BOWIE,eas_452B2
+                setActscriptWait ALLY_MUSHRA,eas_452B2
                 setPos FOLLOWER_A,64,64,DOWN
-                setActscriptWait ALLY_BOWIE,eas_45308
+                setActscriptWait ALLY_MUSHRA,eas_45308
                 csc_end
 eas_452A4:       ac_moveEntFacRelPos 0,0,1
                  ac_waitDest
@@ -75,14 +75,14 @@ MapEventType4:
                 bsr.w   ApplyActscriptToFollowers
                 bsr.w   WaitForFollowersStopped
                 jsr     InitializeFollowerActscripts
-                setSavedByte #PLAYERTYPE_BOWIE, PLAYER_TYPE
+                setSavedByte #PLAYERTYPE_MUSHRA, PLAYER_TYPE
                 rts
 
     ; End of function MapEventType4
 
 cs_45348:       setActscriptWait FOLLOWER_A,eas_45360
-                setSprite ALLY_BOWIE,ALLY_BOWIE
-                setActscriptWait ALLY_BOWIE,eas_4536C
+                setSprite ALLY_MUSHRA,ALLY_MUSHRA
+                setActscriptWait ALLY_MUSHRA,eas_4536C
                 csc_end
 eas_45360:       ac_clonePos $0
 word_45364:      ac_branch
@@ -139,9 +139,9 @@ return_453F0:
 
     ; End of function MapEventType3
 
-cs_453F2:       setActscriptWait ALLY_BOWIE,eas_4540C
+cs_453F2:       setActscriptWait ALLY_MUSHRA,eas_4540C
                 setPos FOLLOWER_D,64,64,DOWN
-                setActscriptWait ALLY_BOWIE,eas_45426
+                setActscriptWait ALLY_MUSHRA,eas_45426
                 csc_end
 
 ; =============== S U B R O U T I N E =======================================
@@ -183,14 +183,14 @@ MapEventType5:
                 bsr.w   ApplyActscriptToHeroAndFollowers
                 bsr.w   WaitForHeroAndFollowersStopped
                 jsr     InitializeFollowerActscripts
-                setSavedByte #PLAYERTYPE_BOWIE, PLAYER_TYPE
+                setSavedByte #PLAYERTYPE_MUSHRA, PLAYER_TYPE
                 rts
 
     ; End of function MapEventType5
 
 cs_45470:       setActscriptWait FOLLOWER_D,eas_45360
-                setSprite ALLY_BOWIE,ALLY_BOWIE
-                setActscriptWait ALLY_BOWIE,eas_4548C
+                setSprite ALLY_MUSHRA,ALLY_MUSHRA
+                setActscriptWait ALLY_MUSHRA,eas_4548C
                 csc_end
 byte_45488:      ac_clonePos $1F        ; ENTITY_RAFT
 eas_4548C:       ac_moveFacRelPos 0,1
@@ -263,14 +263,14 @@ sub_454E4:
 ; =============== S U B R O U T I N E =======================================
 
 
-ShrinkIntoCaravanBowieAndFollowers:
+ShrinkIntoCaravanMUSHRAAndFollowers:
                 
                 move.b  #-1,((VIEW_TARGET_ENTITY-$1000000)).w
                 clr.w   d0
                 bsr.w   MakeEntityIdle  
                 moveq   #1,d0
                 bsr.w   MakeEntityIdle  
-                script  ms_BowieShrinkIn
+                script  ms_MUSHRAShrinkIn
                 lea     eas_ShrinkIn(pc), a1
                 bsr.w   ApplyActscriptToFollowers
                 bsr.w   WaitForFollowersStopped
@@ -279,11 +279,11 @@ ShrinkIntoCaravanBowieAndFollowers:
                 jsr     (Sleep).w       
                 rts
 
-    ; End of function ShrinkIntoCaravanBowieAndFollowers
+    ; End of function ShrinkIntoCaravanMUSHRAAndFollowers
 
-ms_BowieShrinkIn:
-                setActscriptWait ALLY_BOWIE,eas_ShrinkIn
-                setPos ALLY_BOWIE,64,64,DOWN
+ms_MUSHRAShrinkIn:
+                setActscriptWait ALLY_MUSHRA,eas_ShrinkIn
+                setPos ALLY_MUSHRA,64,64,DOWN
                 csc_end
 eas_ShrinkIn:    ac_moveEntFacRelPos 1,0,0
                  ac_wait 6
@@ -314,21 +314,21 @@ word_455A8:      ac_branch
 ; =============== S U B R O U T I N E =======================================
 
 
-GrowOutBowieAndFollowers:
+GrowOutMUSHRAAndFollowers:
                 
                 clr.w   d0
                 bsr.w   MakeEntityIdle  
-                script  ms_BowieGrowOut
+                script  ms_MUSHRAGrowOut
                 lea     eas_GrowOut(pc), a1
                 bsr.w   ApplyActscriptToFollowers
                 bsr.w   WaitForFollowersStopped
                 jsr     InitializeFollowerActscripts
-                setSavedByte #PLAYERTYPE_BOWIE, PLAYER_TYPE
+                setSavedByte #PLAYERTYPE_MUSHRA, PLAYER_TYPE
                 rts
 
-    ; End of function GrowOutBowieAndFollowers
+    ; End of function GrowOutMUSHRAAndFollowers
 
-ms_BowieGrowOut:setActscriptWait ALLY_BOWIE,eas_GrowOut
+ms_MUSHRAGrowOut:setActscriptWait ALLY_MUSHRA,eas_GrowOut
                 csc_end
 eas_GrowOut:     ac_clonePos $1
                  ac_resizable ON

@@ -251,7 +251,7 @@ UpgradeRandomBattleEnemies:
                 clr.w   d2
                 clr.w   d0
                 
-                ; Get Bowie's effective level -> D2
+                ; Get MUSHRA's effective level -> D2
             if (STANDARD_BUILD=1)
                 jsr     CalculateEffectiveLevel
                 move.w  d1,d2
@@ -268,7 +268,7 @@ UpgradeRandomBattleEnemies:
                 loadSavedDataAddress CURRENT_BATTLE, a1
                 clr.w   d1
                 move.b  (a1),d1
-                sub.w   d1,d2           ; subtract battle index from Bowie's effective level
+                sub.w   d1,d2           ; subtract battle index from MUSHRA's effective level
                 bne.s   @CheckPositive
                 tst.w   d4
                 bne.s   @Default2
@@ -293,12 +293,12 @@ UpgradeRandomBattleEnemies:
                 bra.w   @Done
 @CalculateUpgradeMultiplier:
                 
-                divu.w  #10,d2          ; D2 = bowie_level - battle_index / 10
+                divu.w  #10,d2          ; D2 = MUSHRA_level - battle_index / 10
                 andi.l  #BYTE_MASK,d2
                 tst.w   d2
                 bne.s   @CalculateUpgradeRange
                 move.w  d5,d1
-                bra.w   @Done           ; default to original enemy if Bowie is less than 10 levels over current battle
+                bra.w   @Done           ; default to original enemy if MUSHRA is less than 10 levels over current battle
 @CalculateUpgradeRange:
                 
                 clr.w   d6

@@ -69,7 +69,7 @@ DebugModeBattleTest:
                 moveq   #ALLY_CLAUDE,d0
                 bsr.w   j_JoinForce
                 
-                moveq   #ALLY_BOWIE,d0
+                moveq   #ALLY_MUSHRA,d0
                 move.w  #99,d1
                 bsr.w   j_SetBaseAgi
                 bsr.w   j_SetBaseAtt

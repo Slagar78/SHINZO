@@ -4,7 +4,7 @@
 abcs_battle33:  textCursor 2876
                 loadMapFadeIn MAP_MOUN,8,6
                 loadMapEntities ce_4D322
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,13,11,UP
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -26,7 +26,7 @@ abcs_battle33:  textCursor 2876
                 fadeInB
                 nextSingleText $0,FOLLOWER_B ; "There may be some survivors{N}somewhere.{W1}"
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript FOLLOWER_B,eas_2xUpDown
                 csWait 5
@@ -56,7 +56,7 @@ abcs_battle33:  textCursor 2876
                  moveRight 3
                 endActions
                 setFacing ALLY_PETER,UP
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing FOLLOWER_B,RIGHT
                 customActscriptWait 128
                  ac_setSpeed 24,24      ;   
@@ -110,11 +110,11 @@ abcs_battle33:  textCursor 2876
                  moveRight 3
                  moveUp 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 4
                 endActions
                 setFacing FOLLOWER_B,RIGHT
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $0,FOLLOWER_B ; "Are you a survivor?{N}Are you from Moun?{N}What's your name?{W1}"
                 nextSingleText $0,128   ; "I am {NAME;26}.{N}I am not from Moun.{W1}"
                 nextSingleText $0,FOLLOWER_B ; "Then, where are you from?{W1}"
@@ -157,7 +157,7 @@ abcs_battle33:  textCursor 2876
                 setFacing FOLLOWER_B,DOWN
                 nextText $0,FOLLOWER_B  ; "{LEADER}, hurry!{N}Follow {NAME;26}!{W2}"
                 nextSingleText $0,FOLLOWER_B ; "{NAME;26} knows where{N}they're hiding.{W1}"
-                followEntity FOLLOWER_B,ALLY_BOWIE,2
+                followEntity FOLLOWER_B,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,FOLLOWER_B,2
                 setF 833                ; Set after the scene after you win the battle in Moun plays out
                 csc_end

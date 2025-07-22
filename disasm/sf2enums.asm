@@ -3535,8 +3535,8 @@ BATTLEBACKGROUND_OVERWORLD: equ 255 ; used by custom backgrounds table
 ; ---------------------------------------------------------------------------
 
 ; enum Mapsprites
-MAPSPRITE_BOWIE_BASE: equ 0
-MAPSPRITE_BOWIE_PROMO: equ 1 ; Unused : MAPSPRITE_BOWIE_SPECIAL
+MAPSPRITE_MUSHRA_BASE: equ 0
+MAPSPRITE_MUSHRA_PROMO: equ 1 ; Unused : MAPSPRITE_MUSHRA_SPECIAL
 MAPSPRITE_SARAH_BASE: equ 2
 MAPSPRITE_SARAH_PROMO: equ 3
 MAPSPRITE_SARAH_SPECIAL: equ 4
@@ -3823,7 +3823,7 @@ SPECIALSPRITE_KRAKEN_5: equ 9
 ; ---------------------------------------------------------------------------
 
 ; enum Portraits
-PORTRAIT_BOWIE_BASE: equ 0
+PORTRAIT_MUSHRA_BASE: equ 0
 PORTRAIT_SARAH: equ 1
 PORTRAIT_CHESTER: equ 2
 PORTRAIT_JAHA: equ 3
@@ -3869,12 +3869,12 @@ PORTRAIT_ZALBARD: equ 43
 PORTRAIT_CAMEELA: equ 44
 PORTRAIT_GESHP: equ 45
 PORTRAIT_ZEON: equ 46
-PORTRAIT_BOWIE_PROMO: equ 47
+PORTRAIT_MUSHRA_PROMO: equ 47
 PORTRAIT_PETER_PROMO: equ 48
 PORTRAIT_GERHALT_PROMO: equ 49
 PORTRAIT_SLADE_PROMO: equ 50
 PORTRAIT_KIWI_PROMO: equ 51
-PORTRAIT_BOWIE_PAINTING: equ 52
+PORTRAIT_MUSHRA_PAINTING: equ 52
 PORTRAIT_NONE: equ 255
 PORTRAIT_DEFAULT: equ 65535
 
@@ -3901,7 +3901,7 @@ MAPSPRITEDIALOGUEDEF_ENTRY_SIZE: equ 4
 ; ---------------------------------------------------------------------------
 
 ; enum Allies
-ALLY_BOWIE: equ 0
+ALLY_MUSHRA: equ 0
 ALLY_SARAH: equ 1
 ALLY_CHESTER: equ 2
 ALLY_JAHA: equ 3
@@ -4350,7 +4350,7 @@ MAP_EVENT_RELOADMAP: equ $100FF
 ; ---------------------------------------------------------------------------
 
 ; enum PlayerTypes
-PLAYERTYPE_BOWIE: equ 0
+PLAYERTYPE_MUSHRA: equ 0
 PLAYERTYPE_CARAVAN: equ 1
 PLAYERTYPE_RAFT: equ 2
 

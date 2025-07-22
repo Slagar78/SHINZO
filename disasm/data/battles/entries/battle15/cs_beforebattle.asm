@@ -4,7 +4,7 @@
 bbcs_15:        textCursor 2503
                 loadMapFadeIn MAP_ACHILLES_SHRINES,9,15
                 loadMapEntities ce_4AE42
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait FOLLOWER_A,eas_Init
                 setPos FOLLOWER_A,14,19,UP
                 setActscriptWait FOLLOWER_B,eas_Init

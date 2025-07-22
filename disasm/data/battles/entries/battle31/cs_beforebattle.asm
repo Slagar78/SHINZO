@@ -4,7 +4,7 @@
 bbcs_31:        textCursor 2811
                 loadMapFadeIn MAP_PACALON,16,2
                 loadMapEntities ce_4CB92
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,20,3,DOWN
                 setActscriptWait FOLLOWER_B,eas_Init

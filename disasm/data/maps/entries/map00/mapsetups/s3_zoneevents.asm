@@ -27,7 +27,7 @@ cs_5E3C2:       textCursor 2731
                 setActscriptWait FOLLOWER_B,eas_Init
                 nextSingleText $0,128   ; "Welcome, Granseal force!{W1}"
                 setActscript FOLLOWER_B,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
                 setFacing ALLY_PETER,DOWN
                 nextSingleText $0,ALLY_PETER ; "What?{W1}"
@@ -36,7 +36,7 @@ cs_5E3C2:       textCursor 2731
                 csWait 120
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,FOLLOWER_B ; "I heard a voice from the{N}other side of the door.{W1}"
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setDest 32799,13,12
                 setDest ALLY_PETER,16,12
                 setFacing FOLLOWER_B,UP
@@ -44,12 +44,12 @@ cs_5E3C2:       textCursor 2731
                 setCamDest 8,9
                 nextSingleText $0,128   ; "I'm Zalbard.  I'm one of{N}the greater devils.{W1}"
                 setActscriptWait FOLLOWER_B,eas_DeactivateAutoFacing
-                setActscriptWait ALLY_BOWIE,eas_DeactivateAutoFacing
+                setActscriptWait ALLY_MUSHRA,eas_DeactivateAutoFacing
                 setActscriptWait ALLY_PETER,eas_DeactivateAutoFacing
                 entityActions FOLLOWER_B
                  moveDown 2
                 endActions
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActionsWait ALLY_PETER
@@ -89,7 +89,7 @@ cs_5E3C2:       textCursor 2731
                  moveDown 1
                  moveLeft 3
                 endActions
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,UP
                 setCamDest 9,12
                 setFacing FOLLOWER_B,DOWN
@@ -153,11 +153,11 @@ cs_5E3C2:       textCursor 2731
                 nextText $0,FOLLOWER_B  ; "Zalbard...at least he's not{N}as strong as Odd Eye.{W2}"
                 nextText $0,FOLLOWER_B  ; "But still, he's a greater{N}devil.{W2}"
                 nextSingleText $0,FOLLOWER_B ; "We had better complete our{N}preparations before we go in.{W1}"
-                nextSingleText $0,ALLY_BOWIE ; "OK.{W1}"
+                nextSingleText $0,ALLY_MUSHRA ; "OK.{W1}"
                 nod ALLY_PETER
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
-                followEntity FOLLOWER_B,ALLY_BOWIE,2
+                followEntity FOLLOWER_B,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,FOLLOWER_B,2
                 setBlocks 0,38,2,3,14,10
                 setF 840                ; Set after the door to the Mitula Shrine is opened

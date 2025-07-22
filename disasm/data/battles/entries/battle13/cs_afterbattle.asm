@@ -5,7 +5,7 @@ abcs_battle13:  textCursor 2495
                 playSound $FD
                 loadMapFadeIn MAP_POLCA,11,8
                 loadMapEntities ce_4AD96
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setPos ALLY_PETER,15,13,RIGHT
                 customActscriptWait ALLY_LUKE
                  ac_motion OFF          ;   

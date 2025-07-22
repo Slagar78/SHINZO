@@ -35,14 +35,14 @@ cs_56422:       textCursor 1294
                 setActscriptWait ALLY_PETER,eas_Init
                 setDest ALLY_PETER,14,10
                 setFacing ALLY_PETER,UP
-                setActscriptWait ALLY_BOWIE,eas_DeactivateAutoFacing
+                setActscriptWait ALLY_MUSHRA,eas_DeactivateAutoFacing
                 setActscriptWait ALLY_PETER,eas_DeactivateAutoFacing
                 customActscriptWait 129
                  ac_setSpeed 48,48      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
                 csWait 30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 setActscriptWait 128,eas_BumpDown
@@ -50,7 +50,7 @@ cs_56422:       textCursor 1294
                  moveDown 1
                 endActions
                 csWait 30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActions ALLY_PETER
@@ -61,7 +61,7 @@ cs_56422:       textCursor 1294
                  moveDown 1
                 endActions
                 csWait 30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActions ALLY_PETER
@@ -72,7 +72,7 @@ cs_56422:       textCursor 1294
                  moveDown 1
                 endActions
                 csWait 30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActions ALLY_PETER
@@ -83,7 +83,7 @@ cs_56422:       textCursor 1294
                  moveDown 1
                 endActions
                 csWait 30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActions ALLY_PETER
@@ -110,7 +110,7 @@ cs_56422:       textCursor 1294
                 nextSingleText $0,129   ; "You came here to capture{N}Parmecia!{W1}"
                 nextSingleText $0,128   ; "We'll never obey you!{N}Go away!{W1}"
                 setActscriptWait 129,eas_Init
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 entityActions 128
                  moveUp 1
@@ -120,14 +120,14 @@ cs_56422:       textCursor 1294
                 endActions
                 setActscriptWait ALLY_PETER,eas_Jump
                 nextSingleText $0,ALLY_PETER ; "You talk too much!{W1}"
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 nextText $0,ALLY_PETER  ; "Hey, {LEADER}!{N}Why don't you say something?{W2}"
                 nextSingleText $0,ALLY_PETER ; "I can't stand this!{W1}"
                 entityActionsWait ALLY_PETER
                  moveLeft 1
                  moveUp 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $0,ALLY_PETER ; "Hey, you!  I think I{N}understand how you feel,{N}but listen to me!{W1}"
                 setFacing 128,DOWN
                 setFacing 129,DOWN
@@ -153,14 +153,14 @@ cs_56422:       textCursor 1294
                 nextSingleText $0,129   ; "I promise that we will{N}welcome you when you visit{N}us again!{W1}"
                 fadeOutB
                 loadMapEntities ce_55FBE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setBlocks 32,2,1,1,25,12
                 setBlocks 32,2,1,1,22,24
                 setBlocks 32,2,1,1,7,25
                 setBlocks 32,3,2,1,6,15
                 setF 709                ; Set after the mayor in Ribble scene... this flag unlocks the doors
                 executeSubroutine j_csub_40F2
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 csWait 50
                 fadeInB
                 csc_end

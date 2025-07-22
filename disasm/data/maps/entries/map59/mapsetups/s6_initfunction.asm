@@ -56,7 +56,7 @@ cs_5EB44:       textCursor 3699
                 setCameraEntity 65535
                 reloadMap 8,2
                 loadMapEntities ce_5F19E
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 csWait 60
                 playSound MUSIC_WITCH
                 csWait 30
@@ -100,7 +100,7 @@ cs_5EB44:       textCursor 3699
 cs_5EBFC:       loadMapFadeIn MAP_PRISM_FLOWERS_FIELD,8,14
                 textCursor 3723
                 loadMapEntities ce_5F1DE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 stopEntity 130
                 stopEntity 131
                 stopEntity 132
@@ -166,7 +166,7 @@ cs_5EBFC:       loadMapFadeIn MAP_PRISM_FLOWERS_FIELD,8,14
 cs_5ED06:       textCursor 3729
                 loadMapFadeIn MAP_OVERWORLD_NEW_GRANSEAL_SHORE,0,0
                 loadMapEntities ce_5F1BE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 executeSubroutine sub_5F31E
                 playSound MUSIC_MITULA_SHRINE
                 setBlocks 0,10,22,10,42,10
@@ -177,7 +177,7 @@ cs_5ED06:       textCursor 3729
                 nextSingleText $0,FOLLOWER_B ; "We've finally come home.{W1}"
                 loadMapFadeIn MAP_PRISM_FLOWERS_FIELD,10,13
                 loadMapEntities ce_5F23E
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 playSound MUSIC_BATTLE_THEME_1
                 stopEntity 128
                 stopEntity 130
@@ -187,7 +187,7 @@ cs_5ED06:       textCursor 3729
                 nextSingleText $80,129  ; "I see the Nazca Ship!{N}Everybody, get ready!{W1}"
                 loadMapFadeIn MAP_OVERWORLD_NEW_GRANSEAL_SHORE,0,0
                 loadMapEntities ce_5F1BE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 executeSubroutine sub_5F31E
                 playSound MUSIC_MITULA_SHRINE
                 setBlocks 0,10,22,10,42,10
@@ -201,7 +201,7 @@ cs_5ED06:       textCursor 3729
 cs_5EDB8:       textCursor 3737
                 loadMapFadeIn MAP_PRISM_FLOWERS_FIELD,10,13
                 loadMapEntities ce_5F28E
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 playSound MUSIC_ENEMY_ATTACK
                 setActscript 133,eas_5EF46
                 setActscript 134,eas_5EF46
@@ -335,7 +335,7 @@ cs_5EF60:       textCursor 3739
                 endActions
                 setFacing ALLY_PETER,LEFT
                 nextSingleText $80,ALLY_PETER ; "Oooouu!!  What was that?!{N}Lightning?{W1}"
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_ZYNK,DOWN
                 nextText $80,ALLY_ZYNK  ; "An attack from the ground.{W2}"
                 nextSingleText $80,ALLY_ZYNK ; "I can't control the ship!{W1}"
@@ -393,7 +393,7 @@ cs_5EF60:       textCursor 3739
                 setQuake 0
                 mapLoad MAP_OVERWORLD_GRANS_NORTH_SHORE,20,14
                 loadMapEntities ce_5F1CE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setCameraEntity 128
                 customActscriptWait 128
                  ac_setSpeed 16,16      ;   

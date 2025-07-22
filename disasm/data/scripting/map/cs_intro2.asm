@@ -4,7 +4,7 @@
 IntroCutscene2: textCursor 4202
                 mapLoad MAP_GRANSEAL_CASTLE,7,2
                 loadMapEntities ce_48510
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 cloneEntity 132,131
                 resetMap
                 fadeInB

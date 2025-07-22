@@ -372,23 +372,23 @@ ProcessMapEventType5_GetOutOfRaft:
 ; =============== S U B R O U T I N E =======================================
 
 
-j_j_ShrinkInBowieAndFollowers:
+j_j_ShrinkInMUSHRAAndFollowers:
                 
-                jsr     j_ShrinkIntoCaravanBowieAndFollowers
+                jsr     j_ShrinkIntoCaravanMUSHRAAndFollowers
                 rts
 
-    ; End of function j_j_ShrinkInBowieAndFollowers
+    ; End of function j_j_ShrinkInMUSHRAAndFollowers
 
 
 ; =============== S U B R O U T I N E =======================================
 
 
-j_j_GrowOutBowieAndFollowers:
+j_j_GrowOutMUSHRAAndFollowers:
                 
-                jsr     j_GrowOutBowieAndFollowers
+                jsr     j_GrowOutMUSHRAAndFollowers
                 rts
 
-    ; End of function j_j_GrowOutBowieAndFollowers
+    ; End of function j_j_GrowOutMUSHRAAndFollowers
 
 
 ; =============== S U B R O U T I N E =======================================

@@ -24,7 +24,7 @@ loc_612A8:
 
 cs_612BE:       textCursor 3681
                 mapLoad MAP_ZEON_ARENA,8,4
-                setPos ALLY_BOWIE,63,63,DOWN
+                setPos ALLY_MUSHRA,63,63,DOWN
                 setPos ALLY_PETER,63,63,DOWN
                 setPos FOLLOWER_B,63,63,DOWN
                 setPos ALLY_ZYNK,63,63,DOWN

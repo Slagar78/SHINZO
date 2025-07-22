@@ -29,18 +29,18 @@ return_53994:
     ; End of function ms_map20_InitFunction
 
 cs_53996:       textCursor 2176
-                setPos ALLY_BOWIE,23,39,DOWN
+                setPos ALLY_MUSHRA,23,39,DOWN
                 setPos ALLY_SARAH,23,38,DOWN
                 setPos ALLY_CHESTER,23,37,DOWN
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_SARAH,eas_Init
                 setActscriptWait ALLY_CHESTER,eas_Init
                 fadeInB
                 csWait 20
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 csWait 20
                 setCamDest 12,34
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 nextSingleText $0,128   ; "Mmmm....{N}Hmmm...mmmm....{W1}"
                 nextSingleText $0,129   ; "Oh, father!{N}Please wake up.{W1}"
                 entityActionsWait 131
@@ -73,10 +73,10 @@ cs_53996:       textCursor 2176
                 setActscriptWait 130,eas_Init
                 nextSingleText $0,130   ; "What are you doing here?!{W1}"
                 setCamDest 17,34
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_SARAH,eas_Jump
                 setActscriptWait ALLY_CHESTER,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_SARAH,eas_Jump
                 setActscriptWait ALLY_CHESTER,eas_Jump
                 nextSingleText $80,ALLY_CHESTER ; "Oops!{W1}"
@@ -89,7 +89,7 @@ cs_53996:       textCursor 2176
                  moveLeft 1
                 endActions
                 setFacing ALLY_SARAH,DOWN
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 nextSingleText $80,ALLY_SARAH ; "Well, we just followed you....{W1}"
                 entityActionsWait 130
                  moveRight 1
@@ -139,7 +139,7 @@ cs_53996:       textCursor 2176
                  moveRight 1
                  moveUp 1
                 endActions
-                followEntity ALLY_SARAH,ALLY_BOWIE,2
+                followEntity ALLY_SARAH,ALLY_MUSHRA,2
                 followEntity ALLY_CHESTER,ALLY_SARAH,2
 cs_53B60:       hide 130
                 csc_end

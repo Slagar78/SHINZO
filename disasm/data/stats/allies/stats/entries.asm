@@ -1,7 +1,7 @@
 
 ; ASM FILE data\stats\allies\stats\entries.asm :
 ; 0x1EE270..0x1EE2F0 : Ally stats
-pt_AllyStats:   dc.l AllyStats00        ; BOWIE
+pt_AllyStats:   dc.l AllyStats00        ; MUSHRA
                 dc.l AllyStats01        ; SARAH
                 dc.l AllyStats02        ; CHESTER
                 dc.l AllyStats03        ; JAHA

@@ -50,7 +50,7 @@ $0008 - join - Character joins Force
 Trigger the event by displaying join text, playing music, updating Force member list.
 1 param :
 - word : character index
-Character IDs are from 00-1D (Bowie-Claude).
+Character IDs are from 00-1D (MUSHRA-Claude).
 Harcoded special case : value $80 is used for Sarah + Chester who join simultaneously.
 
 $0009 - hideText - Hide textbox and optional portait.

@@ -4,7 +4,7 @@
 bbcs_40:        textCursor 3036
                 loadMapFadeIn MAP_ODDEYE_ARENA,11,34
                 loadMapEntities ce_4E878
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,15,40,UP
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -21,7 +21,7 @@ cs_4E544:       setBlocks 11,6,11,29,44,0
                 playSound MUSIC_STOP
                 fadeInB
                 cameraSpeed $30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 3
                 endActions
                 entityActions ALLY_PETER
@@ -37,9 +37,9 @@ cs_4E544:       setBlocks 11,6,11,29,44,0
                  moveUp 3
                 endActions
                 nextSingleText $C0,129  ; "{LEADER}, you're finally{N}here.{W1}"
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 1
                 endActions
                 entityActions ALLY_PETER
@@ -86,7 +86,7 @@ cs_4E544:       setBlocks 11,6,11,29,44,0
                 nextSingleText $0,ALLY_PETER ; "That means...we don't have{N}to fight him.{W1}"
                 nextSingleText $0,FOLLOWER_B ; "True, but we can't take the{N}easy way out.  We mustn't{N}give him the jewel.{W1}"
                 nextSingleText $C0,129  ; "You know how strong I am.{N}I think you had better{N}accept the offer.{W1}"
-                nextSingleText $0,ALLY_BOWIE ; "Hmmm....{W1}"
+                nextSingleText $0,ALLY_MUSHRA ; "Hmmm....{W1}"
                 nextSingleText $0,ALLY_PETER ; "Oh, what should we do?!{W1}"
                 nextSingleText $0,FOLLOWER_B ; "We have to fight!{W1}"
                 nextSingleText $C0,129  ; "Times up!  We need space{N}to battle.{W1}"
@@ -197,7 +197,7 @@ cs_4E544:       setBlocks 11,6,11,29,44,0
                 nextSingleText $C0,129  ; "I'm very sorry, {LEADER},{N}but I must kill you!{W1}"
                 setCamDest 11,31
                 setFacing ALLY_PETER,RIGHT
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 nextSingleText $0,ALLY_PETER ; "{LEADER}, are we really{N}going to fight Oddler?{W1}"
                 entityActionsWait FOLLOWER_B
                  moveLeft 1
@@ -209,10 +209,10 @@ cs_4E544:       setBlocks 11,6,11,29,44,0
                  moveRight 1
                 endActions
                 setFacing FOLLOWER_B,UP
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}, let's do it!{W1}"
                 setActscript ALLY_PETER,eas_Jump
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 csc_end
 ce_4E878:       mainEntity 16,39,UP
                 entity 15,40,UP,ALLY_PETER,eas_Init

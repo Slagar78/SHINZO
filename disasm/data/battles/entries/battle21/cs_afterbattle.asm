@@ -4,7 +4,7 @@
 abcs_battle21:  textCursor 2583
                 loadMapFadeIn MAP_OVERWORLD_DEVILS_TAIL,4,18
                 loadMapEntities ce_4B948
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,11,23,LEFT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -36,9 +36,9 @@ abcs_battle21:  textCursor 2583
                 endActions
                 setFacing ALLY_PETER,UP
                 nextSingleText $C0,ALLY_PETER ; "{LEADER}, let's go see{N}Mr. Creed!{W1}"
-                setFacing ALLY_BOWIE,DOWN
-                nod ALLY_BOWIE
-                followEntity FOLLOWER_A,ALLY_BOWIE,2
+                setFacing ALLY_MUSHRA,DOWN
+                nod ALLY_MUSHRA
+                followEntity FOLLOWER_A,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,FOLLOWER_A,1
                 followEntity FOLLOWER_B,FOLLOWER_A,3
                 warp MAP_OVERWORLD_DEVILS_TAIL,26,23,DOWN

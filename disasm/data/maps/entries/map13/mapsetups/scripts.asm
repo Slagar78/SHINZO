@@ -7,7 +7,7 @@ cs_58330:       playSound SFX_BIG_DOOR_RUMBLE
                 setQuake 0
                 csWait 20
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript 133,eas_2xUpDown
                 csWait 50
@@ -27,7 +27,7 @@ cs_58330:       playSound SFX_BIG_DOOR_RUMBLE
                  ac_setSpeed 4,4        ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,RIGHT
                 entityActionsWait 140
                  moveLeft 1
@@ -68,7 +68,7 @@ cs_58330:       playSound SFX_BIG_DOOR_RUMBLE
                 nextSingleText $0,133   ; "Mayor, mayor!{W1}"
                 setPos 137,17,7,RIGHT
                 setCamDest 13,3
-                setPos ALLY_BOWIE,25,9,UP
+                setPos ALLY_MUSHRA,25,9,UP
                 setPos ALLY_PETER,25,9,UP
                 setCameraEntity 137
                 entityActionsWait 137
@@ -125,8 +125,8 @@ cs_58330:       playSound SFX_BIG_DOOR_RUMBLE
                 setFacing 137,LEFT
                 setFacing 133,UP
                 setFacing 140,DOWN
-                setActscriptWait ALLY_BOWIE,eas_Init
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 reloadEntities ms_map13_flag710_Entities
                 csc_end
 cs_58512:       customActscriptWait 130
@@ -136,30 +136,30 @@ cs_58512:       customActscriptWait 130
                 setCameraEntity 65535
                 textCursor 1435
                 nextSingleText $0,130   ; "Help!  Help!{N}I can't...get up!{W2}{N}You, please turn me over!{W1}"
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setDest ALLY_PETER,2,12
                 setFacing ALLY_PETER,LEFT
                 csWait 30
-                setActscriptWait ALLY_BOWIE,eas_BumpUp
+                setActscriptWait ALLY_MUSHRA,eas_BumpUp
                 csWait 40
                 nextSingleText $0,130   ; "Are you a wimp?{N}Push harder!{W1}"
                 csWait 10
-                nod ALLY_BOWIE
-                setActscriptWait ALLY_BOWIE,eas_BumpUp
-                setActscriptWait ALLY_BOWIE,eas_BumpUp
+                nod ALLY_MUSHRA
+                setActscriptWait ALLY_MUSHRA,eas_BumpUp
+                setActscriptWait ALLY_MUSHRA,eas_BumpUp
                 csWait 20
                 nextSingleText $0,130   ; "Good, good!{N}Push!{W1}"
-                setActscriptWait ALLY_BOWIE,eas_DeactivateAutoFacing
-                entityActionsWait ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_DeactivateAutoFacing
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                 endActions
                 csWait 30
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 48,48      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
                 setQuake 2
@@ -180,8 +180,8 @@ cs_58512:       customActscriptWait 130
                 entityActionsWait 130
                  moveUp 10
                 endActions
-                setActscriptWait ALLY_BOWIE,eas_Init
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 csc_end
 cs_585FE:       playSound $FD
                 customActscriptWait 129
@@ -268,7 +268,7 @@ cs_585FE:       playSound $FD
                 setCamDest 6,6
                 nextSingleText $0,ALLY_GERHALT ; "I'll help you fight against{N}the devils and guard Oddler!{W1}"
                 setCameraEntity ALLY_GERHALT
-                setPos ALLY_BOWIE,20,9,DOWN
+                setPos ALLY_MUSHRA,20,9,DOWN
                 setPos ALLY_PETER,19,8,DOWN
                 entityActionsWait ALLY_GERHALT
                  moveDown 3
@@ -375,13 +375,13 @@ cs_58856:       textCursor 1487
                 setFacing ALLY_LUKE,UP
                 nextSingleText $0,ALLY_LUKE ; "C'mon, mayor.  We're alive!{W1}"
                 nextSingleText $0,137   ; "What?!{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 1
                 endActions
                 entityActionsWait 137
                  moveDown 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing 137,RIGHT
                 setFacing ALLY_LUKE,LEFT
                 csWait 30
@@ -508,7 +508,7 @@ cs_58856:       textCursor 1487
                 endActions
                 setFacing ALLY_LUKE,DOWN
                 nextSingleText $0,ALLY_LUKE ; "Let's go!{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity ALLY_LUKE,ALLY_PETER,2
                 csc_end
 cs_58AE2:       textCursor 1517
@@ -528,7 +528,7 @@ cs_58AE2:       textCursor 1517
                 nextSingleText $C0,ALLY_LUKE ; "You don't want to take care{N}of him!{W1}"
                 setFacing 137,LEFT
                 nextSingleText $0,137   ; "I...er....{W1}"
-                setPos ALLY_BOWIE,22,12,RIGHT
+                setPos ALLY_MUSHRA,22,12,RIGHT
                 setPos ALLY_PETER,23,12,LEFT
                 setPos ALLY_LUKE,23,11,DOWN
                 setCamDest 16,6
@@ -539,7 +539,7 @@ cs_58AE2:       textCursor 1517
                 jumpIfFlagSet 89,cs_58B7A ; YES/NO prompt answer
                 nextText $0,ALLY_PETER  ; "I agree.  Our journey will{N}be too difficult on him,{N}as he is blind.{W2}"
                 csWait 30
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing ALLY_LUKE,UP
                 nextSingleText $80,ALLY_PETER ; "Mayor, we can't take him,{N}we're sorry.{W1}"
@@ -570,7 +570,7 @@ cs_58B7A:       textCursor 1528
                 endActions
                 setFacing 137,DOWN
                 setFacing 140,DOWN
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing ALLY_LUKE,UP
                 nextText $0,137         ; "Oh, thank you!{W1}"
@@ -590,7 +590,7 @@ cs_58BEA:       textCursor 1541
                 nextSingleText $0,140   ; "Please, let me go with you!{W1}"
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait ALLY_LUKE,eas_Init
-                setPos ALLY_BOWIE,14,30,UP
+                setPos ALLY_MUSHRA,14,30,UP
                 setPos ALLY_PETER,15,30,UP
                 setPos ALLY_LUKE,13,30,UP
                 setCamDest 10,22
@@ -619,7 +619,7 @@ cs_58BEA:       textCursor 1541
                 ac_end
                 removeShadow 140
                 csWait 30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 2
                 endActions
                 entityActions ALLY_PETER
@@ -648,7 +648,7 @@ cs_58BEA:       textCursor 1541
                 setFacing 140,RIGHT
                 nextSingleText $80,ALLY_PETER ; "But, you may be injured!{W1}"
                 setFacing 140,DOWN
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_LUKE,RIGHT
                 nextText $0,ALLY_LUKE   ; "Well, I think he should come{N}with us.{W2}"
                 nextText $0,ALLY_LUKE   ; "If we left him here, he{N}could be killed.{W2}"
@@ -657,7 +657,7 @@ cs_58BEA:       textCursor 1541
                  moveDown 1
                 endActions
                 setFacing ALLY_PETER,LEFT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 nextText $80,ALLY_PETER ; "He needs a guardian.{W2}"
                 nextSingleText $80,ALLY_PETER ; "I'll take care of him.{W1}"
                 entityActionsWait ALLY_PETER
@@ -665,7 +665,7 @@ cs_58BEA:       textCursor 1541
                 endActions
                 setFacing ALLY_PETER,LEFT
                 setFacing 140,RIGHT
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $80,ALLY_PETER ; "OK.  Let's go.{W1}"
                 textCursor 1532
                 nod 140
@@ -694,7 +694,7 @@ cs_58D4C:       textCursor 1532
                 ac_end
                 removeShadow 140
                 csWait 30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 2
                 endActions
                 entityActions ALLY_PETER
@@ -718,7 +718,7 @@ cs_58DD2:       textCursor 1536
                 nextSingleText $0,140   ; "I'm afraid I'll cause you a{N}lot of trouble.{W1}"
                 nextSingleText $FF,255  ; "{LEADER} decides to{N}take Oddler with him.{W1}"
                 csWait 30
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity 140,ALLY_PETER,2
                 followEntity ALLY_LUKE,140,2
                 setF 68                 ; Oddler is a follower

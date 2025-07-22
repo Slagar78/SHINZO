@@ -41,7 +41,7 @@ FIX_COPY_SWAP_EXPLOIT:               equ 1   ; Some game data will be carried ov
 FIX_COUNT_DEFEATED_ENEMIES:          equ 1   ; Fixes the death counter that impacts "swarm AI" for battles 16, 20, 21. In vanilla, does not impact battles 16, 20, but makes 21 more aggressive.
 FIX_CRITICAL_HIT_DEFINITIONS:        equ 1   ; Makes the "Increase Critical" equipeffect increase chance while never impacting damage potential.
 FIX_DWARVEN_MINER_VOICE:             equ 1   ; A cutscene has a fairy NPC concluding her dialogue, and when the dwarf delivers his first line, it uses the same female NPC speech sound effect until his follow-up dialogue line.
-FIX_ELIS_DIALOGUE_ASSIGNMENT:        equ 1   ; A line of dialogue used during the cutscene in the tower underground room before Granseal's destruction is wrongly assigned to Bowie.
+FIX_ELIS_DIALOGUE_ASSIGNMENT:        equ 1   ; A line of dialogue used during the cutscene in the tower underground room before Granseal's destruction is wrongly assigned to MUSHRA.
 FIX_ELIS_SPEECH_SFX:                 equ 1   ; Corrects Elis's speech SFX when using MAPSPRITE_POSE6.
 FIX_ENEMY_BATTLE_EQUIP:              equ 1   ; Enemies will equip battle items as designated in the battle spriteset.
 FIX_EXPLORATION_MAGIC_MENU_ICONS:    equ 1   ; Applies the index mask $3F to spell entries when populating the currently displayed icons table.
@@ -96,7 +96,7 @@ EXPANDED_RANGES:                    equ 1       ; Weapons/spells can have ranges
 LEARN_SPELL_AT_PROMOTION:           equ 0       ; Allow learning 1 spell immediately upon promotion.
 MUSCLE_MAGIC:                       equ 0       ; 0 = OFF, 1-256 = spell power increased by (muscleMagicStat * n) / 256
 MUSCLE_MAGIC_STAT:                  equ 5       ; 0 = Max HP, 1 = Current HP, 2 = Max MP, 3 = Current MP, 4 = Base ATT, 5 = Current ATT, 6 = Base DEF, 7 = Current DEF, 8 = Base AGI, 9 = Current AGI
-ORIGINAL_TAROS_INVULNERABILITY:     equ 0       ; 0 = OFF, 1 = Japanese version behavior (i.e, Bowie must continually attack to keep invulnerability off), 2 = SFCD behavior (invulnerability stays off for the remainder of the battle)
+ORIGINAL_TAROS_INVULNERABILITY:     equ 0       ; 0 = OFF, 1 = Japanese version behavior (i.e, MUSHRA must continually attack to keep invulnerability off), 2 = SFCD behavior (invulnerability stays off for the remainder of the battle)
 PER_LEVEL_CHURCH_COST:              equ 0       ; Raise/Cure cost based on ally level (double cost per promo level.)
 PERCENT_POISON_DAMAGE:              equ 0       ; 1-100 = n% of max HP
 PLAYER_DEFEAT_IS_GAME_OVER:         equ 0       ; On player defeat, rather than halve the gold and return to town, reset the game.

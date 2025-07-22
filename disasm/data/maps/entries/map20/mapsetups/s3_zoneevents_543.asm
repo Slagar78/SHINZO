@@ -43,9 +43,9 @@ byte_632E0:
 
     ; End of function Map20_21F_ZoneEvent0
 
-cs_632EA:       setActscriptWait ALLY_BOWIE,eas_Init
+cs_632EA:       setActscriptWait ALLY_MUSHRA,eas_Init
                 csWait 1
-                shiver ALLY_BOWIE
+                shiver ALLY_MUSHRA
                 csc_end
 
 ; =============== S U B R O U T I N E =======================================

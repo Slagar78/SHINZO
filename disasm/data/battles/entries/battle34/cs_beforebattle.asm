@@ -4,7 +4,7 @@
 bbcs_34:        textCursor 2895
                 loadMapFadeIn MAP_CAMEELA_ARENA,21,22
                 loadMapEntities ce_4D48E
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,30,28,LEFT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -16,7 +16,7 @@ cs_4D38E:       animEntityFX 129,6
                 playSound MUSIC_BATTLE_THEME_1
                 fadeInB
                 cameraSpeed $30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveLeft 3
                 endActions
                 entityActions ALLY_PETER

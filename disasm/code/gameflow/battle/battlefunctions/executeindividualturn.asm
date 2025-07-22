@@ -20,7 +20,7 @@ ExecuteIndividualTurn:
                 
                 bsr.w   ClearDeadCombatantsListLength
                 
-                ; Are we currently battling Taros, and is Bowie the actor?
+                ; Are we currently battling Taros, and is MUSHRA the actor?
                 compareToSavedByte #BATTLE_VERSUS_TAROS, CURRENT_BATTLE ; HARDCODED battle index
                 bne.s   @IsActorAlive
                 tst.w   combatant(a6)

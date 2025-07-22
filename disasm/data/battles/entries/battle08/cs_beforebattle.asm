@@ -4,7 +4,7 @@
 bbcs_08:        textCursor 2461
                 loadMapFadeIn MAP_OVERWORLD_NORTH_SOUTH_PARMECIA_JUNCTION,1,46
                 loadMapEntities ce_4AA14
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 stopEntity 129
                 customActscriptWait 129
                  ac_motion OFF          ;   

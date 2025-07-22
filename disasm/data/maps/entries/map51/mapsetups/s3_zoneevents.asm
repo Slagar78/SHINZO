@@ -75,8 +75,8 @@ cs_5C312:       textCursor 2555
                 csc_end
 cs_5C3AA:       textCursor 2565
                 nextSingleText $0,ALLY_PETER ; "{LEADER}, we have to{N}save him!{W1}"
-                nod ALLY_BOWIE
-                entityActionsWait ALLY_BOWIE
+                nod ALLY_MUSHRA
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
                 csc_end

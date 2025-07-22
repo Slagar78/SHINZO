@@ -5,7 +5,7 @@ bbcs_16:        textCursor 2513
                 loadMapFadeIn MAP_KRAKEN_RAFT,9,10
                 executeSubroutine csub_4B1CA
                 loadMapEntities ce_4B15C
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setBlocks 13,4,3,3,0,0
                 setBlocks 31,4,3,3,13,4
                 cloneEntity 129,130
@@ -23,7 +23,7 @@ bbcs_16:        textCursor 2513
                 fadeInB
                 csWait 30
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript ALLY_PETER,eas_2xRightLeft
                 csWait 5
@@ -33,11 +33,11 @@ bbcs_16:        textCursor 2513
                  moveRight 1
                 endActions
                 csWait 20
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing FOLLOWER_B,DOWN
                 nextSingleText $C0,ALLY_PETER ; "Huh?  The raft stopped!{W1}"
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,LEFT
                 setFacing FOLLOWER_B,RIGHT
                 nextSingleText $0,FOLLOWER_B ; "Did the water stop flowing?{N}What's happening?{W1}"
@@ -47,7 +47,7 @@ bbcs_16:        textCursor 2513
                 setActscriptWait ALLY_PETER,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
                 nextSingleText $C0,ALLY_PETER ; "Wow!{D1}  What's that?{W1}"
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing FOLLOWER_B,UP
                 csWait 20
                 entityActionsWait ALLY_PETER

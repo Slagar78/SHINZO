@@ -39,7 +39,7 @@ cs_5249E:       playSound $FD
                 fadeInB
                 textCursor 880
                 reloadMap 52,1
-                setPos ALLY_BOWIE,59,4,UP
+                setPos ALLY_MUSHRA,59,4,UP
                 nextSingleText $0,ALLY_SARAH ; "Impossible!{N}Galam and Granseal are{N}allies!{W1}"
                 nextSingleText $C0,132  ; "But it's true.  I'm a scholar.{N}I'm here because I tried{N}to stop him.{W1}"
                 nextText $C0,133        ; "I'm a leader of the Galam{N}Army.  I disagreed with{N}the war and now I'm here.{W2}"
@@ -56,11 +56,11 @@ cs_5249E:       playSound $FD
                 playSound MUSIC_CASTLE
                 fadeInB
                 csWait 30
-                setDest ALLY_BOWIE,59,5
-                headshake ALLY_BOWIE
-                nod ALLY_BOWIE
-                nextSingleText $0,ALLY_BOWIE ; "(Yawn){W1}"
-                setFacing ALLY_BOWIE,LEFT
+                setDest ALLY_MUSHRA,59,5
+                headshake ALLY_MUSHRA
+                nod ALLY_MUSHRA
+                nextSingleText $0,ALLY_MUSHRA ; "(Yawn){W1}"
+                setFacing ALLY_MUSHRA,LEFT
                 csWait 40
                 setFacing ALLY_CHESTER,RIGHT
                 textCursor 892

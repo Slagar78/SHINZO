@@ -143,7 +143,7 @@ ExecuteAiCommand_Heal:
                 btst    #COMBATANT_BIT_ENEMY,d0
                 bne.s   @EnemyTargets   
                 
-                clr.w   d0              ; if ally (aka force member), highest priority target to heal is Bowie
+                clr.w   d0              ; if ally (aka force member), highest priority target to heal is MUSHRA
                 move.w  #COMBATANT_ALLIES_COUNTER,d4 ; check the first 30 force members whether they need healing (this is only for when AI controls the force member)
                 bra.s   @MakeTargetsList_Loop
 @EnemyTargets:

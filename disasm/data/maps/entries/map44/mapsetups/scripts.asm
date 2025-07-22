@@ -6,7 +6,7 @@ cs_54578:       textCursor 1013
                 nod 138
                 setFacing 138,DOWN
                 nextSingleText $0,138   ; "Weigh anchor!{W1}"
-                setDest ALLY_BOWIE,11,13
+                setDest ALLY_MUSHRA,11,13
                 entityActions 139
                  moveRight 4
                  moveUp 9
@@ -19,7 +19,7 @@ cs_54578:       textCursor 1013
                  faceRight 2
                  faceDown 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 4
 Map21_DefaultZoneEvent:
                  moveDown 1
@@ -28,7 +28,7 @@ Map21_DefaultZoneEvent:
                  moveRight 2
                 endActions
                 csWait 30
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing FOLLOWER_B,DOWN
                 setFacing FOLLOWER_A,DOWN
                 setFacing 159,DOWN
@@ -74,14 +74,14 @@ Map21_DefaultZoneEvent:
                 csWait 120
                 loadMapFadeIn MAP_OVERWORLD_GRANS_GRANSEAL,28,26
                 loadMapEntities ce_54736
-                setActscriptWait ALLY_BOWIE,eas_Init
-                setSprite ALLY_BOWIE,MAPSPRITE_BOAT
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                setSprite ALLY_MUSHRA,MAPSPRITE_BOAT
                 fadeInB
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 20,20      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveRight 1
                  moveUp 2
                  moveRight 1

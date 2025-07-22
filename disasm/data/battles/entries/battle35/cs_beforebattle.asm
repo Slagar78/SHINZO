@@ -4,7 +4,7 @@
 bbcs_35:        textCursor 2934
                 loadMapFadeIn MAP_OVERWORLD_GRANS_RETURN_PATH,37,5
                 loadMapEntities ce_4D832
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,44,10,LEFT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -17,7 +17,7 @@ bbcs_35:        textCursor 2934
 cs_4D728:       fadeInB
                 cameraSpeed $30
                 nextSingleText $0,128   ; "You're still alive?{W1}"
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscriptWait FOLLOWER_B,eas_Jump
                 nextSingleText $C0,FOLLOWER_B ; "Geshp!{W1}"

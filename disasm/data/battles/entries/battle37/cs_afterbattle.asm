@@ -4,7 +4,7 @@
 abcs_battle37:  textCursor 2972
                 loadMapFadeIn MAP_OVERWORLD_GRANS_AROUND_DWARF_VILLAGE,31,54
                 loadMapEntities ce_4DD8C
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,33,59,RIGHT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -45,17 +45,17 @@ cs_4DBEE:       stopEntity ALLY_LEMON
                 setActscript ALLY_PETER,eas_Jump
                 setActscriptWait FOLLOWER_B,eas_Jump
                 nextSingleText $0,FOLLOWER_B ; "It's {NAME;28}!{W1}"
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 2
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 shiver ALLY_PETER
                 nextSingleText $0,ALLY_PETER ; "Let me see him.{W1}"
                 shiver ALLY_LEMON
                 stopEntity ALLY_LEMON
                 entityFlashWhite ALLY_LEMON,$39
                 setActscript ALLY_PETER,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscriptWait FOLLOWER_B,eas_Jump
                 nextSingleText $0,ALLY_PETER ; "Wow, he's alive!{W1}"
                 nextSingleText $0,FOLLOWER_B ; "{NAME;28}!  {NAME;28}!{W1}"
@@ -83,7 +83,7 @@ cs_4DBEE:       stopEntity ALLY_LEMON
                 endActions
                 shiver ALLY_LEMON
                 setFacing ALLY_PETER,DOWN
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 nextSingleText $C0,ALLY_LEMON ; "What can I do?{N}How can I atone for my sins?{W1}"
                 setFacing ALLY_LEMON,DOWN
                 nextSingleText $C0,ALLY_LEMON ; "Sir Astral, tell me.{W1}"
@@ -99,7 +99,7 @@ cs_4DBEE:       stopEntity ALLY_LEMON
                 setFacing ALLY_LEMON,UP
                 nextSingleText $C0,ALLY_LEMON ; "I have to die for my sins.{N}It will be my atonement.{W2}"
                 setActscript ALLY_PETER,eas_Jump
-                setActscriptWait ALLY_BOWIE,eas_Jump
+                setActscriptWait ALLY_MUSHRA,eas_Jump
                 nextSingleText $C0,ALLY_LEMON ; "I have to die!{W1}"
                 setFacing ALLY_LEMON,DOWN
                 csWait 30
@@ -112,7 +112,7 @@ cs_4DBEE:       stopEntity ALLY_LEMON
                 nextSingleText $0,ALLY_PETER ; "Will you let him die?{W1}"
                 nextSingleText $0,FOLLOWER_B ; "{NAME;28} is an immortal{N}vampire now.  He can't die{N}very easily.{W1}"
                 setFacing FOLLOWER_B,RIGHT
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 nextSingleText $0,FOLLOWER_B ; "I think we'll meet him again.{N}{LEADER}, let's go.{W1}"
                 csc_end
 ce_4DD8C:       mainEntity 36,57,DOWN

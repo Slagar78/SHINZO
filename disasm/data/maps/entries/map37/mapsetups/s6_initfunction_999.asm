@@ -20,7 +20,7 @@ ms_map37_flag999_InitFunction:
 
 cs_5FABC:       textCursor 3359
                 reloadMap 6,6
-                setPos ALLY_BOWIE,8,12,UP
+                setPos ALLY_MUSHRA,8,12,UP
                 setPos ALLY_PETER,13,12,UP
                 setPos ALLY_ZYNK,10,10,DOWN
                 setPos 128,10,11,UP

@@ -20,7 +20,7 @@ return_5C3D6:
 cs_5C3D8:       textCursor 2550
                 setActscriptWait FOLLOWER_B,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
-                setPos ALLY_BOWIE,11,22,UP
+                setPos ALLY_MUSHRA,11,22,UP
                 setPos FOLLOWER_B,10,22,UP
                 setPos ALLY_PETER,9,22,UP
                 fadeInB
@@ -41,8 +41,8 @@ cs_5C3D8:       textCursor 2550
                 nextSingleText $C0,ALLY_ELRIC ; "Help me!{W1}"
                 nextText $0,ALLY_PETER  ; "An...elven boy?{N}He's stuck in the pond.{W2}"
                 nextSingleText $0,ALLY_PETER ; "He must be very tired.{N}Let's pull him out.{W1}"
-                setCameraEntity ALLY_BOWIE
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                setCameraEntity ALLY_MUSHRA
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 csc_end
                 dc.b $FF

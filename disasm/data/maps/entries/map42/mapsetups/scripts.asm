@@ -4,8 +4,8 @@
 cs_5FE9A:       textCursor 3337
                 nextText $FF,255        ; "The Jewel of Light begins{N}to glow.{W2}"
                 nextSingleText $FF,255  ; "The light seems to pull{N}{LEADER}.{D3}"
-                setActscriptWait ALLY_BOWIE,eas_Init
-                entityActionsWait ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                  moveDown 1
                  moveRight 1
@@ -13,14 +13,14 @@ cs_5FE9A:       textCursor 3337
                  moveRight 1
                  moveRight 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                  moveRight 1
                  moveRight 1
                  moveUp 1
                  moveUp 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                  moveUp 1
                 endActions
@@ -39,7 +39,7 @@ cs_5FE9A:       textCursor 3337
                 csc_end
 cs_5FF06:       textCursor 3335
                 hideText
-                entityFlashWhite ALLY_BOWIE,$3C
+                entityFlashWhite ALLY_MUSHRA,$3C
                 setBlocks 33,2,1,1,39,2
                 newEntity 128,39,2,DOWN,MAPSPRITE_OBJECT3
                 setActscript 128,eas_AnimSpeedx2

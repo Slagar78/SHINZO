@@ -4,7 +4,7 @@
 abcs_battle38:  textCursor 3012
                 loadMapFadeIn MAP_OVERWORLD_GRANS_GRANSEAL,3,22
                 loadMapEntities ce_4E372
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,5,25,RIGHT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -29,7 +29,7 @@ cs_4DF00:       setActscriptWait 128,eas_DeactivateAutoFacing
                 setActscriptWait 133,eas_DeactivateAutoFacing
                 setActscriptWait 134,eas_DeactivateAutoFacing
                 setActscriptWait 135,eas_DeactivateAutoFacing
-                setPriority ALLY_BOWIE,$0
+                setPriority ALLY_MUSHRA,$0
                 setPriority 136,$FFFF
                 fadeInB
                 csWait 60
@@ -127,10 +127,10 @@ cs_4DF00:       setActscriptWait 128,eas_DeactivateAutoFacing
                 setFacing 136,UP
                 setCameraEntity 136
                 csWait 60
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 csWait 60
                 cameraSpeed $8
                 customActscriptWait 136
@@ -141,11 +141,11 @@ cs_4DF00:       setActscriptWait 128,eas_DeactivateAutoFacing
                  moveUp 1
                 endActions
                 setFacing ALLY_PETER,UP
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 entityActionsWait 136
                  moveUp 2
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 entityActionsWait 136
                  moveUp 2
                 endActions
@@ -308,7 +308,7 @@ cs_4DF00:       setActscriptWait 128,eas_DeactivateAutoFacing
                 endActions
                 nextSingleText $0,ALLY_PETER ; "He will do the same to us{N}if we lose to him.{W1}"
                 nextSingleText $0,FOLLOWER_B ; "We must not be defeated.{W1}"
-                followEntity FOLLOWER_A,ALLY_BOWIE,2
+                followEntity FOLLOWER_A,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,FOLLOWER_A,1
                 followEntity FOLLOWER_B,FOLLOWER_A,3
                 csc_end

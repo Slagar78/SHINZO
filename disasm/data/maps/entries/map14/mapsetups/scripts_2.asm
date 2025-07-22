@@ -4,9 +4,9 @@
 cs_58FA4:       textCursor 2262
                 reloadMap 8,7
                 loadMapEntities ce_59270
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 csWait 1
-                setPriority ALLY_BOWIE,$0
+                setPriority ALLY_MUSHRA,$0
                 setPriority 130,$0
                 setPriority 133,$FFFF
                 fadeInB
@@ -137,13 +137,13 @@ cs_59142:       textCursor 2278
                 entityActions 131
                  moveDown 4
                 endActions
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 4
                 endActions
                 entityActionsWait ALLY_JAHA
                  moveUp 5
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_JAHA,RIGHT
                 setCamDest 8,10
                 nextSingleText $0,ALLY_JAHA ; "{LEADER}, wait.  Wait!{W1}"
@@ -178,7 +178,7 @@ cs_59142:       textCursor 2278
                 setFacing ALLY_KIWI,DOWN
                 setFacing ALLY_CHESTER,DOWN
                 setFacing ALLY_KAZIN,LEFT
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing 131,UP
                 setFacing 128,DOWN
                 nextSingleText $0,ALLY_SARAH ; "Are you leaving?{N}Say it isn't so!{W1}"
@@ -190,7 +190,7 @@ cs_59142:       textCursor 2278
                 entityActions 131
                  moveDown 7
                 endActions
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 7
                 endActions
                 entityActions ALLY_SARAH

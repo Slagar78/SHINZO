@@ -20,10 +20,10 @@ ms_map43_flag612_InitFunction:
     ; End of function ms_map43_InitFunction
 
 cs_540C0:       textCursor 811
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_KAZIN,eas_Init
                 setPos 128,7,4,DOWN
-                setPos ALLY_BOWIE,6,11,UP
+                setPos ALLY_MUSHRA,6,11,UP
                 setPos ALLY_KAZIN,5,11,UP
                 customActscriptWait 128
                  ac_motion OFF          ;   
@@ -35,7 +35,7 @@ cs_540C0:       textCursor 811
                 reloadMap 0,4
                 fadeInB
                 csWait 50
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_KAZIN,RIGHT
                 csWait 30
                 nextSingleText $0,ALLY_KAZIN ; "This is Hawel's house.{W1}"
@@ -49,8 +49,8 @@ cs_540C0:       textCursor 811
                 setFacing ALLY_KAZIN,RIGHT
                 csWait 40
                 nextSingleText $0,ALLY_KAZIN ; "Strange...{N}There's no answer.{W2}{N}Has he gone somewhere?{N}Well, why don't you wait{N}for him inside?{W1}"
-                nod ALLY_BOWIE
-                entityActionsWait ALLY_BOWIE
+                nod ALLY_MUSHRA
+                entityActionsWait ALLY_MUSHRA
                  moveLeft 2
                 endActions
                 roofEvent 4,9
@@ -59,7 +59,7 @@ cs_540C0:       textCursor 811
                 entityActions ALLY_KAZIN
                  moveUp 3
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 3
                 endActions
                 csWait 30
@@ -151,13 +151,13 @@ cs_540C0:       textCursor 811
                 nextSingleText $0,128   ; "They were Galam soldiers.{N}They demanded my notes on{N}Ground Seal.{W2}{N}They suddenly snatched at{N}them, and...(cough)...{W1}"
                 shiver 128
                 stopEntity 128
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 2
                  moveUp 3
                 endActions
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_KAZIN,LEFT
-                nextSingleText $0,ALLY_BOWIE ; "(Whisper)....{W1}"
+                nextSingleText $0,ALLY_MUSHRA ; "(Whisper)....{W1}"
                 nextSingleText $0,128   ; "Who...is...it?{N}What...did he...say?{W1}"
                 setFacing ALLY_KAZIN,UP
                 nextSingleText $0,ALLY_KAZIN ; "He's {LEADER} from{N}Granseal.  He said that{N}Ground Seal has opened.{W1}{N}And a serious disaster{N}took place!{W1}{N}He came to see you for{N}more information.{W1}"
@@ -181,10 +181,10 @@ cs_540C0:       textCursor 811
                 nextSingleText $0,ALLY_KAZIN ; "Sir!  Sir Hawel!{N}Don't leave me alone!{N}Oh, no...!{W1}"
                 stopEntity ALLY_KAZIN
                 csWait 60
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveRight 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 csWait 30
                 startEntity ALLY_KAZIN
                 setFacing ALLY_KAZIN,DOWN
@@ -192,7 +192,7 @@ cs_540C0:       textCursor 811
                 nextSingleText $0,ALLY_KAZIN ; "{LEADER}, please!{N}His wish is related to{N}your mission, right?{W2}{N}Can you go with me and{N}seal the tower?{W1}"
                 join 32772
                 nextSingleText $0,ALLY_KAZIN ; "Now, let's go to the{N}Ancient Shrine!{W1}"
-                followEntity ALLY_KAZIN,ALLY_BOWIE,2
+                followEntity ALLY_KAZIN,ALLY_MUSHRA,2
                 clearF 72               ; Kazin is a follower
                 setStoryFlag 4          ; Battle 4 unlocked - BATTLE_AMBUSHED_BY_GALAM_SOLDIERS
                 csc_end

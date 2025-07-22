@@ -4,7 +4,7 @@
 abcs_battle36:  textCursor 2953
                 loadMapFadeIn MAP_PRISM_FLOWERS_FIELD,6,17
                 loadMapEntities ce_4DA46
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,10,19,DOWN
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -25,7 +25,7 @@ cs_4D9F0:       animEntityFX 128,6
                 setFacing 128,UP
                 nextSingleText $0,128   ; "{LEADER}, I shall return{N}with Red Baron!{N}You'll pay for this!{W1}"
                 animEntityFX 128,6
-                followEntity 129,ALLY_BOWIE,2
+                followEntity 129,ALLY_MUSHRA,2
                 followEntity ALLY_PETER,129,1
                 followEntity FOLLOWER_B,129,3
                 csc_end

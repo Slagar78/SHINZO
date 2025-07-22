@@ -13,7 +13,7 @@ table_AllyStartDefinitions:
 ;
 ; Note: Constant names ("enums"), shorthands (defined by macro), and numerical indexes are interchangeable.
                 
-                startClass SDMN         ; 0: BOWIE
+                startClass SDMN         ; 0: MUSHRA
                 startLevel 1
                 startItems &
                     WOODEN_SWORD|EQUIPPED, &

@@ -2,18 +2,18 @@
 ; ASM FILE data\maps\entries\map15\mapsetups\scripts.asm :
 ; 0x5D04E..0x5D1CA : 
 cs_5D04E:       textCursor 2006
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setDest ALLY_PETER,24,17
                 setFacing ALLY_PETER,RIGHT
                 setPos ALLY_SKREECH,31,33,UP
                 csWait 1
                 setCamDest 26,22
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
                 setPos ALLY_PETER,24,17,RIGHT
                 setPos FOLLOWER_B,24,16,RIGHT
-                setPos ALLY_BOWIE,24,18,RIGHT
+                setPos ALLY_MUSHRA,24,18,RIGHT
                 fly ALLY_SKREECH,$FFFF
                 entityActions ALLY_SKREECH
                  moveUp 8
@@ -91,8 +91,8 @@ cs_5D04E:       textCursor 2006
                 nextSingleText $0,ALLY_PETER ; "You grew up quickly, huh?{W1}"
                 nextSingleText $80,ALLY_SKREECH ; "Yeah, I learned how to fight.{W1}"
                 join ALLY_SKREECH
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
-                followEntity ALLY_SKREECH,ALLY_BOWIE,5
+                followEntity ALLY_SKREECH,ALLY_MUSHRA,5
                 fly ALLY_SKREECH,$0
                 csc_end

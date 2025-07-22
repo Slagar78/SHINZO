@@ -33,7 +33,7 @@ cs_54E86:       textCursor 1066
                  moveDown 2
                 endActions
                 setFacing 139,RIGHT
-                setPos ALLY_BOWIE,10,9,DOWN
+                setPos ALLY_MUSHRA,10,9,DOWN
                 setCameraEntity 138
                 entityActionsWait 138
                  moveUp 1
@@ -41,7 +41,7 @@ cs_54E86:       textCursor 1066
                 nextText $0,138         ; "Oh, {LEADER}.{N}Good timing.{W2}"
                 nextText $0,138         ; "There's a strange animal in{N}town.{W2}"
                 nextSingleText $0,138   ; "It's very exciting!{W1}"
-                setCameraEntity ALLY_BOWIE
+                setCameraEntity ALLY_MUSHRA
                 entityActionsWait 138
                  moveRight 1
                  moveUp 7
@@ -164,7 +164,7 @@ cs_54F26:       textCursor 1074
                 setFacing 136,UP
                 setFacing 137,UP
                 setFacing 140,UP
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing 128,UP
                 setFacing 130,UP
                 setFacing 131,UP
@@ -218,7 +218,7 @@ cs_54F26:       textCursor 1074
                 setFacing 136,LEFT
                 setFacing 137,LEFT
                 setFacing 140,LEFT
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing 128,LEFT
                 setFacing 130,DOWN
                 setFacing 131,DOWN
@@ -286,7 +286,7 @@ cs_55242:       textCursor 1123
                 entityActionsWait 142
                  moveDown 7
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 nextText $0,142         ; "Welcome back, {LEADER}!{N}I heard your journey was{N}hard.{W2}"
                 nextText $0,142         ; "Sir Astral was right.{N}He said, you were coming{N}back soon.{W2}"
@@ -301,15 +301,15 @@ cs_55288:       textCursor 1126
                 setActscriptWait FOLLOWER_B,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 nextSingleText $0,ALLY_JANET ; "I finally found you.{N}You're {LEADER}, right?{W1}"
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript FOLLOWER_B,eas_Jump
                 setActscriptWait ALLY_PETER,eas_Jump
                 setFacing 139,UP
                 setCamDest 14,17
-                setDest ALLY_BOWIE,19,28
+                setDest ALLY_MUSHRA,19,28
                 setDest FOLLOWER_B,20,28
                 setDest ALLY_PETER,20,27
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing FOLLOWER_B,UP
                 setFacing ALLY_PETER,UP
                 entityActionsWait ALLY_JANET
@@ -338,15 +338,15 @@ cs_55288:       textCursor 1126
                  moveDown 1
                 endActions
                 nextSingleText $0,ALLY_JANET ; "Yes, I know.{N}I still want to go!{W1}"
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing FOLLOWER_B,LEFT
                 nextSingleText $C0,FOLLOWER_B ; "OK, you look tough enough,{N}anyway.{W1}"
-                nod ALLY_BOWIE
-                setFacing ALLY_BOWIE,UP
+                nod ALLY_MUSHRA
+                setFacing ALLY_MUSHRA,UP
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,ALLY_JANET ; "Oh, really?{N}Thank you very much!{W1}"
                 join ALLY_JANET
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 followEntity ALLY_JANET,FOLLOWER_B,2
                 csc_end

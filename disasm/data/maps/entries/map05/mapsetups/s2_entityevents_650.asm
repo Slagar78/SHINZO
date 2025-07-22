@@ -46,7 +46,7 @@ Map5_EntityEvent0:
 
     ; End of function Map5_EntityEvent0
 
-cs_51B14:       followEntity ALLY_KAZIN,ALLY_BOWIE,2
+cs_51B14:       followEntity ALLY_KAZIN,ALLY_MUSHRA,2
                 csc_end
 
 ; =============== S U B R O U T I N E =======================================

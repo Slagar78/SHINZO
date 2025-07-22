@@ -15,7 +15,7 @@ abcs_battle05:  textCursor 2332
                 setActscriptWait ALLY_SLADE,eas_Jump
                 setActscriptWait ALLY_SLADE,eas_Jump
                 nextText $0,ALLY_SLADE  ; "{LEADER}, did you use{N}magic?{W2}"
-                setF 384                ; Set after Bowie obtains the jewel of light/evil... whichever it is
+                setF 384                ; Set after MUSHRA obtains the jewel of light/evil... whichever it is
                 csWait 30
                 nextText $0,ALLY_SLADE  ; "Ummm...I can't remove it!{N}Is it cursed?{W2}"
                 setActscriptWait ALLY_SLADE,eas_DeactivateAutoFacing
@@ -27,6 +27,6 @@ abcs_battle05:  textCursor 2332
                 nextSingleText $0,ALLY_SLADE ; "Let's go to Granseal!{W1}"
                 clearF 73               ; Slade is a follower
                 setStoryFlag 6          ; Battle 6 unlocked - BATTLE_TO_GRANSEAL               
-                followEntity ALLY_SLADE,ALLY_BOWIE,2
+                followEntity ALLY_SLADE,ALLY_MUSHRA,2
                 warp MAP_GALAM_CASTLE,16,18,DOWN
                 csc_end

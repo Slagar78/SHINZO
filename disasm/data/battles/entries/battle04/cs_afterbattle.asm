@@ -4,13 +4,13 @@
 abcs_battle04:  textCursor 2319
                 loadMapFadeIn MAP_OVERWORLD_GRANS_GRANSEAL,9,16
                 loadMapEntities ce_49A6A
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setPos ALLY_SARAH,14,21,DOWN
                 setPos ALLY_CHESTER,12,21,DOWN
                 setPos ALLY_JAHA,13,22,DOWN
                 setPos ALLY_KAZIN,11,22,DOWN
                 fadeInB
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 nextSingleText $0,ALLY_LEMON ; "Your battle strategy was{N}wonderful!  I praise you.{W1}"
                 csWait 5
                 setActscript ALLY_JAHA,eas_2xRightLeft
@@ -26,7 +26,7 @@ abcs_battle04:  textCursor 2319
                  moveUp 2
                 endActions
                 setFacing ALLY_LEMON,LEFT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_SARAH,RIGHT
                 setFacing ALLY_CHESTER,RIGHT
                 setFacing ALLY_JAHA,RIGHT
@@ -39,30 +39,30 @@ abcs_battle04:  textCursor 2319
                 entityActionsWait ALLY_LEMON
                  moveLeft 4
                 endActions
-                setActscriptWait ALLY_BOWIE,eas_DeactivateAutoFacing
-                customActscriptWait ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_DeactivateAutoFacing
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 48,48      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
                 setQuake 2
                 playSound SFX_BATTLEFIELD_DEATH
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveLeft 1
                 endActions
                 setQuake 0
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                  moveRight 1
                 endActions
-                setActscript ALLY_BOWIE,eas_RotateRight
+                setActscript ALLY_MUSHRA,eas_RotateRight
                 setFacing ALLY_SARAH,UP
                 setFacing ALLY_CHESTER,UP
                 setFacing ALLY_JAHA,UP
                 setFacing ALLY_KAZIN,UP
                 csWait 60
-                setActscriptWait ALLY_BOWIE,eas_Init
-                setFacing ALLY_BOWIE,DOWN
-                customActscriptWait ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                setFacing ALLY_MUSHRA,DOWN
+                customActscriptWait ALLY_MUSHRA
                  ac_motion OFF          ;   
                  ac_orientLeft          ;   
                  ac_updateSprite        ;   

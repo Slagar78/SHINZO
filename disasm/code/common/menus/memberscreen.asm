@@ -773,8 +773,8 @@ aJewel:
 @WriteJewelString:
                 
                 move.w  member(a6),d0
-                bne.s   @LoadSpellIcons ; skip if anyone other than Bowie
-                chkFlg  384             ; Set after Bowie obtains the jewel of light/evil... whichever it is
+                bne.s   @LoadSpellIcons ; skip if anyone other than MUSHRA
+                chkFlg  384             ; Set after MUSHRA obtains the jewel of light/evil... whichever it is
                 beq.s   @LoadSpellIcons
                 move.w  d7,-(sp)
                 lea     aJewel(pc), a0  
@@ -790,7 +790,7 @@ aJewel:
                 adda.w  #WINDOW_MEMBERSTATUS_OFFSET_JEWEL_OF_LIGHT,a1
                 move.w  #$92,d1 ; ?
                 bsr.w   WriteMemberScreenIcons
-                chkFlg  385             ; Set after Bowie obtains King Galam's jewel
+                chkFlg  385             ; Set after MUSHRA obtains King Galam's jewel
                 beq.s   @LoadSpellIcons
                 movea.l windowLayoutStartAddress(a6),a1
                 adda.w  #WINDOW_MEMBERSTATUS_OFFSET_JEWEL_OF_EVIL,a1

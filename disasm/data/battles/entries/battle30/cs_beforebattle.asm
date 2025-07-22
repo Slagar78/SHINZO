@@ -4,14 +4,14 @@
 bbcs_30:        textCursor 2760
                 loadMapFadeIn MAP_INSIDE_MITULA,7,21
                 loadMapEntities ce_4C690
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,11,28,UP
                 setActscriptWait FOLLOWER_B,eas_Init
                 setPos FOLLOWER_B,11,27,UP
                 playSound MUSIC_BATTLE_THEME_1
                 fadeInB
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 2
                 endActions
                 entityActions FOLLOWER_B

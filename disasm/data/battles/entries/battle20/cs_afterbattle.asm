@@ -4,7 +4,7 @@
 abcs_battle20:  textCursor 2566
                 loadMapFadeIn MAP_HARPY_POOL,2,6
                 loadMapEntities ce_4B780
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
                 setPos ALLY_PETER,5,10,UP
@@ -24,18 +24,18 @@ abcs_battle20:  textCursor 2566
                 nextText $0,ALLY_ELRIC  ; "An elf always returns a{N}favor.{W2}"
                 nextSingleText $0,ALLY_ELRIC ; "Please, let me help you.{W1}"
                 setFacing ALLY_PETER,RIGHT
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 nextSingleText $C0,ALLY_PETER ; "{LEADER}, looks like{N}we've found another friend.{W1}"
                 entityActionsWait ALLY_ELRIC
                  moveDown 1
                 endActions
                 nextSingleText $0,ALLY_ELRIC ; "Oh, thank you!{W1}"
-                setFacing ALLY_BOWIE,UP
-                nod ALLY_BOWIE
+                setFacing ALLY_MUSHRA,UP
+                nod ALLY_MUSHRA
                 join ALLY_ELRIC
                 setFacing ALLY_PETER,UP
                 nextSingleText $C0,ALLY_PETER ; "Now, let's go see Mr. Creed!{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 followEntity ALLY_ELRIC,FOLLOWER_B,2
                 csc_end

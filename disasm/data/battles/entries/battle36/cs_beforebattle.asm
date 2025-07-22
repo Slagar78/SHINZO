@@ -4,7 +4,7 @@
 bbcs_36:        textCursor 2946
                 loadMapFadeIn MAP_PRISM_FLOWERS_FIELD,15,0
                 loadMapEntities ce_4D964
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,18,0,DOWN
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -15,7 +15,7 @@ bbcs_36:        textCursor 2946
 cs_4D8D6:       playSound MUSIC_BATTLE_THEME_1
                 fadeInB
                 cameraSpeed $30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 4
                 endActions
                 entityActions ALLY_PETER
@@ -43,10 +43,10 @@ cs_4D8D6:       playSound MUSIC_BATTLE_THEME_1
                 setFacing FOLLOWER_B,LEFT
                 nextSingleText $0,FOLLOWER_B ; "He believes this is the place{N}where we will die....{W1}"
                 setFacing FOLLOWER_B,DOWN
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}, be careful!{W1}"
-                nod ALLY_BOWIE
-                setFacing ALLY_BOWIE,DOWN
+                nod ALLY_MUSHRA
+                setFacing ALLY_MUSHRA,DOWN
                 csc_end
 ce_4D964:       mainEntity 19,1,DOWN
                 entity 18,0,DOWN,ALLY_PETER,eas_Init

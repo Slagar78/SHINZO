@@ -4,7 +4,7 @@
 abcs_battle40:  textCursor 3065
                 loadMapFadeIn MAP_ODDEYE_ARENA,10,4
                 loadMapEntities ce_4ECD6
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,13,8,RIGHT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -34,20 +34,20 @@ cs_4EAEE:       setBlocks 11,6,11,29,44,0
                 csWait 60
                 nextText $0,131         ; "{LEADER}, you won?{N}You've become so strong.{W2}"
                 nextSingleText $0,131   ; "I knew you would....{W1}"
-                nextSingleText $C0,ALLY_BOWIE ; "Oh, really?{W1}"
+                nextSingleText $C0,ALLY_MUSHRA ; "Oh, really?{W1}"
                 nextText $0,131         ; "Your friends are very good.{N}I knew that when I was{N}traveling with you.{W2}"
                 nextSingleText $0,131   ; "Yes, it was interesting...{N}I miss that time....{W1}"
                 setActscriptWait ALLY_PETER,eas_Jump
                 nextSingleText $C0,ALLY_PETER ; "Odd Eye...no, Oddler!{N}Did you...?{W1}"
                 nextSingleText $0,131   ; "No, {NAME;7}.  I did my{N}best.  You were just better{N}than me.{W1}"
-                nextSingleText $C0,ALLY_BOWIE ; "We had to be.{W1}"
+                nextSingleText $C0,ALLY_MUSHRA ; "We had to be.{W1}"
                 nextText $0,131         ; "I wouldn't have had to{N}fight if I never had gotten{N}my memory back.{W2}"
                 nextSingleText $0,131   ; "It's funny, fighting was{N}everything to me.{W1}"
                 shiver ALLY_PETER
                 nextSingleText $C0,ALLY_PETER ; "Oddler, please don't die!{W1}"
                 nextText $0,131         ; "Thank you, {NAME;7}.{N}I learned a lot from you.{W2}"
                 nextSingleText $0,131   ; "Oh, the pain!{N}Let me say good-bye.{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 1
                 endActions
                 entityActionsWait ALLY_PETER
@@ -132,14 +132,14 @@ cs_4EAEE:       setBlocks 11,6,11,29,44,0
                 endActions
                 setFacing ALLY_PETER,RIGHT
                 csWait 40
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 csWait 40
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 csWait 40
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 csWait 30
-                nod ALLY_BOWIE
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                nod ALLY_MUSHRA
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 followEntity ALLY_LEMON,FOLLOWER_B,2
                 csc_end

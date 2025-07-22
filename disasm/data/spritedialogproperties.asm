@@ -7,12 +7,12 @@ table_MapspriteDialogueProperties:
 ;               portrait  [PORTRAIT_]enum (or index)
 ;               speechSfx [SFX_]enum (or index)
                 
-                mapsprite BOWIE_BASE
-                portrait  BOWIE_BASE
+                mapsprite MUSHRA_BASE
+                portrait  MUSHRA_BASE
                 speechSfx DIALOG_BLEEP_5
                 
-                mapsprite BOWIE_PROMO
-                portrait  BOWIE_PROMO
+                mapsprite MUSHRA_PROMO
+                portrait  MUSHRA_PROMO
                 speechSfx DIALOG_BLEEP_5
                 
                 mapsprite SARAH_BASE

@@ -8,10 +8,10 @@
 ms_map73_InitFunction:
                 
                  
-                chkFlg  700             ; Set after ship arrives in Parmecia and you regain control of Bowie
+                chkFlg  700             ; Set after ship arrives in Parmecia and you regain control of MUSHRA
                 bne.s   byte_50354      
                 script  cs_503A6
-                setFlg  700             ; Set after ship arrives in Parmecia and you regain control of Bowie
+                setFlg  700             ; Set after ship arrives in Parmecia and you regain control of MUSHRA
                 rts
 byte_50354:
                 
@@ -89,13 +89,13 @@ cs_503A6:       textCursor 2239
                 reloadMap 0,0
                 setCameraEntity 65535
                 loadMapEntities ce_506DE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setBlocks 0,10,22,10,42,10
                 playSound MUSIC_TOWN
                 fadeInB
                 textCursor 2213
                 nextSingleText $0,128   ; "We were almost swallowed{N}by that chasm.{W1}"
-                nextSingleText $C0,ALLY_BOWIE ; "That was close!{W1}"
+                nextSingleText $C0,ALLY_MUSHRA ; "That was close!{W1}"
                 nextSingleText $C0,ALLY_SARAH ; "Sir Astral, where should{N}we go now?{W1}"
                 nextSingleText $0,128   ; "I think we should to go{N}to the mainland.{N}Don't you agree, Minister?{W1}"
                 nextSingleText $0,129   ; "We have no choice.{W1}"
@@ -147,7 +147,7 @@ cs_50426:       textCursor 2229
                 nextSingleText $FF,255  ; "The people of Granseal have{N}arrived at their new home.{W1}"
                 loadMapFadeIn MAP_SHIP_DAMAGED,18,25
                 loadMapEntities ce_5072E
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 fadeInB
                 csWait 5
                 setActscript 129,eas_2xRightLeft
@@ -212,7 +212,7 @@ cs_50426:       textCursor 2229
                 csWait 80
                 loadMapFadeIn MAP_SHIP_DAMAGED,45,2
                 loadMapEntities ce_5079E
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setBlocks 51,7,1,1,63,63
                 setBlocks 51,6,1,1,51,7
                 stopEntity 131
@@ -266,7 +266,7 @@ cs_50624:       fadeInB
                 csWait 20
                 setCamDest 34,4
                 nextSingleText $0,ALLY_KAZIN ; "{LEADER}, bring that plank{N}above deck.{W1}"
-                setPriority ALLY_BOWIE,$0
+                setPriority ALLY_MUSHRA,$0
                 setPriority 132,$FFFF
                 csc_end
 ce_506DE:       mainEntity 63,63,UP
@@ -311,12 +311,12 @@ ce_5079E:       mainEntity 40,8,LEFT
                 dc.w $FFFF
 cs_50806:       textCursor 2288
                 loadMapEntities ce_5094A
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait 128,eas_Init
                 setActscriptWait 128,eas_Init
-                setActscriptWait ALLY_BOWIE,eas_Init
-                followEntity 129,ALLY_BOWIE,2
-                followEntity ALLY_BOWIE,128,2
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                followEntity 129,ALLY_MUSHRA,2
+                followEntity ALLY_MUSHRA,128,2
                 setBlocks 42,0,11,10,24,48
                 setCameraEntity 128
                 fadeInB
@@ -346,7 +346,7 @@ cs_50806:       textCursor 2288
                 endActions
                 setPosFlash 130,0,0,LEFT
                 nextSingleText $0,128   ; "Look at that, {LEADER}!{N}They've finished breaking{N}up the ship.{W1}"
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing 128,DOWN
                 setFacing 129,DOWN
                 setCamDest 25,47
@@ -369,13 +369,13 @@ cs_50806:       textCursor 2288
                 setCameraEntity 65535
                 setActscriptWait 128,eas_Init
                 setActscriptWait 129,eas_Init
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setDest 128,29,52
                 setPos 128,0,0,DOWN
                 setDest 129,29,52
                 setPos 129,0,0,DOWN
-                setDest ALLY_BOWIE,29,52
-                setPos ALLY_BOWIE,0,0,DOWN
+                setDest ALLY_MUSHRA,29,52
+                setPos ALLY_MUSHRA,0,0,DOWN
                 csWait 60
                 nextSingleText $FF,255  ; "They worked hard to build{N}their new town.{W1}"
                 playSound $FD

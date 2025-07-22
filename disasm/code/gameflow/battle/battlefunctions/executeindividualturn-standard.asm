@@ -25,7 +25,7 @@ ExecuteIndividualTurn:
             if (ORIGINAL_TAROS_INVULNERABILITY=1)
                 ;
                 ; Re-implement the original Japanese version behavior,
-                ; i.e., other characters can join in the fight after Bowie delivers a hit with the Achilles Sword, 
+                ; i.e., other characters can join in the fight after MUSHRA delivers a hit with the Achilles Sword, 
                 ; however Taros will become invulnerable again unless he is continually attacked with it.
                 ;
                 movem.l d1-d2/a0,-(sp)

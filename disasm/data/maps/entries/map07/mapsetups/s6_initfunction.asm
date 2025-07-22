@@ -27,7 +27,7 @@ return_55830:
 cs_55832:       textCursor 1290
                 mapLoad MAP_NEW_GRANSEAL_CASTLE,6,2
                 loadMapEntities ce_559AE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 resetMap
                 slowFadeInB
                 reloadMap 6,2

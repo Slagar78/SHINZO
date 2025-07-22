@@ -4,8 +4,8 @@
 cs_628C8:       textCursor 3915
                 nextText $0,135         ; "I envy you.{N}I'm an old woman now.{W2}"
                 nextSingleText $0,135   ; "Nobody kisses me anymore.{W1}"
-                setDest ALLY_BOWIE,25,28
-                setFacing ALLY_BOWIE,UP
+                setDest ALLY_MUSHRA,25,28
+                setFacing ALLY_MUSHRA,UP
                 setDest 136,25,27
                 setFacing 136,RIGHT
                 setFacing 135,LEFT
@@ -19,12 +19,12 @@ cs_6290C:       hideText
                 entityActionsWait 138
                  moveDown 1
                 endActions
-                setDest ALLY_BOWIE,42,10
+                setDest ALLY_MUSHRA,42,10
                 setDest ALLY_KAZIN,42,10
                 setDest ALLY_SARAH,42,10
                 setDest ALLY_JAHA,42,10
                 setDest ALLY_CHESTER,42,10
-                followEntity ALLY_BOWIE,138,2
+                followEntity ALLY_MUSHRA,138,2
                 followEntity ALLY_KAZIN,138,5
                 followEntity ALLY_SARAH,138,6
                 followEntity ALLY_JAHA,ALLY_KAZIN,2

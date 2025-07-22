@@ -61,7 +61,7 @@ cs_62D0E:       textCursor 3967
                 setPos ALLY_SARAH,26,30,UP
                 setPos ALLY_JAHA,26,30,UP
                 setPos ALLY_CHESTER,26,30,UP
-                followEntity ALLY_BOWIE,129,2
+                followEntity ALLY_MUSHRA,129,2
                 followEntity ALLY_KAZIN,129,5
                 followEntity ALLY_SARAH,129,6
                 followEntity ALLY_JAHA,ALLY_KAZIN,2
@@ -77,7 +77,7 @@ cs_62D0E:       textCursor 3967
                 entityActionsWait 129
                  moveUp 14
                 endActions
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_SARAH,eas_Init
                 setActscriptWait ALLY_JAHA,eas_Init
                 setActscriptWait ALLY_CHESTER,eas_Init
@@ -104,7 +104,7 @@ cs_62D0E:       textCursor 3967
                 endActions
                 csWait 30
                 nod 129
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_SARAH,UP
                 setFacing ALLY_JAHA,UP
                 setFacing ALLY_CHESTER,UP
@@ -173,7 +173,7 @@ cs_62D0E:       textCursor 3967
                 setFacing ALLY_MAY,DOWN
                 setFacing ALLY_HIGINS,DOWN
                 setFacing ALLY_ROHDE,UP
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 csWait 40
                 setCamDest 24,7
                 csWait 5
@@ -195,7 +195,7 @@ cs_62D0E:       textCursor 3967
                 setFacing ALLY_ROHDE,RIGHT
                 setFacing ALLY_ZYNK,RIGHT
                 setFacing ALLY_CHAZ,LEFT
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 nextText $0,ALLY_JAHA   ; "I understand what my friends{N}are saying, but...I love{N}her.{W2}"
                 nextSingleText $0,ALLY_JAHA ; "May I kiss her?{N}Somebody, say yes!{W1}"
                 csWait 5
@@ -257,7 +257,7 @@ cs_62FB0:       textCursor 3987
                 setFacing ALLY_KAZIN,UP
                 setFacing ALLY_PETER,UP
                 setFacing ALLY_HIGINS,UP
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextText $80,ALLY_SARAH ; "M...me?  Well...{W2}"
                 shiver ALLY_SARAH
                 nextText $80,ALLY_SARAH ; "I'm worried about her...{N}but...I...{W2}"
@@ -281,7 +281,7 @@ cs_62FB0:       textCursor 3987
                  moveLeft 1
                 endActions
                 setActscript ALLY_CHESTER,eas_RotateRight
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_KAZIN,DOWN
                 setFacing ALLY_JAHA,DOWN
                 setFacing ALLY_PETER,DOWN
@@ -358,7 +358,7 @@ cs_62FB0:       textCursor 3987
                 setFacing ALLY_ROHDE,UP
                 setFacing ALLY_ZYNK,UP
                 setFacing ALLY_HIGINS,UP
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextText $80,ALLY_LUKE  ; "You heard everyone.{N}We think {LEADER} is the{N}right choice.{W2}"
                 setFacing ALLY_LUKE,DOWN
                 nextText $80,ALLY_LUKE  ; "{NAME;4} will take care{N}of {NAME;1}.{W2}"

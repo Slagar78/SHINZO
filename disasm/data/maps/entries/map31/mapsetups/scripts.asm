@@ -15,8 +15,8 @@ cs_5D65E:       textCursor 2027
                 nextSingleText $0,136   ; "Then, would you stand over{N}there, in front of the{N}flowers?{W1}"
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
-                setDest ALLY_BOWIE,28,3
-                setFacing ALLY_BOWIE,DOWN
+                setDest ALLY_MUSHRA,28,3
+                setFacing ALLY_MUSHRA,DOWN
                 setDest ALLY_PETER,27,4
                 setDest FOLLOWER_B,27,5
                 setFacing 136,UP
@@ -49,7 +49,7 @@ cs_5D65E:       textCursor 2027
                  moveRight 1
                 endActions
                 setFacing 136,LEFT
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 csc_end
 cs_5D712:       textCursor 2026
@@ -72,7 +72,7 @@ cs_5D732:       executeSubroutine sub_5D73E
 sub_5D73E:
                 
                 movem.l d0-d2/a0,-(sp)
-                move.w  #PORTRAIT_BOWIE_PAINTING,d0 ; Bowie painting portrait index
+                move.w  #PORTRAIT_MUSHRA_PAINTING,d0 ; MUSHRA painting portrait index
                 moveq   #-1,d1
                 clr.w   d2
                 jsr     j_OpenPortraitWindow

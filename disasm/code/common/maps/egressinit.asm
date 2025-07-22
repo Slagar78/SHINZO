@@ -15,7 +15,7 @@ GetSavepointForMap:
                 chkFlg  399             ; Set after first battle's cutscene OR first save? Checked at witch screens
                 bne.s   @Continue
                 
-                ; Go back to Bowie's room if the gizmos cutscene has not been triggered
+                ; Go back to MUSHRA's room if the gizmos cutscene has not been triggered
                 ; HARDCODED initial egress position : map, x, y, facing
                 moveq   #GAMESTART_MAP,d0           ; 3: Granseal
                 moveq   #GAMESTART_SAVEPOINT_X,d1   ; 56

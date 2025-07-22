@@ -24,14 +24,14 @@ cs_58E5C:       textCursor 2261
                 yesNo
                 jumpIfFlagClear 89,cs_58EB8 ; YES/NO prompt answer
                 hideText
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveDown 1
                 endActions
                 csWait 40
                 setActscriptWait 131,eas_DeactivateAutoFacing
                 setActscriptWait 132,eas_DeactivateAutoFacing
                 setActscriptWait 133,eas_DeactivateAutoFacing
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveDown 3
                 endActions
                 entityActions 131

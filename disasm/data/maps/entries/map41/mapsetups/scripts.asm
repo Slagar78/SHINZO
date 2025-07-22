@@ -1,7 +1,7 @@
 
 ; ASM FILE data\maps\entries\map41\mapsetups\scripts.asm :
 ; 0x5F4B8..0x5F630 : 
-cs_5F4B8:       setActscriptWait ALLY_BOWIE,eas_Init
+cs_5F4B8:       setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
                 csWait 40
@@ -10,7 +10,7 @@ cs_5F4B8:       setActscriptWait ALLY_BOWIE,eas_Init
                 csWait 40
                 playSound SFX_BIG_DOOR_RUMBLE
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript ALLY_PETER,eas_2xRightLeft
                 csWait 5
@@ -26,7 +26,7 @@ cs_5F4B8:       setActscriptWait ALLY_BOWIE,eas_Init
                 playSound SFX_BLAST_SPELL
                 flashScreenWhite $4
                 playSound SFX_BIG_DOOR_RUMBLE
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 csWait 60
@@ -36,21 +36,21 @@ cs_5F4B8:       setActscriptWait ALLY_BOWIE,eas_Init
                 playSound SFX_BIG_DOOR_RUMBLE
                 setQuake 16387
                 csWait 40
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscriptWait FOLLOWER_B,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscriptWait FOLLOWER_B,eas_Jump
                 csWait 50
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 csc_end
 cs_5F594:       newEntity ALLY_LEMON,6,15,UP,NOTHING_BYTE
                 textCursor 3513
                 nextSingleText $0,ALLY_LEMON ; "Sir Astral!  {LEADER}!{W1}"
                 setDest FOLLOWER_B,6,10
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing FOLLOWER_B,DOWN
                 setCamDest 1,6
@@ -71,7 +71,7 @@ cs_5F594:       newEntity ALLY_LEMON,6,15,UP,NOTHING_BYTE
                 setFacing FOLLOWER_B,UP
                 nextSingleText $80,FOLLOWER_B ; "He's a hero in Galam.{N}I think he should join us.{W1}"
                 nod ALLY_PETER
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 setFacing FOLLOWER_B,DOWN
                 csWait 20
                 nod FOLLOWER_B

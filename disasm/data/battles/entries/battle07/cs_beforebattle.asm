@@ -5,7 +5,7 @@ bbcs_07:        textCursor 2357
                 clearF 83               ; King + Minister are followers
                 loadMapFadeIn MAP_ANCIENT_TOWER_UNDERGROUND_ROOM,8,29
                 loadMapEntities ce_49F36
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 animEntityFX 133,4
                 fadeInB
                 cameraSpeed $28

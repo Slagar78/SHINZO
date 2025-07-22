@@ -73,8 +73,8 @@ cs_4FB64:       textCursor 2543
                 setDest ALLY_PETER,59,27
                 setFacing ALLY_PETER,RIGHT
                 nextSingleText $C0,ALLY_PETER ; "What's wrong, Oddler?{W1}"
-                setDest ALLY_BOWIE,60,26
-                setFacing ALLY_BOWIE,DOWN
+                setDest ALLY_MUSHRA,60,26
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,FOLLOWER_B ; "{LEADER}...{NAME;7}...can{N}you hear that?{W1}"
                 nextSingleText $C0,ALLY_PETER ; "Hear what?{W1}"
@@ -96,8 +96,8 @@ cs_4FB64:       textCursor 2543
                 csWait 40
                 setDest ALLY_PETER,57,25
                 setPos ALLY_PETER,63,63,DOWN
-                setDest ALLY_BOWIE,57,25
-                setPos ALLY_BOWIE,63,63,DOWN
+                setDest ALLY_MUSHRA,57,25
+                setPos ALLY_MUSHRA,63,63,DOWN
                 warp MAP_HARPY_POOL,11,22,UP
                 csc_end
 cs_4FC32:       textCursor 2593
@@ -106,7 +106,7 @@ cs_4FC32:       textCursor 2593
                 entityActionsWait ALLY_ELRIC
                  moveUp 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,ALLY_ELRIC ; "Fairy said, move this rock{N}in this manner, and...{W1}"
@@ -133,10 +133,10 @@ cs_4FC32:       textCursor 2593
                  moveUp 1
                 endActions
                 hide ALLY_ELRIC
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 1
                 endActions
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 1
                 endActions
                 warp MAP_UNDERGROUND_PATH_1,29,3,LEFT

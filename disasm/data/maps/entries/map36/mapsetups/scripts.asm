@@ -21,15 +21,15 @@ cs_5DA28:       textCursor 3323
                 setStoryFlag 34         ; Battle 34 unlocked - BATTLE_VERSUS_CAMEELA            
                 csc_end
 cs_5DA7A:       setCameraEntity 131
-                setDest ALLY_BOWIE,4,23
-                setFacing ALLY_BOWIE,UP
+                setDest ALLY_MUSHRA,4,23
+                setFacing ALLY_MUSHRA,UP
                 entityActionsWait 131
                  moveRight 2
                 endActions
                 entityActionsWait 131
                  moveDown 1
                 endActions
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 csWait 60
                 customActscriptWait 131
                  ac_setSpeed 16,16      ;   

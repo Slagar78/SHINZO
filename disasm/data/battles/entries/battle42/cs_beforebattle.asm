@@ -4,7 +4,7 @@
 bbcs_42:        textCursor 3088
                 loadMapFadeIn MAP_ZEON_ARENA,8,29
                 loadMapEntities ce_4EEDC
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,12,36,UP
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -30,7 +30,7 @@ cs_4EDE8:       stopEntity 129
                 endActions
                 nextSingleText $0,ALLY_PETER ; "I can't see!  Is anybody{N}there?{W1}"
                 nextSingleText $C0,128  ; "Welcome...{W1}"
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscript FOLLOWER_B,eas_Jump
                 setActscriptWait ALLY_LEMON,eas_Jump
@@ -41,7 +41,7 @@ cs_4EDE8:       stopEntity 129
                 nextSingleText $C0,128  ; "Is it too dark?{N}Let there be light!{W1}"
                 fadeInB
                 nextSingleText $C0,128  ; "Is that better?{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 2
                 endActions
                 entityActionsWait ALLY_LEMON
@@ -49,13 +49,13 @@ cs_4EDE8:       stopEntity 129
                 endActions
                 shiver FOLLOWER_B
                 nextSingleText $0,FOLLOWER_B ; "King Galam!{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveLeft 1
                 endActions
                 entityActionsWait ALLY_LEMON
                  moveUp 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 entityActionsWait ALLY_LEMON
                  moveUp 1
                 endActions

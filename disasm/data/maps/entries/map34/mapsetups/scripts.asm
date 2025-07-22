@@ -49,10 +49,10 @@ cs_5B6C0:       textCursor 3207
                 csWait 10
                 setPos 130,7,6,DOWN
                 setActscript 130,eas_Transparent
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
-                setPos ALLY_BOWIE,7,12,UP
+                setPos ALLY_MUSHRA,7,12,UP
                 setPos ALLY_PETER,6,12,UP
                 setPos FOLLOWER_B,8,12,UP
                 setCamDest 2,4
@@ -78,7 +78,7 @@ cs_5B6C0:       textCursor 3207
                 mapFadeOutToWhite
                 csWait 30
                 nextSingleText $0,130   ; "Hmmmm....{N}Hmmmm...mmmm....{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 1
                 endActions
                 entityActions ALLY_PETER
@@ -105,7 +105,7 @@ cs_5B6C0:       textCursor 3207
                 nextSingleText $0,130   ; "If I touch something of his,{N}maybe I could contact his{N}mind better....{W1}"
                 setCamDest 2,5
                 setFacing ALLY_PETER,RIGHT
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing FOLLOWER_B,LEFT
                 nextSingleText $0,ALLY_PETER ; "{LEADER}, you have the{N}Jewel of Evil, right?{W1}"
                 setFacing 128,DOWN
@@ -114,7 +114,7 @@ cs_5B6C0:       textCursor 3207
                 setActscriptWait 128,eas_Jump
                 nextText $80,128        ; "Is this true, {LEADER}?{W2}"
                 nextSingleText $80,128  ; "That's one of the magic{N}jewels used to seal{N}Zeon.  Give it to me.{W1}"
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,ALLY_PETER ; "But, we can't remove it.{W1}"
@@ -131,7 +131,7 @@ cs_5B6C0:       textCursor 3207
                 setActscriptWait 128,eas_StopMoving
                 stopEntity 128
                 csWait 20
-                entityFlashWhite ALLY_BOWIE,$28
+                entityFlashWhite ALLY_MUSHRA,$28
                 startEntity 128
                 entityActions 128
                  moveUp 1
@@ -147,7 +147,7 @@ cs_5B6C0:       textCursor 3207
                 nextText $80,128        ; "{LEADER}, do you have both{N}of the legendary jewels?{W2}"
                 nextText $80,128        ; "I can't remove them.{N}The chain is made of Mithril.{W2}"
                 nextSingleText $80,128  ; "Show them to him.{N}They might help him.{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 csWait 20
                 setCamDest 2,4
                 setActscriptWait 128,eas_Init
@@ -155,12 +155,12 @@ cs_5B6C0:       textCursor 3207
                  moveRight 1
                  moveUp 1
                 endActions
-                entityActionsWait ALLY_BOWIE
+                entityActionsWait ALLY_MUSHRA
                  moveUp 2
                 endActions
                 setFacing 129,UP
                 nextSingleText $FF,255  ; "{LEADER} displays the{N}jewels to Evil Spirit.{W1}"
-                entityFlashWhite ALLY_BOWIE,$28
+                entityFlashWhite ALLY_MUSHRA,$28
                 nextText $0,130         ; "Yeah, I feel it...I feel it...!{N}I think I can do it now.{N}Let me try again.{W1}"
                 executeSubroutine csub_55EF4
                 csWait 20
@@ -209,12 +209,12 @@ cs_5B6C0:       textCursor 3207
                 executeSubroutine sub_5BFDA
                 flashScreenWhite $28
                 executeSubroutine sub_5BFE4
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscript FOLLOWER_B,eas_Jump
                 setActscript 128,eas_Jump
                 setActscriptWait 129,eas_Jump
-                setActscript ALLY_BOWIE,eas_Jump
+                setActscript ALLY_MUSHRA,eas_Jump
                 setActscript ALLY_PETER,eas_Jump
                 setActscript FOLLOWER_B,eas_Jump
                 setActscript 128,eas_Jump
@@ -541,7 +541,7 @@ cs_5B6C0:       textCursor 3207
                 setQuake 16389
                 executeSubroutine sub_55F82
                 csWait 60
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing 129,DOWN
                 setFacing 128,DOWN
                 nextText $80,128        ; "No!  Evil Spirit exploded!{W2}"
@@ -575,7 +575,7 @@ cs_5B6C0:       textCursor 3207
                  moveDown 5
                 endActions
                 hide 129
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 csc_end
 

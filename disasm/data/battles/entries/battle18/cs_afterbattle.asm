@@ -4,7 +4,7 @@
 abcs_battle18:  textCursor 2528
                 loadMapFadeIn MAP_TAROS_SHRINE,7,5
                 loadMapEntities ce_4B6BE
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
                 setActscriptWait ALLY_ROHDE,eas_Init
@@ -15,7 +15,7 @@ abcs_battle18:  textCursor 2528
                 fadeInB
                 csWait 60
                 nextSingleText $0,ALLY_ROHDE ; "{LEADER}, you're much{N}stronger than I thought.{W1}"
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,LEFT
                 setFacing FOLLOWER_B,LEFT
                 csWait 30
@@ -24,7 +24,7 @@ abcs_battle18:  textCursor 2528
                 entityActionsWait ALLY_ROHDE
                  moveRight 6
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 entityActionsWait ALLY_ROHDE
@@ -87,31 +87,31 @@ abcs_battle18:  textCursor 2528
                  moveDown 9
                 endActions
                 csWait 20
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_setSpeed 64,64      ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                setActscriptWait ALLY_BOWIE,eas_DeactivateAutoFacing
-                entityActions ALLY_BOWIE
+                setActscriptWait ALLY_MUSHRA,eas_DeactivateAutoFacing
+                entityActions ALLY_MUSHRA
                  moveLeft 1
                 endActions
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,LEFT
                 setFacing FOLLOWER_B,LEFT
                 csWait 60
                 setCamDest 7,4
-                setActscriptWait ALLY_BOWIE,eas_Init
-                setFacing ALLY_BOWIE,DOWN
+                setActscriptWait ALLY_MUSHRA,eas_Init
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing FOLLOWER_B,DOWN
                 nextSingleText $0,ALLY_PETER ; "Oh, he's gone!{W1}"
                 csWait 60
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,LEFT
                 setFacing FOLLOWER_B,LEFT
                 nextSingleText $0,ALLY_PETER ; "I hope he comes back.{N}Did {NAME;11} lie to us?{W1}"
                 csWait 30
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing FOLLOWER_B,DOWN
                 csWait 150
@@ -124,31 +124,31 @@ abcs_battle18:  textCursor 2528
                 setFacing 128,LEFT
                 setFacing FOLLOWER_B,LEFT
                 csWait 20
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 csWait 10
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,RIGHT
                 csWait 10
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 csWait 10
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,LEFT
                 csWait 10
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 csWait 10
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,RIGHT
                 csWait 10
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 csWait 10
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,LEFT
                 csWait 10
-                customActscriptWait ALLY_BOWIE
+                customActscriptWait ALLY_MUSHRA
                  ac_motion OFF          ;   
                  ac_orientLeft          ;   
                  ac_updateSprite        ;   
@@ -160,7 +160,7 @@ abcs_battle18:  textCursor 2528
                  ac_updateSprite        ;   
                  ac_jump eas_Idle       ;   
                 ac_end
-                stopEntity ALLY_BOWIE
+                stopEntity ALLY_MUSHRA
                 stopEntity ALLY_PETER
                 csWait 30
                 setFacing 128,DOWN
@@ -172,12 +172,12 @@ abcs_battle18:  textCursor 2528
                 setPos ALLY_ROHDE,12,5,RIGHT
                 setActscriptWait ALLY_ROHDE,eas_4536C
                 csWait 3
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
-                startEntity ALLY_BOWIE
+                startEntity ALLY_MUSHRA
                 startEntity ALLY_PETER
                 entityActionsWait ALLY_ROHDE
                  moveDown 3
@@ -208,18 +208,18 @@ abcs_battle18:  textCursor 2528
                  moveDown 1
                 endActions
                 setFacing ALLY_PETER,LEFT
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing FOLLOWER_B,LEFT
                 nextSingleText $0,ALLY_PETER ; "Well, at least we can bring{N}a lot of soldiers with us.{W1}"
                 entityActionsWait ALLY_ROHDE
                  moveDown 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,ALLY_ROHDE ; "But soldiers in the Caravan{N}cannot enter battle 'cause{N}they've been miniaturized.{W1}"
                 nextSingleText $0,ALLY_PETER ; "We'll just have to see.{W1}"
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,LEFT
                 setFacing FOLLOWER_B,LEFT
                 nextSingleText $0,ALLY_PETER ; "Humph.  I don't like this guy.{W1}"
@@ -230,7 +230,7 @@ abcs_battle18:  textCursor 2528
                 csWait 20
                 setActscriptWait ALLY_ROHDE,eas_Jump
                 setActscriptWait ALLY_ROHDE,eas_Jump
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,ALLY_ROHDE ; "I wonder what adventures{N}we'll find with this Caravan!{W1}"
@@ -250,11 +250,11 @@ abcs_battle18:  textCursor 2528
                  moveDown 9
                 endActions
                 csWait 30
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing ALLY_PETER,LEFT
                 setFacing FOLLOWER_B,LEFT
                 csWait 10
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing FOLLOWER_B,DOWN
                 csWait 180

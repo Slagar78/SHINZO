@@ -4,7 +4,7 @@
 abcs_battle42:  textCursor 3106
                 loadMapFadeIn MAP_ZEON_ARENA,8,13
                 loadMapEntities ce_4F328
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,15,15,LEFT
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -37,7 +37,7 @@ cs_4EF5E:       stopEntity 128
                 csWait 60
                 shiver 128
                 nextSingleText $C0,128  ; "Auuugh...{W1}"
-                setFacing ALLY_BOWIE,DOWN
+                setFacing ALLY_MUSHRA,DOWN
                 setFacing ALLY_PETER,DOWN
                 setFacing FOLLOWER_B,DOWN
                 shiver 128
@@ -49,7 +49,7 @@ cs_4EF5E:       stopEntity 128
                 setFacing ALLY_PETER,LEFT
                 setActscriptWait ALLY_PETER,eas_Jump
                 nextSingleText $0,ALLY_PETER ; "Princess Elis!{W1}"
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing FOLLOWER_B,RIGHT
                 setFacing ALLY_LEMON,UP
                 nextSingleText $C0,129  ; "Zzzzz....{W1}"
@@ -100,7 +100,7 @@ cs_4EF5E:       stopEntity 128
                  moveDown 1
                 endActions
                 csWait 50
-                nextSingleText $0,ALLY_BOWIE ; "Ah...{W1}"
+                nextSingleText $0,ALLY_MUSHRA ; "Ah...{W1}"
                 csWait 50
                 nextSingleText $C0,129  ; "Er...ummm....{W1}"
                 setPos ALLY_PETER,13,18,UP
@@ -120,7 +120,7 @@ cs_4EF5E:       stopEntity 128
                 csWait 120
                 setFacing ALLY_LEMON,DOWN
                 setQuake 2
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveLeft 2
                 endActions
                 entityActionsWait 129
@@ -128,7 +128,7 @@ cs_4EF5E:       stopEntity 128
                  moveLeft 1
                 endActions
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xUpDown
+                setActscript ALLY_MUSHRA,eas_2xUpDown
                 entityActionsWait ALLY_PETER
                  moveRight 2
                 endActions
@@ -144,7 +144,7 @@ cs_4EF5E:       stopEntity 128
                 nextSingleText $0,ALLY_LEMON ; "Something is coming up{N}through the earth...{W1}"
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,FOLLOWER_B ; "I almost forgot...about...{N}the other devil....{W1}"
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 2
                  moveRight 1
                 endActions
@@ -161,11 +161,11 @@ cs_4EF5E:       stopEntity 128
                  moveUp 1
                 endActions
                 waitIdle ALLY_PETER
-                setFacing ALLY_BOWIE,RIGHT
+                setFacing ALLY_MUSHRA,RIGHT
                 setFacing FOLLOWER_B,LEFT
-                nextSingleText $0,ALLY_BOWIE ; "You mean...Zeon?{W1}"
+                nextSingleText $0,ALLY_MUSHRA ; "You mean...Zeon?{W1}"
                 nod FOLLOWER_B
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing FOLLOWER_B,UP
                 setFacing ALLY_LEMON,UP
@@ -185,7 +185,7 @@ cs_4EF5E:       stopEntity 128
                 csWait 40
                 nextSingleText $0,129   ; "Eeeekkk!{W1}"
                 csWait 40
-                nextSingleText $0,ALLY_BOWIE ; "Oh, no.{W1}"
+                nextSingleText $0,ALLY_MUSHRA ; "Oh, no.{W1}"
                 playSound SFX_DEMON_BREATH
                 setQuake 4
                 csWait 30
@@ -244,8 +244,8 @@ cs_4EF5E:       stopEntity 128
                 setFacing ALLY_LEMON,LEFT
                 setActscriptWait FOLLOWER_B,eas_Jump
                 nextSingleText $0,FOLLOWER_B ; "What?  Oh, my.{W1}"
-                setFacing ALLY_BOWIE,DOWN
-                setActscriptWait ALLY_BOWIE,eas_Jump
+                setFacing ALLY_MUSHRA,DOWN
+                setActscriptWait ALLY_MUSHRA,eas_Jump
                 entityActionsWait ALLY_LEMON
                  moveDown 1
                 endActions
@@ -265,9 +265,9 @@ cs_4EF5E:       stopEntity 128
                 setFacing FOLLOWER_B,UP
                 nextText $0,FOLLOWER_B  ; "{LEADER}, believe in your{N}sword and the jewel!{N}We must fight Zeon now!{W1}"
                 nextSingleText $0,FOLLOWER_B ; "Let's go!{W1}"
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 setStoryFlag 43         ; Battle 43 unlocked - BATTLE_VERSUS_ZEON               
                 csc_end
 ce_4F328:       mainEntity 13,17,UP

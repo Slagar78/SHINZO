@@ -4,7 +4,7 @@
 bbcs_32:        textCursor 2845
                 loadMapFadeIn MAP_OVERWORLD_MOUN_AND_MITULA,10,38
                 loadMapEntities ce_4CCC0
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setPos ALLY_PETER,16,45,UP
                 setActscriptWait FOLLOWER_B,eas_Init
@@ -15,7 +15,7 @@ bbcs_32:        textCursor 2845
                 setPos FOLLOWER_A,15,45,UP
                 fadeInB
                 cameraSpeed $30
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 3
                 endActions
                 entityActions ALLY_PETER

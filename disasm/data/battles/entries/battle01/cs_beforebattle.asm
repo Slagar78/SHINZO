@@ -4,7 +4,7 @@
 bbcs_01:        textCursor 2292
                 loadMapFadeIn MAP_ANCIENT_TOWER_FIRST_ROOM,2,10
                 loadMapEntities ce_49694
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setPos ALLY_SARAH,8,17,UP
                 setPos ALLY_CHESTER,7,17,UP
                 setActscriptWait ALLY_SARAH,eas_Init

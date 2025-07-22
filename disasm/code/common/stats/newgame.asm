@@ -22,7 +22,7 @@ NewGame:
                 
                 moveq   #GAMESTART_GOLD,d1 ; starting gold value
                 bsr.w   SetGold
-                moveq   #ALLY_BOWIE,d0  ; starting character
+                moveq   #ALLY_MUSHRA,d0  ; starting character
                 bsr.w   JoinForce       
                 movem.w (sp)+,d0-d1/d7
                 rts

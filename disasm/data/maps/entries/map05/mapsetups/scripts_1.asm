@@ -8,7 +8,7 @@ cs_60708:       textCursor 3513
                 setCamDest 16,28
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
-                setPos ALLY_BOWIE,21,39,UP
+                setPos ALLY_MUSHRA,21,39,UP
                 setPos ALLY_PETER,22,39,UP
                 setPos FOLLOWER_B,20,39,UP
                 nextSingleText $80,ALLY_LEMON ; "{LEADER}, wait!{W1}"
@@ -25,13 +25,13 @@ cs_60708:       textCursor 3513
                 nextSingleText $80,ALLY_LEMON ; "I will die fighting for your{N}cause, if you let me.{W1}"
                 csWait 40
                 setFacing FOLLOWER_B,RIGHT
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,LEFT
                 nextSingleText $0,FOLLOWER_B ; "He's a hero in Galam.{N}I think he should join us.{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 nod ALLY_PETER
                 csWait 20
-                entityActions ALLY_BOWIE
+                entityActions ALLY_MUSHRA
                  moveUp 3
                 endActions
                 entityActions ALLY_PETER
@@ -47,7 +47,7 @@ cs_60708:       textCursor 3513
                 setActscriptWait ALLY_LEMON,eas_Jump
                 setActscriptWait ALLY_LEMON,eas_Jump
                 nextSingleText $80,ALLY_LEMON ; "Oh, thank you!  I know I can{N}take the King of the Devils!{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 followEntity ALLY_LEMON,FOLLOWER_B,2
                 csc_end
@@ -55,14 +55,14 @@ cs_607DE:       textCursor 3388
                 setPos 130,63,63,DOWN
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
-                setPos ALLY_BOWIE,21,39,UP
+                setPos ALLY_MUSHRA,21,39,UP
                 setPos ALLY_PETER,22,40,UP
                 setPos FOLLOWER_B,20,40,UP
                 reloadMap 16,34
                 fadeInB
                 nextSingleText $0,ALLY_LEMON ; "I'm guilty!{W1}"
                 csWait 5
-                setActscript ALLY_BOWIE,eas_2xRightLeft
+                setActscript ALLY_MUSHRA,eas_2xRightLeft
                 csWait 5
                 setActscript ALLY_PETER,eas_2xUpDown
                 csWait 5
@@ -71,7 +71,7 @@ cs_607DE:       textCursor 3388
                 entityActionsWait ALLY_PETER
                  moveUp 2
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing FOLLOWER_B,UP
                 nextSingleText $0,ALLY_PETER ; "Hey, there's {NAME;28}.{W1}"
                 setCamDest 13,28
@@ -119,15 +119,15 @@ cs_607DE:       textCursor 3388
                 entityActionsWait FOLLOWER_B
                  moveUp 2
                 endActions
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,LEFT
                 nextText $0,FOLLOWER_B  ; "No, {NAME;28} cannot die{N}by jumping off a cliff.{W2}"
                 setFacing FOLLOWER_B,RIGHT
                 nextText $0,FOLLOWER_B  ; "{NAME;28} is an immortal{N}vampire.{W2}"
                 nextSingleText $0,FOLLOWER_B ; "But, I'm sure the impact{N}didn't feel too good.{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 nod ALLY_PETER
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 setActscriptWait ALLY_LEMON,eas_Init
                 startEntity ALLY_LEMON
@@ -140,7 +140,7 @@ cs_6093A:       textCursor 3396
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
                 setFacing ALLY_LEMON,UP
-                setDest ALLY_BOWIE,11,7
+                setDest ALLY_MUSHRA,11,7
                 setDest ALLY_PETER,11,7
                 setDest FOLLOWER_B,11,7
                 entityActionsWait ALLY_PETER
@@ -168,7 +168,7 @@ cs_6093A:       textCursor 3396
                  moveDown 1
                 endActions
                 shiver 128
-                setFacing ALLY_BOWIE,LEFT
+                setFacing ALLY_MUSHRA,LEFT
                 setFacing ALLY_PETER,LEFT
                 nextSingleText $80,ALLY_PETER ; "What's he doing?{W1}"
                 nextSingleText $0,FOLLOWER_B ; "He's mistaking us for devils.{W1}"
@@ -176,7 +176,7 @@ cs_6093A:       textCursor 3396
                 csWait 20
                 shiver 128
                 setFacing ALLY_PETER,UP
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextText $80,128        ; "What tough devils!{W2}"
                 nextSingleText $80,128  ; "My symbol doesn't drive{N}them away!{W1}"
                 entityActionsWait FOLLOWER_B
@@ -284,7 +284,7 @@ cs_60B10:       textCursor 3426
                  moveUp 1
                 endActions
                 setPos 128,63,63,DOWN
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 csc_end
 cs_60BA6:       textCursor 3434
@@ -326,16 +326,16 @@ cs_60BA6:       textCursor 3434
                  moveUp 1
                 endActions
                 setPos 128,63,63,DOWN
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 followEntity ALLY_LEMON,FOLLOWER_B,2
                 csc_end
 cs_60C42:       textCursor 3442
                 setActscriptWait ALLY_LEMON,eas_Init
-                setActscriptWait ALLY_BOWIE,eas_Init
+                setActscriptWait ALLY_MUSHRA,eas_Init
                 setActscriptWait ALLY_PETER,eas_Init
                 setActscriptWait FOLLOWER_B,eas_Init
-                setPos ALLY_BOWIE,28,54,LEFT
+                setPos ALLY_MUSHRA,28,54,LEFT
                 setPos ALLY_PETER,28,55,LEFT
                 setPos FOLLOWER_B,27,53,LEFT
                 setPos 128,26,50,DOWN
@@ -479,17 +479,17 @@ cs_60CA4:       textCursor 3446
                  moveRight 4
                  faceDown 1
                 endActions
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 nextText $80,FOLLOWER_B ; "{LEADER}, we have to{N}find the Holy Sword and{N}the door to the tower.{W2}"
                 nextSingleText $80,FOLLOWER_B ; "The legends only hint of{N}you, but we believe in you.{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 entityActionsWait 128
                  moveDown 1
                 endActions
                 setFacing FOLLOWER_B,UP
                 setFacing ALLY_CHAZ,RIGHT
                 nextSingleText $0,128   ; "Believe in the power of{N}your jewel!{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 entityActionsWait 128
                  moveUp 1
@@ -504,18 +504,18 @@ cs_60EB2:       textCursor 3468
                  moveRight 1
                 endActions
                 setFacing FOLLOWER_B,DOWN
-                setFacing ALLY_BOWIE,UP
+                setFacing ALLY_MUSHRA,UP
                 setFacing ALLY_PETER,UP
                 setFacing ALLY_LEMON,UP
                 nextSingleText $80,FOLLOWER_B ; "Now, {LEADER}.{W1}"
-                nod ALLY_BOWIE
+                nod ALLY_MUSHRA
                 entityActionsWait 128
                  moveDown 1
                 endActions
                 setFacing FOLLOWER_B,UP
                 setFacing ALLY_CHAZ,RIGHT
                 nextSingleText $0,128   ; "We need to return and{N}restore world peace.{W1}"
-                followEntity ALLY_PETER,ALLY_BOWIE,2
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
                 followEntity FOLLOWER_B,ALLY_PETER,2
                 followEntity ALLY_LEMON,FOLLOWER_B,2
                 entityActionsWait 128
@@ -539,7 +539,7 @@ cs_60F18:       textCursor 3471
                 shiver ALLY_CHAZ
                 csWait 30
                 nextSingleText $80,ALLY_PETER ; "This is not a sight-seeing{N}tour, OK?!{N}Let's go {LEADER}!{W1}"
-                followEntity ALLY_CHAZ,ALLY_BOWIE,5
+                followEntity ALLY_CHAZ,ALLY_MUSHRA,5
                 csc_end
 cs_60F64:       textCursor 3480
                 nextText $FF,255        ; "It's a fine-looking piano.{N}Will you play it?{W1}"

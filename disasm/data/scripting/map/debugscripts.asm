@@ -1,21 +1,21 @@
 
 ; ASM FILE data\scripting\map\debugscripts.asm :
 ; 0x4931C..0x494BC : Debugging scripts
-dms_01:         faceEntity 134,ALLY_BOWIE
+dms_01:         faceEntity 134,ALLY_MUSHRA
                 addNewFollower ALLY_SLADE
                 addNewFollower ALLY_JAHA
                 addNewFollower ALLY_ZYNK
-                followEntity ALLY_PETER,ALLY_BOWIE,2
-                moveEntityAboveAnother ALLY_BOWIE,ALLY_BOWIE
+                followEntity ALLY_PETER,ALLY_MUSHRA,2
+                moveEntityAboveAnother ALLY_MUSHRA,ALLY_MUSHRA
                 csc_end
-                setCameraEntity ALLY_BOWIE
-                setActscript ALLY_BOWIE,eas_ControlledCharacter
-cs_4934A:       entityFlashWhite ALLY_BOWIE,$B4
+                setCameraEntity ALLY_MUSHRA
+                setActscript ALLY_MUSHRA,eas_ControlledCharacter
+cs_4934A:       entityFlashWhite ALLY_MUSHRA,$B4
                 jump cs_4934A
                 csc_end
                 textCursor 322
                 csc15 ALLY_SARAH,$1,eas_ControlledCharacter
-                showPortrait $0,ALLY_BOWIE
+                showPortrait $0,ALLY_MUSHRA
                 setQuake 32770
                 setQuake 16386
                 loadMapFadeIn MAP_OUTSIDE_MITULA,13,13
@@ -26,7 +26,7 @@ cs_4934A:       entityFlashWhite ALLY_BOWIE,$B4
                 stopEntity ALLY_KAZIN
                 csc15 ALLY_SARAH,$1,eas_493A2
                 waitIdle ALLY_SARAH
-                showPortrait $0,ALLY_BOWIE
+                showPortrait $0,ALLY_MUSHRA
                 csWait 60
                 startEntity ALLY_KAZIN
                 hidePortrait
@@ -81,11 +81,11 @@ sub_493EC:
                 reviveAlly 128
                 reviveAlly 150
                 allyDefeated ALLY_JAHA
-                showPortrait $0,ALLY_BOWIE
+                showPortrait $0,ALLY_MUSHRA
                 csc_end
                 setCameraEntity 65535
-                entityFlashWhite ALLY_BOWIE,$28
-                hide ALLY_BOWIE
+                entityFlashWhite ALLY_MUSHRA,$28
+                hide ALLY_MUSHRA
                 setPos ALLY_KIWI,13,23,DOWN
                 entityFlashWhite ALLY_KIWI,$28
                 animEntityFX ALLY_KIWI,7
