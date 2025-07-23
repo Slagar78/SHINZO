@@ -4444,9 +4444,9 @@ LONGWORD_PROMOTED_AT_LEVELS_COUNTER: equ longwordPromotedAtLevelsCounter
 ; enum GameStartValues
 
 gamestartGold = 60
-gamestartMap = MAP_GRANSEAL
-gamestartSavepointX = 56
-gamestartSavepointY = 3
+gamestartMap = MAP_KLEDON
+gamestartSavepointX = 15
+gamestartSavepointY = 20
 gamestartFacing = DOWN
 
     if (STANDARD_BUILD&TEST_BUILD&TEST_BUILD_SKIP_TO_NEW_GRANSEAL=1)
