@@ -53,7 +53,7 @@ FastLevelUp:
                 
                 bsr.w   GetClass        
                 move.w  d1,d3           ; d3.w = class
-                bsr.w   GetCurrentLevel
+                bsr.w   GetLevel
                 move.w  d1,d5           ; d5.w = current level
                 
                 ; Determine level cap for class type
@@ -313,14 +313,14 @@ IncreaseAllyBaseDouble:
                 addq.w  #1,d2
                 bmi.s   @Zero           ; clamp to zero on negative
                 
-                cmpi.w  #4,d2
-                bne.s   @Continue
+                cmpi.w  #PROWESS_1IN4,d2
+                bls.s   @Continue
                 
-                moveq   #3,d2
+                moveq   #PROWESS_1IN4,d2 ; otherwise, cap to highest chance
                 bra.s   @Continue
 @Zero:          
                 
-                moveq   #0,d2
+                moveq   #PROWESS_1IN32,d2
 @Continue:
                 
                 lsl.w   #PROWESS_LOWER_DOUBLE_SHIFT_COUNT,d2

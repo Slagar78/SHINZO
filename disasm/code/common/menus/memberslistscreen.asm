@@ -745,7 +745,7 @@ BuildMembersListWindow:
                 move.w  #WINDOW_MEMBERS_LIST_SIZE,d0
                 bsr.w   alt_WriteWindowTiles
                 movea.l windowLayoutStartAddress(a6),a1
-                move.w  #$FFC6,d1
+                move.w  #-58,d1
                 suba.w  d1,a1
                 addq.w  #4,a1
                 moveq   #WINDOW_MEMBERS_LIST_HEADER_LENGTH,d7
@@ -821,7 +821,7 @@ BuildMembersListWindow:
                 
                 ; Write LV
                 move.w  currentMember(a6),d0
-                jsr     j_GetCurrentLevel
+                jsr     j_GetLevel
                 moveq   #LV_DIGITS_NUMBER,d7
                 move.w  d1,d0
                 ext.l   d0
@@ -1000,7 +1000,7 @@ BuildMemberSummaryWindow:
             if (STANDARD_BUILD&SHOW_EFFECTIVE_LEVEL=1)
                 jsr     CalculateEffectiveLevel
             else
-                jsr     j_GetCurrentLevel
+                jsr     j_GetLevel
             endif
                 moveq   #2,d7
                 move.w  d1,d0
@@ -1837,8 +1837,12 @@ LoadMemberSummaryIcons:
 
 DmaMembersListIcon:
                 
-                moveq   #$7F,d7         ; unused icon index mask (?)
-                add.w   d0,d0
+            if (STANDARD_BUILD=1)
+                ; do nothing
+            else
+                moveq   #ITEMENTRY_MASK_INDEX,d7 ; unused icon index mask
+            endif
+                add.w   d0,d0           ; d0 is current diamond-menu choice
                 move.w  rjt_DmaMembersListIconFunctions(pc,d0.w),d0
                 jmp     rjt_DmaMembersListIconFunctions(pc,d0.w)
 
@@ -2747,7 +2751,7 @@ WriteSpellLevel:
 EquipNewItem:
                 
                 cmpi.w  #-1,d1
-                beq.w   @Equip
+                beq.w   @Equip          ; equip if nothing equipped
                 
                 move.w  d2,d1
                 jsr     j_UnequipItemBySlotIfNotCursed

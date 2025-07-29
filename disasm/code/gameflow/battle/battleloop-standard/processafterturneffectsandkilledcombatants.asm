@@ -32,7 +32,7 @@ ProcessAfterTurnEffects:
                 andi.w  #STATUSEFFECT_STUN,d1
                 beq.s   @CheckSleep
                 move.w  d0,((DIALOGUE_NAME_INDEX_1-$1000000)).w
-                andi.w  #STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d2
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_STUN,d2
                 move.w  #CHANCE_TO_NO_LONGER_BE_STUNNED,d6 ; 1/2 chance to no longer be stunned
                 jsr     (GenerateRandomNumber).w
                 tst.w   d7
@@ -49,7 +49,7 @@ ProcessAfterTurnEffects:
                 andi.w  #STATUSEFFECT_SLEEP,d1
                 beq.s   @CheckMuddle
                 move.w  d0,((DIALOGUE_NAME_INDEX_1-$1000000)).w
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d2
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_SLEEP,d2
                 
                 ; Randomly wake early
                 move.w  d1,d6
@@ -71,7 +71,7 @@ ProcessAfterTurnEffects:
                 move.w  d1,d2
                 andi.w  #STATUSEFFECT_MUDDLE,d1
                 beq.s   @CheckSilence
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d2
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_MUDDLE,d2
                 move.w  d1,d6
                 jsr     (GenerateRandomNumber).w
                 andi.w  #STATUSEFFECT_MUDDLE,d7
@@ -79,7 +79,7 @@ ProcessAfterTurnEffects:
                 move.w  d0,((DIALOGUE_NAME_INDEX_1-$1000000)).w
                 txt     355             ; "{CLEAR}{NAME} is fine.{D3}"
                 clr.w   d1
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d2
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_MUDDLE2,d2
                 bra.s   @UpdateMuddle
 @Muddled:       subi.w  #STATUSEFFECTCOUNTER_MUDDLE,d1 ; randomly decrement muddle counter
 @UpdateMuddle:  or.w    d2,d1
@@ -89,7 +89,7 @@ ProcessAfterTurnEffects:
                 move.w  d1,d2
                 andi.w  #STATUSEFFECT_SILENCE,d1
                 beq.s   @CheckSlow
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d2
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_SILENCE,d2
                 move.w  d1,d6
                 jsr     (GenerateRandomNumber).w
                 andi.w  #STATUSEFFECT_SILENCE,d7
@@ -107,7 +107,7 @@ ProcessAfterTurnEffects:
                 move.w  d1,d2
                 andi.w  #STATUSEFFECT_SLOW,d1
                 beq.s   @CheckAttack
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d2
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_SLOW,d2
                 subi.w  #STATUSEFFECTCOUNTER_SLOW,d1 ; decrement slow counter
                 bne.s   @UpdateSlow
                 move.w  #SPELL_SLOW,((DIALOGUE_NAME_INDEX_1-$1000000)).w
@@ -119,7 +119,7 @@ ProcessAfterTurnEffects:
                 move.w  d1,d2
                 andi.w  #STATUSEFFECT_ATTACK,d1
                 beq.s   @CheckBoost
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST,d2
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_ATTACK,d2
                 subi.w  #STATUSEFFECTCOUNTER_ATTACK,d1 ; decrement attack counter
                 bne.s   @UpdateAttack
                 move.w  #SPELL_ATTACK,((DIALOGUE_NAME_INDEX_1-$1000000)).w
@@ -131,7 +131,7 @@ ProcessAfterTurnEffects:
                 move.w  d1,d2
                 andi.w  #STATUSEFFECT_BOOST,d1
                 beq.s   @SetStatus
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_ATTACK,d2
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_BOOST,d2
                 subi.w  #STATUSEFFECTCOUNTER_BOOST,d1 ; decrement boost counter
                 bne.s   @UpdateBoost
                 move.w  #SPELL_BOOST,((DIALOGUE_NAME_INDEX_1-$1000000)).w
@@ -151,7 +151,7 @@ ProcessAfterTurnEffects:
                 jsr     GetMaxHP
                 mulu.w  #PERCENT_POISON_DAMAGE,d1
                 divu.w  #100,d1
-                andi.l  #$FFFF,d1
+                andi.l  #WORD_MASK,d1
             else
                 moveq   #POISON_DAMAGE,d1 ; constant poison damage
             endif

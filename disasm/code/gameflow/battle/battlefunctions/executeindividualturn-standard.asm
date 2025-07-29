@@ -79,7 +79,7 @@ ExecuteIndividualTurn:
                 andi.w  #STATUSEFFECT_MUDDLE,d1
                 bne.s   @AiControl1
                 jsr     GetActivationBitfield
-                andi.w  #4,d1
+                andi.w  #AIBITFIELD_AI_CONTROLLED,d1
                 bne.s   @AiControl1
                 tst.b   d0
                 bpl.s   @IsAutoBattle       ; check auto battle if ally
@@ -290,7 +290,7 @@ DetermineRandomAttackSpell:
             if (FIX_KIWI_BREATH_UPGRADE_LEVELS=1)
                 jsr     CalculateEffectiveLevel
             else
-                jsr     GetCurrentLevel
+                jsr     GetLevel
             endif
                 clr.w   d0
                 
@@ -304,7 +304,7 @@ DetermineRandomAttackSpell:
 @CheckUpgrade3: cmp.b   (a0)+,d1
                 blt.s   @LoadSpell
                 addq.w  #1,d0
-@LoadSpell:     lsl.w   #6,d0
+@LoadSpell:     lsl.w   #SPELLENTRY_OFFSET_LV,d0
                 or.b    (a0),d0
                 move.w  d0,((BATTLEACTION_ITEM_OR_SPELL-$1000000)).w
 @Done:          movem.l (sp)+,d1-d2/a0

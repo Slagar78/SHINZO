@@ -1,6 +1,6 @@
 
 ; ASM FILE code\common\stats\updatecombatantstats.asm :
-; 0x89CE..0x8BD0 : Functions to calculate effective stat values
+; 0x89CE..0x8BD0 : Functions to apply equip and status effects on stats
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -13,7 +13,7 @@ UpdateCombatantStats:
                 move.w  d0,-(sp)
                 bsr.w   GetStatusEffects
                 move.w  d1,d3
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d3
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_CURSE,d3
                 bsr.w   InitializeCurrentStats
                 bsr.w   GetCombatantEntryAddress
                 lea     COMBATANT_OFFSET_ITEMS(a0),a1
@@ -31,7 +31,7 @@ UpdateCombatantStats:
                 beq.s   @Next
                 bsr.w   ApplyItemOnStats
                 beq.s   @Next
-                ori.w   #4,d3
+                ori.w   #STATUSEFFECT_CURSE,d3
 @Next:
                 
                 addq.w  #ITEMENTRY_SIZE,a1
@@ -101,7 +101,7 @@ ApplyStatusEffectsOnStats:
 
 ; In: a2 = prowess entry pointer
 ;     d0.w = combatant index
-;     d1.w = item index
+;     d1.w = item entry
 
 
 ApplyItemOnStats:
@@ -132,7 +132,7 @@ ApplyItemOnStats:
                 bcs.s   @ExecuteEquipEffectFunction
 @InfiniteLoop:
                 
-                bra.s   @InfiniteLoop   ; caught in an inifinite loop if equip effect index is too high
+                bra.s   @InfiniteLoop   ; caught in an infinite loop if equip effect index is too high
 @ExecuteEquipEffectFunction:
                 
                 lsl.w   #INDEX_SHIFT_COUNT,d2
@@ -164,9 +164,9 @@ pt_EquipEffectFunctions:
                 dc.l DecreaseCurrentDef
                 dc.l DecreaseCurrentAgi
                 dc.l DecreaseCurrentMov
-                dc.l EquipEffect_SetCriticalProwess
-                dc.l EquipEffect_SetDoubleAttackProwess
-                dc.l EquipEffect_SetCounterAttackProwess
+                dc.l equipEffect_SetCriticalProwess
+                dc.l equipEffect_SetDoubleAttackProwess
+                dc.l equipEffect_SetCounterAttackProwess
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -186,7 +186,7 @@ equipEffect_IncreaseCriticalProwess:
             if (STANDARD_BUILD&FIX_CRITICAL_HIT_DEFINITIONS=1)
                 move.b  (a2),d2
                 andi.b  #PROWESS_MASK_CRITICAL,d2
-                cmpi.b  #8,d2
+                cmpi.b  #PROWESS_CRITICAL_NONE,d2
                 bhs.s   @Skip           ; skip if not a critical hit setting, i.e., no critical or ailment infliction
                 
                 cmpi.b  #4,d2
@@ -194,19 +194,19 @@ equipEffect_IncreaseCriticalProwess:
                 
                 ; Increase chance to perform a regular critical
                 add.b   d1,d2
-                cmpi.b  #4,d2
-                blo.s   @Skip
+                cmpi.b  #PROWESS_CRITICAL125_1IN4,d2
+                bls.s   @Skip
                 
-                moveq   #3,d2           ; cap to highest regular (+25%) critical hit setting
+                moveq   #PROWESS_CRITICAL125_1IN4,d2 ; cap to highest regular (+25%) critical hit setting
                 bra.s   @Skip
 @StrongerCritical:
                 
                 ; Increase chance to perform a stronger critical
                 add.b   d1,d2
-                cmpi.b  #8,d2
-                blo.s   @Skip
+                cmpi.b  #PROWESS_CRITICAL150_1IN4,d2
+                bls.s   @Skip
                 
-                moveq   #7,d2           ; cap to highest stronger (+50%) critical hit setting
+                moveq   #PROWESS_CRITICAL150_1IN4,d2 ; cap to highest stronger (+50%) critical hit setting
 @Skip:
                 
                 andi.b  #PROWESS_MASK_DOUBLE|PROWESS_MASK_COUNTER,(a2)
@@ -215,12 +215,12 @@ equipEffect_IncreaseCriticalProwess:
             else
                 move.b  (a2),d2
                 andi.b  #PROWESS_MASK_CRITICAL,d2
-                cmpi.b  #8,d2
+                cmpi.b  #PROWESS_CRITICAL_NONE,d2
                 bcc.s   @Skip           ; skip if not a regular critical hit setting
                 add.b   d1,d2
-                cmpi.b  #8,d2
+                cmpi.b  #PROWESS_CRITICAL_NONE,d2
                 bcs.s   @Skip
-                moveq   #7,d2           ; cap to highest regular critical hit setting
+                moveq   #PROWESS_CRITICAL125_1IN4,d2 ; cap to highest regular critical hit setting
 @Skip:
                 
                 andi.b  #PROWESS_MASK_DOUBLE|PROWESS_MASK_COUNTER,(a2)
@@ -277,6 +277,7 @@ equipEffect_IncreaseCounterAttackProwess:
                 rts
 
     ; End of function equipEffect_IncreaseCounterAttackProwess
+
 
 ; =============== S U B R O U T I N E =======================================
 

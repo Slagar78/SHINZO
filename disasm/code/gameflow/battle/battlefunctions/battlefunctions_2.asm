@@ -503,7 +503,7 @@ CreatePulsatingItemRangeGrid:
                 move.w  d1,d3
                 jsr     j_GetEquippedWeapon
                 move.w  d2,-(sp)
-                bsr.w   sub_24C4E
+                bsr.w   sub_24C4E       
                 jsr     j_GetEquippedWeapon
                 move.w  d2,d1
                 jsr     j_UnequipItemBySlot
@@ -602,11 +602,11 @@ sub_24C4E:
                 ; Equip first item if inventory is full with equippable items
                 clr.w   d1
                 jsr     j_EquipItemBySlot
-                bra.s   @Goto_ExecuteDiamondMenu
+                bra.s   @Goto_ExecuteMenu
 @DefaultToUnarmed:
                 
                 moveq   #DOWN,d1        ; set menu initial choice to down slot
-@Goto_ExecuteDiamondMenu:
+@Goto_ExecuteMenu:
                 
                 bra.s   @ExecuteDiamondMenu
 @GetMenuInitialChoice:
@@ -792,6 +792,7 @@ loc_24D42:
                 clr.w   d1
                 bra.s   @HasTarget_Give
 @ChooseTarget:
+                
             if (STANDARD_BUILD&TRADEABLE_ITEMS=1)
                 clsTxt
             endif
@@ -992,12 +993,12 @@ byte_25066:
                 cmp.w   ((CHEST_CONTENTS-$1000000)).w,d0
             else
                 cmpi.w  #-1,((CHEST_CONTENTS-$1000000)).w
+                bne.w   @ExamineContents
             endif
-                bne.w   loc_25088
                 move.w  #BATTLEACTION_STAY,((CURRENT_BATTLEACTION-$1000000)).w
                 clr.w   d0
                 bra.w   @EndBattleEntityControl
-loc_25088:
+@ExamineContents:
                 
                 move.w  combatant(a6),d0
                 move.w  d0,((DIALOGUE_NAME_INDEX_1-$1000000)).w
@@ -1023,9 +1024,9 @@ loc_250B0:
                 bsr.w   GetEntityPositionAfterApplyingFacing
                 move.w  d1,d2
                 move.w  d0,d1
-                jsr     sub_1AC054
+                jsr     j_CheckForTrappedChest
                 cmpi.w  #-1,d0
-                beq.w   loc_250FC
+                beq.w   @CheckForGoldChest
                 
                 move.w  #BATTLEACTION_TRAPPED_CHEST,((CURRENT_BATTLEACTION-$1000000)).w
                 move.w  d0,((BATTLEACTION_ITEM_OR_SPELL-$1000000)).w
@@ -1033,7 +1034,7 @@ loc_250B0:
                 sndCom  MUSIC_CORRUPTED_SAVE
                 bsr.w   SpawnEnemySkipCamera
                 bra.w   @EndBattleEntityControl
-loc_250FC:
+@CheckForGoldChest:
                 
                 move.w  ((CHEST_CONTENTS-$1000000)).w,d2
                 cmpi.w  #ITEMINDEX_GOLDCHESTS_START,d2

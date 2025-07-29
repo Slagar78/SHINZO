@@ -76,7 +76,7 @@ ChurchMenu:
                 addi.w  #1,deadMembersCount(a6)
                 move.w  d0,((DIALOGUE_NAME_INDEX_1-$1000000)).w
                 txt     129             ; "Gosh!  {NAME} is{N}exhausted!{W2}"
-                jsr     j_GetCurrentLevel
+                jsr     j_GetLevel
                 mulu.w  #CHURCHMENU_PER_LEVEL_RAISE_COST,d1
                 move.l  d1,actionCost(a6)
                 jsr     j_GetClass
@@ -164,7 +164,7 @@ ChurchMenu:
                 move.w  member(a6),((DIALOGUE_NAME_INDEX_1-$1000000)).w
                 txt     121             ; "Gosh!  {NAME} is{N}poisoned!{W2}"
             if (STANDARD_BUILD&PER_LEVEL_CHURCH_COST=1)
-                jsr     GetCurrentLevel
+                jsr     GetLevel
                 mulu.w  #CHURCHMENU_PER_LEVEL_CURE_POISON_COST,d1
                 move.l  d1,actionCost(a6)
                 jsr     GetClass
@@ -206,7 +206,7 @@ ChurchMenu:
                 jsr     j_DecreaseGold
                 move.w  member(a6),d0
                 move.w  d2,d1
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d1
+                andi.w  #(STATUSEFFECT_MASK-STATUSEFFECT_POISON),d1
                 jsr     j_SetStatusEffects
                 sndCom  MUSIC_CURE
                 jsr     WaitForMusicResumeAndPlayerInput(pc)
@@ -337,7 +337,7 @@ ChurchMenu:
                 bra.w   @RestartPromo
 @CheckPromotableLevel:
                 
-                jsr     j_GetCurrentLevel
+                jsr     j_GetLevel
                 cmpi.w  #CHURCHMENU_MIN_PROMOTABLE_LEVEL,d1
                 bcc.w   @ConfirmPromo
                 move.w  member(a6),((DIALOGUE_NAME_INDEX_1-$1000000)).w

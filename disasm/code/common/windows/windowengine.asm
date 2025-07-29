@@ -60,7 +60,7 @@ FindFreeWindowSlot_Loop:
                 
                 movea.l ((WINDOW_LAYOUTS_END_POINTER-$1000000)).w,a1
                 cmpa.l  #WINDOW_TILE_LAYOUTS,a1
-                bne.s   @Continue
+                bne.s   @Continue       
                 bsr.w   CopyPlaneALayoutForWindows
 @Continue:
                 
@@ -574,7 +574,8 @@ sub_4BEA:
                 add.w   d1,d6
                 add.w   d6,d6
                 cmpi.w  #VDPTILE_SCREEN_BLACK_BAR|VDPTILE_PALETTE3|VDPTILE_PRIORITY,(SPRITE_00_VDPTILE).l
-                bne.s   return_4C36
+                bne.s   @Return
+                
                 move.w  (VERTICAL_SCROLL_DATA).l,d1
                 addq.w  #4,d1
                 lsr.w   #3,d1
@@ -589,9 +590,10 @@ sub_4BEA:
                 sub.w   d1,d6
                 eor.w   d6,d7
                 btst    #6,d7
-                beq.s   return_4C36
-                addi.w  #$40,d6 
-return_4C36:
+                beq.s   @Return
+                
+                addi.w  #$40,d6
+@Return:
                 
                 rts
 

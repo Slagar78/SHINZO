@@ -15,9 +15,6 @@ NewGame:
                 moveq   #COMBATANT_ALLIES_COUNTER,d0
                 sub.w   d7,d0
                 bsr.w   InitializeAllyCombatantEntry
-            if (STANDARD_BUILD&(TEST_BUILD|ALL_ALLIES_JOINED)=1)
-                bsr.w   JoinForce
-            endif
                 dbf     d7,@Loop
                 
                 moveq   #GAMESTART_GOLD,d1 ; starting gold value
@@ -81,9 +78,6 @@ InitializeAllyCombatantEntry:
                 move.b  (a0)+,d1
                 move.b  d1,COMBATANT_OFFSET_CLASS(a1)
                 move.b  (a0)+,d2
-            if (STANDARD_BUILD&TEST_BUILD=1)
-                moveq   #TEST_BUILD_ALLIES_START_LEVEL,d2
-            endif
                 move.b  d2,COMBATANT_OFFSET_LEVEL(a1)
                 ext.w   d2
                 move.w  d2,-(sp)        ; -> push starting level
@@ -101,7 +95,8 @@ InitializeAllyCombatantEntry:
                 setSavedWord d3, a1, COMBATANT_OFFSET_ITEM_2
                 getStartingItem (a0)+, d3
                 setSavedWord d3, a1, COMBATANT_OFFSET_ITEM_3
-                move.l  #LONGWORD_SPELLS_INITVALUE,COMBATANT_OFFSET_SPELLS(a1) ; spell entries default to nothing
+                move.l  #LONGWORD_SPELLS_INITVALUE,COMBATANT_OFFSET_SPELLS(a1) 
+                                                        ; spell entries default to nothing
                 bsr.w   LoadAllyClassData
                 move.w  (sp)+,d1        ; D1 <- pull starting level
                 bsr.w   InitializeAllyStats

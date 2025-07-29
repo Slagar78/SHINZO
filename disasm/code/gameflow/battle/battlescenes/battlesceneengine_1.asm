@@ -122,6 +122,7 @@ loc_198D6:
                 
                 move.w  #VDPTILE_PALETTE4,(a0)+
                 dbf     d0,loc_198D6
+				
                 moveq   #31,d0
 loc_198E0:
                 
@@ -137,11 +138,13 @@ loc_198F0:
                 
                 move.l  (a1)+,(a0)+
                 dbf     d0,loc_198F0
+				
                 moveq   #31,d0
 loc_198F8:
                 
                 move.w  #VDPTILE_BLANK|VDPTILE_PALETTE3,(a0)+
                 dbf     d0,loc_198F8
+				
                 move.w  #383,d0
 loc_19904:
                 
@@ -224,7 +227,7 @@ LoadEnemyBattlespritePropertiesAndPalette:
                 lsl.w   #INDEX_SHIFT_COUNT,d0
                 movea.l (a0,d0.w),a0
                 move.w  (a0)+,((BATTLESCENE_ENEMYBATTLESPRITE_ANIMATION_SPEED-$1000000)).w
-                move.w  (a0)+,((ENEMY_BATTLESPRITE_PROP1-$1000000)).w
+                move.w  (a0)+,((ENEMY_BATTLESPRITE_STATUS_OFFSET_X-$1000000)).w
                 move.w  (a0),d0
                 adda.w  d0,a0           ; a0 = pointer to palettes
                 lsl.w   #5,d1
@@ -300,7 +303,7 @@ LoadAllyBattlespritePropertiesAndPalette:
                 lsl.w   #INDEX_SHIFT_COUNT,d0
                 movea.l (a0,d0.w),a0
                 move.w  (a0)+,((BATTLESCENE_ALLYBATTLESPRITE_ANIMATION_SPEED-$1000000)).w
-                move.w  (a0)+,((ALLY_BATTLESPRITE_PROP1-$1000000)).w
+                move.w  (a0)+,((ALLY_BATTLESPRITE_STATUS_OFFSET_X-$1000000)).w
                 move.w  (a0),d0
                 adda.w  d0,a0           ; a0 = pointer to palettes
                 lsl.w   #5,d1
@@ -765,9 +768,9 @@ GetBattlespriteAndPalette:
                 movem.l d0/a0,-(sp)
                 jsr     j_GetClass
                 lea     table_AllyBattlesprites(pc), a0
-                mulu.w  #9,d0
+                mulu.w  #9,d0  ; bytes per character entry
                 adda.w  d0,a0
-                moveq   #2,d0
+                moveq   #2,d0  ; classes per character entry - 1
 @FindClass_Loop:
                 
                 cmp.b   (a0)+,d1

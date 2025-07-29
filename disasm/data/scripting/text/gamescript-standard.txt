@@ -214,9 +214,9 @@
 00D5={NAME} received the{N}{ITEM}.
 00D6=Found the {ITEM}, but{N}can't carry it.{N}You must discard something.{W1}
 00D7={NAME} discarded{N}the {ITEM} and{N}picked up the {ITEM}.
-00D8={CLEAR}Djqyf vt#le k'lmvb b {N}&ynthhbqwfvb cnthkj {N}xtkjdtxtcndj c kbwf _tvkb.{W2}{N}Gthtl cfvsv b/uyfybtv jlby{N}extysq gjuhe/bk cdj' ljxm{W1} 
-00D9={N}Zreve d ktnfhubxtcrbq cjy d{N}yflt#lt, xnj jlyf#ls jyf{N}ghjcytncz b yfqltn {N}xtkjdtxtcrjt ePt#bot,{N}b/dtcnyjt rfr Iby/j, dj/hjlbd{N}xtkjdtxtcndj b djccnfyjdbd{W1}
-00DA=vbh vt#le k'lmvb b {N}_ynthhbqwfvb.{W2}
+00D8={CLEAR}Hee, hee, hee...{N}You're finally here!{W2}
+00D9=Ah, you look so confused.{N}You don't know why you're{N}here?{W2}
+00DA=Yes, yes...I used a spell{N}on you.{W2}
 00DB=Ha, ha.  Where are you{N}going?  You can't escape{W2}
 00DC=from this mystery forest{N}unless you help me.{W2}
 00DD={CLEAR}Whatcha gonna do?

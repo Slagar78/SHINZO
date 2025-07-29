@@ -16,7 +16,7 @@ WitchEnd:
                 txt     238             ; "Finally, you've fulfilled my{N}wish!{N}{D2}{D2}Thanks to you, I can{N}escape from this forest!{D2}{N}Are you really that{N}surprised?{D2}{D2}{D2}"
                 clsTxt
                 clr.b   ((BLINK_CONTROL_TOGGLE-$1000000)).w
-                bsr.w   Reinitializelayout_Witch
+                bsr.w   ReinitializeWitchLayout
                 bsr.w   FadeOutToWhite
                 trap    #VINT_FUNCTIONS
                 dc.w VINTS_REMOVE

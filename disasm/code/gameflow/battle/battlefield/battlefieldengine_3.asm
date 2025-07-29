@@ -44,7 +44,7 @@ GetItemRange:
 ; Out: D1 = whether combatant is inflicted with MUDDLE 2 (0=no, 1=yes)
 
 
-CheckMuddled2:
+IsConfused:
                 
                 movem.l d0/d2-a6,-(sp)
                 bsr.w   GetStatusEffects
@@ -72,7 +72,7 @@ CheckMuddled2:
                 movem.l (sp)+,d0/d2-a6
                 rts
 
-    ; End of function CheckMuddled2
+    ; End of function IsConfused
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1010,7 +1010,7 @@ PrioritizeReachableTargets:
                 bne.s   @EnemyItemUser
                 
                 ; Ally item user
-                bsr.w   CheckMuddled2   
+                bsr.w   IsConfused      
                 tst.b   d1
                 bne.s   @MuddledAllyItemUser
                 bsr.w   PopulateTargetsArrayWithEnemies
@@ -1023,7 +1023,7 @@ PrioritizeReachableTargets:
                 bra.s   @PopulateItemPrioritiesList
 @EnemyItemUser:
                 
-                bsr.w   CheckMuddled2   
+                bsr.w   IsConfused      
                 tst.b   d1
                 bne.s   @MuddledEnemyItemUser
                 bsr.w   PopulateTargetsArrayWithAllies
@@ -1066,7 +1066,7 @@ PrioritizeReachableTargets:
                 bne.s   @EnemySpellCaster
                 
                 ; Ally spell caster
-                bsr.w   CheckMuddled2   
+                bsr.w   IsConfused      
                 tst.b   d1
                 bne.s   @MuddledAllySpellCaster
                 bsr.w   PopulateTargetsArrayWithEnemies
@@ -1079,7 +1079,7 @@ PrioritizeReachableTargets:
                 bra.s   @PopulateSpellPrioritiesList
 @EnemySpellCaster:
                 
-                bsr.w   CheckMuddled2   
+                bsr.w   IsConfused      
                 tst.b   d1
                 bne.s   @MuddledEnemySpellCaster
                 bsr.w   PopulateTargetsArrayWithAllies
@@ -1116,7 +1116,7 @@ PrioritizeReachableTargets:
                 bne.s   @EnemyAttacker
                 
                 ; Ally attacker
-                bsr.w   CheckMuddled2   
+                bsr.w   IsConfused      
                 tst.b   d1
                 bne.s   @MuddledAllyAttacker
                 bsr.w   PopulateTargetsArrayWithEnemies
@@ -1129,7 +1129,7 @@ PrioritizeReachableTargets:
                 bra.s   @PopulateAttackPrioritiesList
 @EnemyAttacker:
                 
-                bsr.w   CheckMuddled2   
+                bsr.w   IsConfused      
                 tst.b   d1
                 bne.s   @MuddledEnemyAttacker
                 bsr.w   PopulateTargetsArrayWithAllies
@@ -1178,7 +1178,7 @@ CalculateAttackTargetPriority:
                 movem.l d0-d5/d7-a6,-(sp)
                 moveq   #0,d6           ; d6 = that weird extra AI value, so this just clears it
                 cmpi.b  #SPELL_NOTHING,d1
-                bne.s   @Spell
+                bne.s   @Spell          
                 
                 ; Regular attack
                 move.b  d2,d1           ; d1 = target
@@ -1257,22 +1257,29 @@ pt_TargetPriorityScripts:
 ;
 ; Out: D6 = priority of the action
                 
-                dc.l TargetPriorityScript1
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript3
-                dc.l TargetPriorityScript4
-                dc.l TargetPriorityScript1
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript1
-                dc.l TargetPriorityScript4
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript2
-                dc.l TargetPriorityScript2
+				; Normal
+                dc.l TargetPriorityScript1 ; Dark Smoke & Willard
+                dc.l TargetPriorityScript2 ; Healers
+                dc.l TargetPriorityScript3 ; Attackers
+                dc.l TargetPriorityScript4 ; Bosses
+				
+				; Hard
+                dc.l TargetPriorityScript1 ; Dark Smoke & Willard
+                dc.l TargetPriorityScript2 ; Healers
+                dc.l TargetPriorityScript1 ; Attackers
+                dc.l TargetPriorityScript4 ; Bosses
+				
+				; Super
+                dc.l TargetPriorityScript2 ; Dark Smoke & Willard
+                dc.l TargetPriorityScript2 ; Healers
+                dc.l TargetPriorityScript2 ; Attackers
+                dc.l TargetPriorityScript2 ; Bosses
+				
+				; Ouch
+                dc.l TargetPriorityScript2 ; Dark Smoke & Willard
+                dc.l TargetPriorityScript2 ; Healers
+                dc.l TargetPriorityScript2 ; Attackers
+                dc.l TargetPriorityScript2 ; Bosses
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -1484,12 +1491,12 @@ TargetPriorityScript2:
                 addi.w  #15,d6          ; if the defender is expected to die from the attack, +15 priority
 loc_CCE2:
                 
-                bsr.w   sub_D2F8
+                bsr.w   sub_D2F8        
                 bcs.s   loc_CCEA
                 addq.w  #1,d6           ; +1 target priority if the attack does more than 2/3rds of defenders remaining health
 loc_CCEA:
                 
-                bsr.w   sub_D362
+                bsr.w   sub_D362        
                 bcs.s   loc_CCF2
                 addq.w  #1,d6           ; +1 target priority if defender is expected to be left with less than 20% of max health.
 loc_CCF2:
@@ -1570,7 +1577,7 @@ TargetPriorityScript4:
                 addi.w  #15,d6          ; if the defender is expected to die from the attack, +15 priority
 loc_CD5A:
                 
-                bsr.w   sub_D362
+                bsr.w   sub_D362        
                 bcs.s   loc_CD62
                 addq.w  #1,d6           ; +1 target priority if defender is expected to be left with less than 20% of max health
 loc_CD62:

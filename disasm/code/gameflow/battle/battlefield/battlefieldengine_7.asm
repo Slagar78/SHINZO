@@ -460,12 +460,11 @@ AddAllToStack:
 
 ; =============== S U B R O U T I N E =======================================
 
-; should be combined with following subroutine
+; (should be combined with following subroutine)
 ; 
 ; In: a2, a3 = pointers to total movecosts and movable grid arrays
 ;     d0.w, d1.w = starting X, Y
 ;     d3.w = move value (MOV*2)
-
 
 
 BuildMoveString:

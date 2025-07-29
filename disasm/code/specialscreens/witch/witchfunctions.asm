@@ -87,7 +87,7 @@ BuildWitchScreen:
 ; =============== S U B R O U T I N E =======================================
 
 
-Reinitializelayout_Witch:
+ReinitializeWitchLayout:
                 
                 getPointer p_layout_Witch, a0
                 lea     (PLANE_B_LAYOUT).l,a1

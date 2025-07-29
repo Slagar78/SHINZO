@@ -50,7 +50,7 @@ UpdateCombatantStats:
                 
                 ; Get all status effects except Curse
                 getSavedWord a2, d3, COMBATANT_OFFSET_STATUSEFFECTS ; Get Status Effects -> d3.w
-                andi.w  #($FFFF-STATUSEFFECT_CURSE),d3
+                andi.w  #STATUSEFFECT_MASK-STATUSEFFECT_CURSE,d3
                 
                 ; Relearn all spells, and initialize movetype while preserving current AI commandset
                 tst.b   d0
@@ -285,13 +285,14 @@ equipEffect_IncreaseCriticalProwess:
                 bhs.s   @Continue       ; skip if not a critical hit setting, i.e., no critical or ailment infliction
                 
                 ; Does the combatant currently inflict a regular or a stronger critical?
-                cmpi.b  #4,d2
+                cmpi.b  #PROWESS_CRITICAL150_1IN32,d2
                 bhs.s   @StrongerCritical
                 
                 ; Increase chance to perform a regular critical
                 add.b   d1,d2
                 bmi.s   @Min125                         ; clamp to zero on negative
-                cmpi.b  #PROWESS_CRITICAL150_1IN32,d2
+                cmpi.b  #PROWESS_CRITICAL125_1IN4,d2
+                bls.s   @Continue
                 moveq   #PROWESS_CRITICAL125_1IN4,d2    ; cap to highest regular (+25%) critical hit setting
                 bra.s   @Continue
 @Min125:        
@@ -304,8 +305,8 @@ equipEffect_IncreaseCriticalProwess:
                 add.b   d1,d2
                 cmpi.b  #PROWESS_CRITICAL150_1IN32,d2
                 blt.s   @Min150                         ; clamp to 4 on less than and also on negative
-                cmpi.b  #PROWESS_CRITICAL_NONE,d2
-                blo.s   @Continue
+                cmpi.b  #PROWESS_CRITICAL150_1IN4,d2
+                bls.s   @Continue
                 moveq   #PROWESS_CRITICAL150_1IN4,d2    ; cap to highest stronger (+50%) critical hit setting
                 bra.s   @Continue
 @Min150:        
@@ -315,11 +316,11 @@ equipEffect_IncreaseCriticalProwess:
                 move.b  COMBATANT_OFFSET_PROWESS_CURRENT(a2),d2
                 andi.b  #PROWESS_MASK_CRITICAL,d2
                 cmpi.b  #PROWESS_CRITICAL_NONE,d2
-                bcc.s   @Continue                       ; skip if not a regular critical hit setting
+                bhs.s   @Continue                       ; skip if not a regular critical hit setting
                 add.b   d1,d2
                 bmi.s   @Zero                           ; clamp to zero on negative
-                cmpi.b  #PROWESS_CRITICAL_NONE,d2
-                blo.s   @Continue
+                cmpi.b  #PROWESS_CRITICAL125_1IN4,d2
+                bls.s   @Continue
                 moveq   #PROWESS_CRITICAL125_1IN4,d2    ; cap to highest regular critical hit setting
                 bra.s   @Continue
 @Zero:          

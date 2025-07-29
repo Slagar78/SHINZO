@@ -110,103 +110,103 @@ fbcDest: macro
 
 ; Step block copies
 
-sbc: macro
-    dc.b \1
-    dc.b \2
+sbc: macro triggerX, triggerY
+    dc.b \triggerX
+    dc.b \triggerY
     endm
 
-sbcSource: macro
-    dc.b \1
-    dc.b \2
+sbcSource: macro x, y
+    dc.b \x
+    dc.b \y
     endm
 
-sbcSize: macro
-    dc.b \1
-    dc.b \2
+sbcSize: macro width, height
+    dc.b \width
+    dc.b \height
     endm
 
-sbcDest: macro
-    dc.b \1
-    dc.b \2
+sbcDest: macro x, y
+    dc.b \x
+    dc.b \y
     endm
 
 
 ; Layer 2 block copies
 
-slbc: macro
-    dc.b \1
-    dc.b \2
+slbc: macro triggerX, triggerY
+    dc.b \triggerX
+    dc.b \triggerY
     endm
 
-slbcSource: macro
-    dc.b \1
-    dc.b \2
+slbcSource: macro x, y ; (255, 255 = empty)
+    dc.b \x
+    dc.b \y
     endm
 
-slbcSize: macro
-    dc.b \1
-    dc.b \2
+slbcSize: macro width, height
+    dc.b \width
+    dc.b \height
     endm
 
-slbcDest: macro
-    dc.b \1
-    dc.b \2
+slbcDest: macro x, y
+    dc.b \x
+    dc.b \y
     endm
 
 
 ; Warps
 
-mWarp: macro
-    dc.b \1
-    dc.b \2
-    endm
+mWarp:	macro triggerX, triggerY
+	dc.b \triggerX
+	dc.b \triggerY
+	endm
 
 warpNoScroll: macro
     dc.b 0
     endm
 
-warpScroll: macro
-    dc.b 0x10+\1
-    endm
+warpScroll:	macro ; retains X/Y coord; does not initialize entities
+	dc.b 0x10+\1
+	endm
 
-warpMap: macro
-    dc.b \1
-    endm
+warpMap: macro targetMap
+	dc.b \targetMap
+	endm
 
-warpDest: macro
-    dc.b \1
-    dc.b \2
-    endm
+warpDest: macro targetX, targetY
+	dc.b \targetX
+	dc.b \targetY
+	endm
 
-warpFacing: macro
-    dc.b \1
-    dc.b 0
-    endm
+warpFacing:	macro targetFacing
+	dc.b \targetFacing
+	dc.b 0
+	endm
 
 
 ; Chest items, Other items
 
 mapItem: macro
-    dc.b \1
-    dc.b \2
-    dc.b \3
-    defineShorthand.b ITEM_,\4
-    endm
-    
+	dc.b \1 ; search x
+	dc.b \2 ; search y
+	dc.b \3 ; associated flag
+	defineShorthand.b ITEM_,\4
+	endm
+	
 
 ; Animations
 
 mapAnimation: macro
-    dc.w \1
-    dc.w \2
-    endm
-    
+	dc.w \1 ; animation tileset
+	dc.w \2 ; speed?
+	endm
+	
 mapAnimEntry: macro
-    dc.w \1
-    dc.w \2
-    dc.w \3
-    dc.w \4
-    endm
+	dc.w \1 ; starting replacement tile
+	dc.w \2 ; # of tiles
+	dc.w \3 ; starting tile to replace; ($-tileset 1, $100-tileset 2, $200-tileset 3, $-tileset 4, $300-tileset 5; $0-line 1, $10-line 2, $20-line 3..$70-line 8)?
+	dc.w \4 ; animation counter
+	endm
 
 
 

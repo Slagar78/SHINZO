@@ -122,7 +122,7 @@ return_5A826:
 
 cs_5A828:       setBlocks 17,13,1,1,9,5
                 textCursor 1903
-                nextSingleText $FF,255  ; "{LEADER} decides to{N}take the fairy with him.{W1}"
+                nextSingleText $FF,ENTITY_NONE  ; "{LEADER} decides to{N}take the fairy with him.{W1}"
                 followEntity 130,FOLLOWER_B,2
                 csc_end
 
@@ -141,10 +141,12 @@ Map33_EntityEvent3:
                 bne.s   byte_5A856      
             endif
                 script  cs_5A8CA
-                dc.w $6004
+                bra.s   byte_5A85A
 byte_5A856:
                 
                 txt     1909            ; "What a pity...then, I wish{N}happiness to all of you.{W1}"
+byte_5A85A:     
+                
                 bra.s   return_5A862
 byte_5A85C:
                 
@@ -171,10 +173,12 @@ Map33_EntityEvent4:
                 bne.s   byte_5A878      
             endif
                 script  cs_5A93A
-                dc.w $6004
+                bra.s   byte_5A87C
 byte_5A878:
                 
                 txt     1912            ; "Tut!  OK, I have a{N}comfortable life here.{W1}"
+byte_5A87C:     
+                
                 bra.s   return_5A884
 byte_5A87E:
                 

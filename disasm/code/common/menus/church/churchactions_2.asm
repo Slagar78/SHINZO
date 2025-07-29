@@ -40,7 +40,7 @@ CountPromotableMembers:
                 bsr.w   GetPromotionData
                 cmpi.w  #0,cannotPromoteFlag(a6)
                 bne.w   @Next
-                jsr     j_GetCurrentLevel
+                jsr     j_GetLevel
                 cmpi.w  #CHURCHMENU_MIN_PROMOTABLE_LEVEL,d1
                 bcs.w   @Next
                 addi.w  #1,promotableMembersCount(a6)
@@ -256,7 +256,7 @@ Church_CureStun:
                 txt     132             ; "Gosh!  {NAME} is{N}paralyzed.{W2}"
                 
             if (STANDARD_BUILD&PER_LEVEL_CHURCH_COST=1)
-                jsr     GetCurrentLevel
+                jsr     GetLevel
                 mulu.w  #CHURCHMENU_PER_LEVEL_CURE_STUN_COST,d1
                 move.l  d1,actionCost(a6)
                 jsr     GetClass
@@ -298,7 +298,7 @@ Church_CureStun:
                 jsr     j_DecreaseGold
                 move.w  member(a6),d0
                 move.w  d2,d1
-                andi.w  #STATUSEFFECT_POISON|STATUSEFFECT_CURSE|STATUSEFFECT_MUDDLE2|STATUSEFFECT_MUDDLE|STATUSEFFECT_SLEEP|STATUSEFFECT_SILENCE|STATUSEFFECT_SLOW|STATUSEFFECT_BOOST|STATUSEFFECT_ATTACK,d1
+                andi.w  #(STATUSEFFECT_MASK-STATUSEFFECT_STUN),d1
                 jsr     j_SetStatusEffects
                 sndCom  MUSIC_CURE
                 jsr     WaitForMusicResumeAndPlayerInput(pc)

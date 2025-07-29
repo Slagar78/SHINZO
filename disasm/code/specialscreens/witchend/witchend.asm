@@ -28,8 +28,8 @@ EndGame:
                 moveq   #2,d1
                 jsr     (ApplyImmediateVramDma).w
                 lea     (PLANE_A_MAP_LAYOUT).l,a0
-                move.l  #$21382139,$21E(a0)
-                move.l  #$21422143,$25E(a0)
+                move.l  #$21382139,$21E(a0)  ; 68th tile x, 69th y
+                move.l  #$21422143,$25E(a0)  ; 76th tile x, 77th y
                 lea     ($C000).l,a1
                 move.w  #$380,d0
                 moveq   #2,d1
@@ -156,7 +156,7 @@ loc_27C2C:
                 clr.l   (a0)+
                 dbf     d7,loc_27C2C
                 jsr     j_ClearEntities
-                setFlg  FLAG_INDEX_BATTLE0             ; Battle 0 unlocked - BATTLE_VERSUS_ALL_BOSSES         
+                setFlg  400             ; Battle 0 unlocked - BATTLE_VERSUS_ALL_BOSSES         
                 move.w  #MAP_MAGIC_TUNNEL_HUB,d0
                 jsr     (CheckBattle).w 
                 move.w  d7,d1

@@ -35,12 +35,12 @@ battlesceneScript_CalculateHealingExp:
                 jsr     GetMaxHp
                 tst.w   d1
                 beq.w   @Skip           ; safety measure to prevent division by 0
-                move.w  #25,d5
+                move.w  #HEALING_SPELL_EXP_MAX,d5
                 mulu.w  d6,d5
                 divu.w  d1,d5
-                cmpi.w  #10,d5
+                cmpi.w  #HEALING_SPELL_EXP_MIN,d5
                 bcc.s   @Add
-                moveq   #10,d5
+                moveq   #HEALING_SPELL_EXP_MIN,d5
 @Add:
                 
                 bsr.w   battlesceneScript_AddExpAndApplyHealingCap
@@ -142,9 +142,9 @@ battlesceneScript_AddExpAndApplyPerActionCap:
 battlesceneScript_AddExpAndApplyHealingCap:
                 
                 add.w   d5,((BATTLESCENE_EXP-$1000000)).w
-                cmpi.w  #HEALING_EXP_CAP,((BATTLESCENE_EXP-$1000000)).w
+                cmpi.w  #HEALING_ACTION_EXP_CAP,((BATTLESCENE_EXP-$1000000)).w
                 ble.s   @Return
-                move.w  #HEALING_EXP_CAP,((BATTLESCENE_EXP-$1000000)).w
+                move.w  #HEALING_ACTION_EXP_CAP,((BATTLESCENE_EXP-$1000000)).w
 @Return:
                 
                 rts
@@ -167,7 +167,7 @@ battlesceneScript_GetKillExp:
             if (STANDARD_BUILD=1)
                 jsr     CalculateEffectiveLevel
             else
-                jsr     GetCurrentLevel 
+                jsr     GetLevel 
             endif
                 move.w  d1,d2
                 move.b  (a4),d0
@@ -176,7 +176,7 @@ battlesceneScript_GetKillExp:
             else
                 jsr     GetClass        
                 move.w  d1,d3
-                jsr     GetCurrentLevel 
+                jsr     GetLevel        
                 cmpi.b  #CHAR_CLASS_FIRSTPROMOTED,d3
                 bcs.s   @Continue
                 addi.w  #CHAR_CLASS_EXTRALEVEL,d1
