@@ -9,9 +9,9 @@
 0008={LEADER}, are you ready?{D3}
 0009={LEADER}, you are going to{N}battle again.
 000A={LEADER}, take it easy!{W1}
-000B={LEADER}, take it easy!{W1} *
+000B={LEADER}, take it easy!{W1}
 000C={LEADER}, are you ready?{D3}
-000D=Do you need more preparations? *
+000D=Do you need more preparations?
 000E=You changed your mind?{W2}
 000F=Who joins the battle party?{W2}
 0010=Who quits the battle party?{W2}
@@ -96,7 +96,7 @@
 005F=Everybody can equip it.{W2}
 0060=The {ITEM} is for{N}
 0061=nobody so far.{W2}
-0062={DICT}{NAME}, {W1}
+0062={DICT}{NAME},
 0063={N}
 0064=to equip.{W2}
 0065=It brings {#} gold coins{N}at a shop.{W2}
@@ -137,7 +137,7 @@
 0088={CLEAR}Who do you want to{N}promote?{W2}
 0089=Oh, I'm wrong.{W2}
 008A=Hmmm...{NAME} needs{N}more experience!{W2}
-008B={NAME} wants to be{N}promoted to a fighting{N}class, right?
+008B={NAME} wants to be{N}promoted to the a fighting{N}class, right?
 008C=Now, let me conduct the{N}rite.{D1}  The light blesses...{N}{D1}{CLASS} {NAME}...{W2}{N}with a class of {CLASS}!{W2}
 008D={NAME} was successfully{N}promoted to {CLASS}.{W2}
 008E=Hmmm...{D1} {NAME} had{N}better remain the current{N}class.{W2}
@@ -214,9 +214,9 @@
 00D5={NAME} received the{N}{ITEM}.
 00D6=Found the {ITEM}, but{N}can't carry it.{N}You must discard something.{W1}
 00D7={NAME} discarded{N}the {ITEM} and{N}picked up the {ITEM}.
-00D8={CLEAR}Hee, hee, hee...{N}You're finally here!{W2}
-00D9=Ah, you look so confused.{N}You don't know why you're{N}here?{W2}
-00DA=Yes, yes...I used a spell{N}on you.{W2}
+00D8={CLEAR}Война между людьми и {N}энтеррийцами стерло {N}человечество с лица Земли.{W2}{N}Перед самым изгнанием один {N}ученый погрузил свою дочь{N}
+00D9=Якуму в летаргический сон {W2}{N}в надежде,что однажды она {N}проснется и найдет {N}человеческое убежище,{W2}{N}известное как Шиндзо, {N}возродив человечество и {N}
+00DA=восстановив мир между людьми{N}и энтеррийцами.{W2}
 00DB=Ha, ha.  Where are you{N}going?  You can't escape{W2}
 00DC=from this mystery forest{N}unless you help me.{W2}
 00DD={CLEAR}Whatcha gonna do?
@@ -283,7 +283,7 @@
 011A={NAME} blew out{N}bubble-breath!
 011B={NAME} summoned{N}{SPELL}!{D1}
 011C={NAME} got{N}damaged by {#}.
-011D={NAME} got{N}damaged by {#}. *
+011D={NAME} got{N}damaged by {#}.
 011E={NAME} quickly{N}dodged the attack!
 011F=Critical hit!!{D1}{N}{NAME} got{N}damaged by {#}.
 0120=Heavy attack!!{D1}{N}{NAME} got{N}damaged by {#}.
@@ -303,7 +303,7 @@
 012E={NAME} is no longer{N}stunned.
 012F={NAME} is no longer{N}cursed.
 0130={NAME}'s soul was{N}stolen.
-0131={NAME}'s soul was{N}stolen. *
+0131={NAME}'s soul was{N}stolen.
 0132={NAME} is sleeping.{D3}
 0133={CLEAR}{NAME} gets damaged{N}by {#} because of the poison.{D3}
 0134={NAME} is exhausted.{D3}
@@ -347,7 +347,7 @@
 015A={NAME} becomes{N}confused.
 015B={NAME} is{N}stunned.
 015C={CLEAR}{SPELL} expired.{N}Agility and defense{N}return to normal.{D3}
-015D={CLEAR}{SPELL} expired.{N}Agility and defense{N}return to normal.{D3} *
+015D={CLEAR}{SPELL} expired.{N}Agility and defense{N}return to normal.{D3}
 015E={CLEAR}{SPELL} expired.{N}Attack returns to normal.{D3}
 015F={CLEAR}{SPELL} expired.{N}{NAME} is no longer{N}silenced.{D3}
 0160={CLEAR}{SPELL} expired.{N}Magic curtain around{N}{NAME} has vanished.{D3}
@@ -605,7 +605,7 @@
 025C=I wouldn't let you go alone{N}if I weren't...{W2}{N}I trust you, son.{W1}
 025D=Princess Elis has not rested{N}since the King collapsed.{W2}
 025E=I understand her reasoning,{N}but she might get sick, too.{W1}
-025F=She has been shivering like{N}this since she came back{N}from the King's room.{W2}{N}She won't work.{W1}
+025F=She has been shrivering like{N}this since she came back{N}from the King's room.{W2}{N}She won't work.{W1}
 0260=I...I've never seen such a{N}horrible face....{W2}{N}I can't tell anybody.{N}They wouldn't believe me.{W1}
 0261=Very few people know{N}about the sickness, even{N}in the castle.{W2}{N}Know what I mean?{W1}
 0262=Sir Astral is sleeping in{N}the King's bedroom.{W2}{N}He needs some more rest{N}because he is so old.{W2}
@@ -629,7 +629,7 @@
 0274=Good luck, {LEADER}.{N}Your father would have{N}been proud of you.{W1}
 0275=I knew your father very{N}well.{N}He was a great leader.{W2}
 0276={LEADER}, you have to{N}study hard and be a fine{N}man like him.{W1}
-0277=He thinks of you as his{N}grandson.{W2}{N}Sometimes he may annoy{N}you, but it's because he{N}loves you.{W1} *
+0277=He thinks of you as his{N}grandson.{W2}{N}Sometimes he may annoy{N}you, but it's because he{N}loves you.{W1}
 0278=Why don't you stop by my{N}shop before you set out{N}on your journey?{W1}
 0279=That Galam messenger rushed{N}out of town.{N}He looked pale.{W1}
 027A=Don't listen to what that{N}fortune teller says.{N}She's a liar.{W1}
@@ -661,7 +661,7 @@
 0294=(Sniff, sniff)...have you{N}seen or smelt any sulfur?{W2}
 0295=I'm an inventor.{N}I'm looking for some sulfur.{W1}
 0296=Here you are!{N}I've been waiting.{W1}
-0297=A soldier said you went{N}into the castle.{N}Is that true?{W2}{N}Ooohh!  I missed it!{N}I would've woken up early{N}if I knew that...!{W1}{N}So I came to meet you{N}here, {LEADER}.{N}You're going to Yeel, right?{W2}{N}Under the King's orders!{N}Cool!  Of course, I'm{N}going too!{W1}
+0297=A soldier said you went{N}into the castle.{N}Is that true?{W2}{N}Oooww!  I missed it!{N}I would've woken up early{N}if I knew that...!{W1}{N}So I came to meet you{N}here, {LEADER}.{N}You're going to Yeel, right?{W2}{N}Under the King's orders!{N}Cool!  Of course, I'm{N}going too!{W1}
 0298=Let's go!{W1}
 0299=(Shiver)....{N}The Galam Army was so{N}rude.{W1}
 029A=Galam soldiers rushed into{N}the castle.  What's going{N}on?{W1}
@@ -1262,7 +1262,7 @@
 04ED=Yes, it is.{W1}
 04EE={LEADER} and {NAME;7}{N}explain in detail.{W1}
 04EF=About the ancient ruins{N}and Creed....{W2}
-04F0=And Zeon's message through{N}Evil Spirit.{W2}
+04F0=And Zeon's message through{N}Evil Spilit.{W2}
 04F1=They explain everything.{W1}
 04F2=Amazing!{N}{LEADER}!  And {NAME;7}...{W1}
 04F3=you've experienced a great{N}deal.{W1}
@@ -1693,7 +1693,7 @@
 069C=They say a fairy lives{N}around here.{N}Do you know her?{W1}
 069D=Fairy?{W2}
 069E=She has not returned{N}from Creed's mansion.{W1}
-069F=To Creed's Mansion?{N}Only the fairy knows how to{N}get there.{W2}
+069F=To Creed Mansion?{N}Only the fairy knows how to{N}get there.{W2}
 06A0=But, maybe {NAME;13} knows{N}because he is a friend of{N}the fairy.{W1}
 06A1={NAME;13} is out.{N}He went to find the fairy{N}to help a sick dwarf.{W2}
 06A2=The forest to the west is{N}very dangerous.{W1}
@@ -1894,7 +1894,7 @@
 0765=Zeon?  Oh, gosh!{W1}
 0766=Goliath!  What are you still{N}doing here?!{W1}
 0767=I have no time to scold you{N}now!{W2}
-0768=Evil Spirit may know{N}something.{W1}
+0768=The Evil Spirit may know{N}something.{W1}
 0769=You guys, follow him.{N}Follow him!{W1}
 076A=Maybe the Jewel of Evil has{N}a secret.{W2}
 076B=Storytellers in Tristan might{N}know something.{W2}
@@ -1931,7 +1931,7 @@
 078A=Where should I go?{N}Hey, may I go with you?{W1}
 078B=Why, how rude!{W1}
 078C=Oddler?{W1}
-078D=I understand.{W1}
+078D=I understand you.{W1}
 078E=Understand what?{W1}
 078F=Oddler will remain here.{W2}
 0790=Won't you, Oddler?{W1}
@@ -2208,7 +2208,7 @@
 089F=Are you alright?{W2}
 08A0=Let me use your soldiers.{N}We must kill it before it{N}finds another victim.{W1}
 08A1=What are you talking about?{N}I don't understand.{W1}
-08A2=(Groan){W1}
+08A2=(Sigh){W1}
 08A3=Astral!{W1}
 08A4=Astral is exhausted.{N}He won't wake up!{W2}{N}The Minister summons the{N}soldiers to the hall to kill{N}the evil spirit.{W1}
 08A5=We were almost swallowed{N}by that chasm.{W1}
@@ -2236,7 +2236,7 @@
 08BB=Are you serious?  Just{N}don't complain that we{N}don't have a ship later!{W1}
 08BC=Whoa!{W1}
 08BD=The ship has crashed into{N}the shore!  Oh, no!{W1}
-08BE=Ouch!  Ouch!{N}That's what I call good{N}helmsmanship!{W1}
+08BE=Ouch!  Ouch!{N}That's what I call good{N}seamanship!{W1}
 08BF=The people of Granseal have{N}arrived at their new home.{W1}
 08C0=Everybody, listen up!{W1}
 08C1=Let's build a new Granseal{N}here!{W2}
@@ -2716,7 +2716,7 @@
 0A9B=Her evil aura was apparent.{N}By the way, did you hear{N}what she said?{W2}
 0A9C=They're all acting on their{N}own, ignoring Zeon's orders.{W2}
 0A9D=It will be dangerous.{N}We must be careful.{W1}
-0A9E=You can't enter Mitula's{N}Shrine now.{W1}
+0A9E=You can't enter Mitula{N}Shrine now.{W1}
 0A9F=Sir Astral, what do we do{N}now?{W1}
 0AA0=Hmmm....{W1}
 0AA1={LEADER}, what do you{N}think?{W1}
@@ -3282,7 +3282,7 @@
 0CD1=Are you from South Parmecia?{N}Oh, great!{W1}
 0CD2=It's been dry here since the{N}devils appeared.{W2}
 0CD3=They must have done something{N}to Goddess Mitula!{W1}
-0CD4=Brave Pacaloners?{W2}
+0CD4=Brave Pacalons?{W2}
 0CD5=None at all.  There are no{N}soldiers who can fight{N}against the devils.{W1}
 0CD6=Devils are coming to town?{N}OK, I'll beat them up!{W1}
 0CD7=Oh, I can't.  I'm too hungry!{W1}
@@ -3537,7 +3537,7 @@
 0DD0=Enemies from the sky are{N}mine.  My arrows will get{N}them!{W1}
 0DD1=I trained a lot when I was{N}younger.  Style is more{N}important than strength.{W1}
 0DD2=I'm not afraid of devils!{N}When's the next battle?{W1}
-0DD3=I'll face any devil, anytime!{N}Bring 'em on!!{W1}
+0DD3=I'll face any devil, any{N}time!  Bring 'em on!!{W1}
 0DD4=My magic powers should be a{N}great help to you!{W1}
 0DD5=I'm afraid of battle, but{N}I'll never run from the{N}enemy!{W1}
 0DD6=I'm fully recovered!{N}Where's the enemy?{W1}
@@ -3672,7 +3672,7 @@
 0E57=When Zeon lost his powers,{N}he fell to Earth, and created{N}a giant crater when he hit.{W2}
 0E58=His moan destroyed the{N}mountains and the crater{N}was buried by the debris.{W1}
 0E59=Grieving over the fight, the{N}God of Wisdom created the{N}Jewel of Light.{W2}
-0E5A=The Jewel of Light chose a{N}brave man and gave him the{N}Holy Sword.{W1}
+0E5A=The Jewel of Light chose a{N}brave man and gave him a{N}Holy Sword.{W1}
 0E5B=With the Holy Sword in{N}hand, the brave man fought{N}against the two devil kings.{W2}
 0E5C=The Holy Sword contained{N}holy power.  Thus, the two{N}devil kings were defeated.{W1}
 0E5D=Evil Arc Valley was sealed{N}beneath the Ancient Tower.{W2}
@@ -4095,7 +4095,7 @@
 0FFE=A well...{N}Throw something in?
 0FFF=A lot of water.{W1}
 1000=No water.{W1}
-1001=A book...{N}DARKSOL{W1}
+1001=A book...{N}DARK SOL{W1}
 1002=A book...{N}HINT BOOK{W1}
 1003=A book...{N}VIVA, FRIENDSHIP!{W1}
 1004=A book...{N}VOLCANON{W1}
@@ -4264,4 +4264,4 @@
 10A7=Stay away from me!{D2}
 10A8=Somebody...HELP!{D2}
 10A9=Aughhhh!!!{D2}
-10AA=(Groan)....{D2}
+10AA=(Sigh)....{D2}
